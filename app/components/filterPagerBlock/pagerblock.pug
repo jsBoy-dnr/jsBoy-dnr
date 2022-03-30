@@ -1,0 +1,10 @@
+mixin pagerblock(text)
+    .pagerblock 
+        .pagerblock__heading #{text}
+        .pagerblock__txt Выводить по
+        .pagerblock__items
+            .pagerblock__item.active 10
+            .pagerblock__item 50
+            .pagerblock__item 100
+        .pagerblock__input
+            input.custom-input(type="text", placeholder="Введите число" )

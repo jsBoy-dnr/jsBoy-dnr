@@ -1,0 +1,569 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/libraries/portal.css')
+        link(rel='stylesheet', href='../css/work_services_block/work_services_block.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+
+            #bk_1(style="background-image: url(../../images/portal_01_bk.png)")
+            #bk_2
+
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content
+                .header_content_top_menu_wrapper
+                    .header_content_top_menu
+                        ul#header_content_top_menu.justify-content-start
+                            li.header_content_top_menu_vline
+                                .header_content_top_menu_inner
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner.hover
+                                    a.noselect(href="#") Главная
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Мои обращения
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Контакты
+
+                #header_content_main_line
+                #header_content_main_title
+                    span Портал
+                    |  самообслуживания пользователя
+
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Портал самообслуживания пользователя')
+                    .disk_block
+                        .feb_content
+                            .title-bl
+                                img(src="../../images/titles/vyberite-razdel.png", alt="Выберите раздел")
+                                .tooltip
+                                    button.btn.tooltip__btn
+                                        svg.w20
+                                            use(xlink:href="../../images/sprite.svg#i_info")
+                                    .tooltip__wrap
+                                        p В случае, если Вы не нашли соответствующий раздел для подачи Вашего обращения, рекомендуем подать обращение через раздел "Прочее"
+                            //- .div_title.div_title--small
+                                img.img__fix(src="../../images/titles/vyberite-razdel.png", alt="Выберите раздел")
+                                .tooltip
+                                    button.btn.tooltip__btn
+                                        svg.w20
+                                            use(href="../../images/sprite.svg#i_info")
+                                    .tooltip__wrap
+                                        p В случае, если Вы не нашли соответствующий раздел для подачи Вашего обращения, рекомендуем подать обращение через раздел "Прочее"
+                            .page-phonebook
+                                .sort-bl
+                                    form.form--small(action, onsubmit="return (function(event){makeSearch(event); return false;})(event);")
+                                        input(type="text", placeholder="Поиск по теме обращения", oninput="updateSearch(this)")
+                                        span.clear(onclick="clearSearch(this)", style="display: none;") ×
+                                        button(type="submit")
+                            .lk_ds_menu_2#lk_ds_menu_2
+                                span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Все
+                                span(onclick="menu2Change(this, 2)") Избранное
+                                span(onclick="menu2Change(this, 3)") Рабочее место
+                                span(onclick="menu2Change(this, 4)") Информационные системы
+                                span(onclick="menu2Change(this, 5)") SAP
+                                span(onclick="menu2Change(this, 6)") Видеоконференцсвязь
+                                span(onclick="menu2Change(this, 7)") Прочее
+                            .lk
+                                .work_services_block
+                                    .service-desc
+                                        #page_tabs
+                                            #page_tab_1
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title НСИ Справочники
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Казначейство и управление активами
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Бухгалтерский и налоговый учет
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Торги ( SRM)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ЗУП
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Учет затрат и производство
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Снабжение
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Инвестиции
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Инвестиции
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Сбыт
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title КИС ТОРО (ТОиР)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Система электронного архива - Saperion
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title КИС Парус
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Теплосбыт-СГК (Omni-US)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АИС Сириус
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АСТЭП
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title СЭД СГК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Подключение к СТС (ИС "Подключение")
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Этран
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АРМ ТИ
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ИАС Созвездие
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title СЭС, Docsvision
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ИАИС СГК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ГИС ZULU
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ELIS
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АСД "Карьер"
+
+                                            #page_tab_2(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Установка ПО на ПК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Корпоративные
+                                                            br
+                                                            | порталы/интернет
+
+                                                    a.item(href="#!", data-target="#repeat-modal", data-trigger="modal")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная почта/Skype/Lync
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Удаленный доступ ( Citrix, RDP, VPN, VDI)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Телефонная связь ( в т.ч аппарат)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная цифровая подпись (ЭЦП)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Оборудование рабочего места
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Учетная запись для входа в ПК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Сетевые ресурсы
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Печать/сканирование/Факсы
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Радиосвязь и видеонаблюдение
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Citrix
+
+                                            #page_tab_3(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Установка ПО на ПК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Корпоративные
+                                                            br
+                                                            | порталы/интернет
+
+                                                    a.item(href="#!", data-target="#repeat-modal", data-trigger="modal")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная почта/Skype/Lync
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Удаленный доступ ( Citrix, RDP, VPN, VDI)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Телефонная связь ( в т.ч аппарат)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная цифровая подпись (ЭЦП)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Оборудование рабочего места
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Учетная запись для входа в ПК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Сетевые ресурсы
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Печать/сканирование/Факсы
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Радиосвязь и видеонаблюдение
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Citrix
+
+                                            #page_tab_4(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Система электронного архива - Saperion
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title КИС Парус
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Теплосбыт-СГК (Omni-US)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АИС Сириус
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АСТЭП
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title СЭД СГК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Подключение к СТС (ИС "Подключение")
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Этран
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АРМ ТИ
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ИАС Созвездие
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title СЭС, Docsvision
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ИАИС СГК
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ГИС ZULU
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ELIS
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title АСД "Карьер"
+
+                                            #page_tab_5(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title НСИ Справочники
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Казначейство и управление активами
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Бухгалтерский и налоговый учет
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Торги ( SRM)
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ЗУП
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Учет затрат и производство
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Снабжение
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Инвестиции
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Инвестиции
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Сбыт
+
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title КИС ТОРО (ТОиР)
+
+                                            #page_tab_6(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title ВКС
+
+                                            #page_tab_7(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Прочее
+
+                                            #page_tab_8(style="display: none")
+                                                .items-wrap
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Установка ПО на ПК
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Корпоративные
+                                                            br
+                                                            | порталы/интернет
+                                                    a.item(href="#!", data-target="#repeat-modal", data-trigger="modal")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная почта/Skype/Lync
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Удаленный доступ ( Citrix, RDP, VPN, VDI)
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Телефонная связь ( в т.ч аппарат)
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Электронная цифровая подпись (ЭЦП)
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Оборудование рабочего места
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Учетная запись для входа в ПК
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Сетевые ресурсы
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Печать/сканирование/Факсы
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Радиосвязь и видеонаблюдение
+                                                    a.item(href="#!")
+                                                        .image
+                                                            img(src="../../images/image_service/is-pasport.svg", alt)
+                                                        .title Citrix
+
+
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

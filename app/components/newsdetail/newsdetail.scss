@@ -1,0 +1,195 @@
+.page-news{
+    &-in {
+        max-width: 97rem;
+        img{
+            margin-bottom: 2rem;
+        }
+    }
+    .page_tags {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        letter-spacing: 0.05em;
+        color: #007BC4;
+        a {
+            text-decoration: none;
+            color: #007BC4;
+            display: inline-block;
+            margin-right: 1.5rem;
+        }
+    }
+    h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 4.8rem;
+        line-height: 5.2rem;
+        color: #333;
+        padding: 0 0 .5rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    .news_text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 110%;
+        color: #333;
+        opacity: 0.7;
+        padding: 0 0 1rem;
+    }
+    .date_see {
+        display: flex;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.6rem;
+        line-height: 120%;
+        color: #b8b9ba;
+        padding-bottom: 2rem;
+        .see {
+            margin-left: 3rem;
+            padding-left: 4rem;
+            background: url(../../images/icons/show-eye.svg) 0 50% no-repeat;
+            background-size: contain;
+        }
+    }
+    .pic_name {
+        position: relative;
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        color: #707274;
+        display: inline-block;
+        top:-1rem;
+        padding-bottom: 1rem;
+    }
+    .news_text_in {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        color: #333;
+        padding: 0 0 2rem;
+        a {
+            color: #007BC4;
+        }
+    }
+    .btns-wrap {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #f5f6fa;
+        a.like-it {
+            border: 1px solid #2e7cc4;
+            box-sizing: border-box;
+            border-radius: .5rem;
+            padding-left: 5.8rem;
+            display: flex;
+            align-items: center;
+            background: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.95014 16.6142L8.93924 16.6035L8.92771 16.5935C6.31917 14.3298 4.20257 12.4687 2.73326 10.715C1.26936 8.96783 0.5 7.38687 0.5 5.68976C0.5 2.93383 2.66705 0.794312 5.5 0.794312C7.0541 0.794312 8.61605 1.51543 9.62138 2.68097L10 3.11991L10.3786 2.68097C11.384 1.51543 12.9459 0.794312 14.5 0.794312C17.3329 0.794312 19.5 2.93383 19.5 5.68976C19.5 7.38687 18.7306 8.96783 17.2667 10.715C15.7974 12.4687 13.6808 14.3298 11.0723 16.5935L11.0608 16.6035L11.0499 16.6142L10 17.6441L8.95014 16.6142Z' fill='white' stroke='%232E7CC4'/%3E%3C/svg%3E%0A") .9rem 50% no-repeat;
+            background-size: 2rem;
+            position: relative;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            color: #2e7cc4;
+            opacity: 0.9;
+            text-decoration: none;
+            margin-right: 4rem;
+            &.active{
+                background: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.95014 16.6142L8.93924 16.6035L8.92771 16.5935C6.31917 14.3298 4.20257 12.4687 2.73326 10.715C1.26936 8.96783 0.5 7.38687 0.5 5.68976C0.5 2.93383 2.66705 0.794312 5.5 0.794312C7.0541 0.794312 8.61605 1.51543 9.62138 2.68097L10 3.11991L10.3786 2.68097C11.384 1.51543 12.9459 0.794312 14.5 0.794312C17.3329 0.794312 19.5 2.93383 19.5 5.68976C19.5 7.38687 18.7306 8.96783 17.2667 10.715C15.7974 12.4687 13.6808 14.3298 11.0723 16.5935L11.0608 16.6035L11.0499 16.6142L10 17.6441L8.95014 16.6142Z' fill='%23FF4A4A' stroke='%23FF4A4A'/%3E%3C/svg%3E%0A") .9rem 50% no-repeat;
+                // background-size: 2rem;
+            }
+            &:before {
+                position: absolute;
+                content: '';
+                top: .5rem;
+                bottom: .5rem;
+                left: 4rem;
+                width: 1px;
+                background: #2e7cc4;
+                opacity: 0.1;
+            }
+            span {
+                padding: .9rem 2rem;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                border-left: 1px solid #2e7cc4;
+                margin-left: 2rem;
+            }
+        }
+        a.favorite {
+            display: flex;
+            align-items: center;
+            padding-left: 5rem;
+            font-weight: 500;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: #333;
+            background: url("data:image/svg+xml,%3Csvg width='40' opacit='0.3' height='41' viewBox='0 0 40 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20.1821' r='20' fill='%23F0F0F0'/%3E%3Cpath d='M25.652 12.6779C25.523 12.4927 25.3494 12.3573 25.1315 12.2714C24.9927 12.212 24.8472 12.1822 24.6952 12.1822V12.1821H14.3051C14.1531 12.1821 14.0078 12.2118 13.869 12.2712C13.6509 12.3571 13.4774 12.4927 13.3485 12.6778C13.2197 12.8628 13.1552 13.0676 13.1552 13.2924V26.0717C13.1552 26.2965 13.2197 26.5013 13.3485 26.6865C13.4774 26.8716 13.6509 27.0071 13.869 27.0929C14.0077 27.1523 14.1531 27.182 14.3051 27.182C14.6159 27.182 14.89 27.0729 15.128 26.855L19.5002 22.6512L23.8723 26.8551C24.1037 27.0663 24.378 27.172 24.6951 27.172C24.8604 27.172 25.0059 27.1458 25.1314 27.0929C25.3494 27.0071 25.523 26.8715 25.6519 26.6862C25.7808 26.5012 25.8451 26.2965 25.8451 26.0716V13.2926C25.8452 13.0678 25.7807 12.863 25.652 12.6779Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 0 50% no-repeat;            background-size: 4rem;
+            text-decoration: none;
+            min-height: 4rem;
+            &.active{
+                background: url("data:image/svg+xml,%3Csvg width='40' height='41' viewBox='0 0 40 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20.1821' r='20' fill='%23333333'/%3E%3Cpath d='M25.652 12.6779C25.523 12.4927 25.3494 12.3573 25.1315 12.2714C24.9927 12.212 24.8472 12.1822 24.6952 12.1822V12.1821H14.3051C14.1531 12.1821 14.0078 12.2118 13.869 12.2712C13.6509 12.3571 13.4774 12.4927 13.3485 12.6778C13.2197 12.8628 13.1552 13.0676 13.1552 13.2924V26.0717C13.1552 26.2965 13.2197 26.5013 13.3485 26.6865C13.4774 26.8716 13.6509 27.0071 13.869 27.0929C14.0077 27.1523 14.1531 27.182 14.3051 27.182C14.6159 27.182 14.89 27.0729 15.128 26.855L19.5002 22.6512L23.8723 26.8551C24.1037 27.0663 24.378 27.172 24.6951 27.172C24.8604 27.172 25.0059 27.1458 25.1314 27.0929C25.3494 27.0071 25.523 26.8715 25.6519 26.6862C25.7808 26.5012 25.8451 26.2965 25.8451 26.0716V13.2926C25.8452 13.0678 25.7807 12.863 25.652 12.6779Z' fill='white'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+            }
+        }
+    }
+    .all-news {
+        display: inline-block;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        padding-left: 1.8rem;
+        margin-top:2rem;
+        margin-bottom: 6rem;
+        text-decoration-line: underline;
+        color: #2e7cc4;
+        background: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 4.18213C12 3.81394 11.7008 3.51546 11.3316 3.51546L2.30603 3.51546L4.54825 1.32509C4.81197 1.06747 4.81639 0.645386 4.55811 0.382335C4.29984 0.119284 3.87668 0.114881 3.61296 0.3725L0.200712 3.70583C0.0723438 3.83123 -4.96951e-08 4.00291 -4.7564e-08 4.18213C-4.54328e-08 4.36135 0.0723438 4.53302 0.200712 4.65843L3.61296 7.99176C3.87668 8.24938 4.29984 8.24497 4.55811 7.98192C4.81639 7.71887 4.81197 7.29679 4.54825 7.03917L2.30603 4.8488L11.3316 4.8488C11.7008 4.8488 12 4.55032 12 4.18213Z' fill='%232E7CC4'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+        background-size: 1.2rem .9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-news .news_text br {
+        display: none;
+    }
+    .page-news h1 {
+        font-size: 3.6rem;
+        line-height: 110%;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .page-news .page_tags {
+        font-size: 1.6rem;
+    }
+
+    .page-news h1 {
+        font-size: 2.4rem;
+        line-height: 110%;
+        padding-bottom: 1rem;
+    }
+
+    .page-news .btns-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .page-news .btns-wrap a.like-it {
+        width: 100%;
+        margin-right: 0;
+        justify-content: space-between;
+        text-align: center;
+        padding-left: 9rem;
+    }
+
+    .page-news .btns-wrap a.favorite {
+        margin-top: 2rem;
+    }
+    .page-news .all-news {
+        margin-top:0;
+        margin-bottom: 4rem;
+    }
+}

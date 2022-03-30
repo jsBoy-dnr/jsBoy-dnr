@@ -1,0 +1,76 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/vacancy_block/vacancy_inner
+    include ../components/vacancy_block/vacancy_block
+    include ../components/user_card/user_card
+    include ../components/modals/modals
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/GUI.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/vacancy_block/vacancy_block.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Вакансии', 'Машинист тепловоза')
+                    +vacancy_inner
+                    h4.section__title Похожие вакансии:
+                    .jobs_list
+                        .jobs
+                            - for (var i = 0; i < 3; i++)
+                                .item
+                                    a.info.flex_wrap.justify(href='vacancy-inner.html')
+                                        h3 Машинист тепловоза
+                                        span от 60 000 ₽
+                                    .flex.map
+                                        a.pin(href="#!") пгт. Чегдомын, Хабаровский край
+                                        a.sort(href="#!") Добыча сырья
+                                    .price.flex_wrap.justify
+                                        .flex.tools
+                                            a.btn(href="#!") Откликнуться
+                                            .order
+                                                a.favorite(href="#!" data-toggle="tooltip" data-placement="bottom" title="Добавить вакансию в избранное")
+                                                a.share(href="#!" data-toggle="tooltip" data-placement="bottom" title="Поделиться в соц.сетях вакансией" data-popup-trigger="socialshare")
+                                                a.copy(href="#!" data-toggle="tooltip" data-placement="bottom" data-copy="https://testtesttest.test" data-copied="Скопировано!" data-err-copied="Не удалось скопировать!" title="Скопипровать пригласительную ссылку")
+                                                a.mail(href="mailt:testmail@testmail.com" data-toggle="tooltip" data-placement="bottom" title="Направить пригласительную ссылку письмом")
+                                                a.print(href="#!" data-toggle="tooltip" data-placement="bottom" title="Отправить на печать" onclick="window.print();")
+                                        data 03 марта 2020, 17:49
+        +footer_custom
+        +modals('otklik', 'Отклик на вакансию')
+        +modals('recomend-vacancy', 'Рекомендовать на вакансию')
+        +modals('socialshare', 'Поделиться вакансией')
+        +modals('friends', 'Программа «Приведи друга»')
+        +modals('submitfriends', 'Ваша рекомендация успешно зарегистрирована. Спасибо!')
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/vacancy_block/vacancy_block.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')

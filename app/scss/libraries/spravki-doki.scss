@@ -1,0 +1,101 @@
+.page-subtitle {
+    font-size: 1.5rem;
+}
+.form-in-page {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 60px 0;
+    h3{
+        text-align: center;
+    }
+    .form {
+        &-auth,
+        &-pin-edit {
+            .btn {
+                margin: auto;
+                display: flex;
+                font-size: 15px;
+            }
+            &-complete {
+                display: none;
+                h5 {
+                    font-weight: 500;
+                    opacity: .4;
+                    text-align: center;
+                }
+            }
+        }
+        &-field {
+            &-full {
+                position: relative;
+                display: flex;
+                align-items: center;
+                label {
+                    position: absolute;
+                    top: 10px;
+                    left: 20px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    transition: .3s;
+                    opacity: 0.8;
+                }
+                input {
+                    height: 54px;
+                    border-radius: 5px 0 0 5px;
+                    padding: 20px 20px 5px 20px;
+                    &:hover {
+                        &~label {
+                            opacity: 1;
+                        }
+                    }
+                    &:focus,
+                    &:valid {
+                        &~label {
+                            opacity: 1;
+                            top: 0;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .btn {
+                    height: 54px;
+                    padding: 0 30px;
+                    border-radius: 0 5px 5px 0;
+                    &:disabled,
+                    &.disabled {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+        &-pin-edit{
+            .form-field-full{
+                margin: 10px 0;
+                input{
+                    border-radius: 5px;
+                }
+            }
+
+        }
+    }
+}
+
+.spravka{
+    &_new{
+        .select-custom{
+            max-width: 150px;
+        }
+    }
+}
+.reg-conditions{
+    margin: 20px 0;
+    .checkbox__wrap{
+        margin-top: 2px;
+    }
+    p{
+        margin: 0;
+        font-size: 14px;
+    }
+}

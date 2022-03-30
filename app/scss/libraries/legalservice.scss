@@ -1,0 +1,47 @@
+.ls header.site-header.small{
+    padding-top:7rem;
+    &:before{
+        background: url(../../images/legalservice/legalmenubg.png) 0 0 no-repeat;
+        background-size: cover;
+        height: 85.6rem;
+    }
+    @media screen and (max-width: 700px) {
+        padding-top: 1.7rem;
+    }
+    .header-sub-menu-wrap{
+        position: relative;
+    }
+    & + .header_content--menu{
+        margin-bottom: 5.5rem!important;
+        .header-sub-menu {
+            justify-content: center;
+            @media(max-width:1024px){
+                justify-content: flex-start;
+            }
+        }
+        @media(max-width:1024px){
+            margin-bottom: 0!important;
+        }
+    }
+}
+.ls{
+    .users_wrap{
+        margin-bottom: 4.5rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .usercard{
+        min-height: 29rem;
+        a{
+            font-size: 1.4rem;
+            span{
+                color: #333;
+            }
+        }
+        span.desc{
+            min-height: auto;
+            margin-bottom: 1rem;
+        }
+    }
+}

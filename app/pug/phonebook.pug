@@ -1,0 +1,172 @@
+doctype html
+html(class="no-js", lang="en")
+
+  include ../components/head/head
+  include ../components/header_top/header_top_custom
+  include ../components/header_right/header_right
+  include ../components/header_notif/header_notif
+  include ../components/section_title/section_title
+  include ../components/section_title/title_bl
+  include ../components/top_filter/top_filter
+  include ../components/items_wrap/items_wrap
+  include ../components/pagelist/pagelist
+  include ../components/footer/footer_custom
+
+  head
+    +head
+    link(rel='stylesheet', href='../css/libraries/phonebook.css')
+    link(rel='stylesheet', href='../css/header_top/header_top.css')
+    link(rel='stylesheet', href='../css/header_right/header_right.css')
+    link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+    link(rel='stylesheet', href='../css/top_filter/top_filter.css')
+    link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+    link(rel='stylesheet', href='../css/footer/footer.css')
+  body
+    .site-wrapper.phonebook_page.template--aim
+      header.site-header.with-bg
+        +header_top_custom
+        +header_right
+      .blocks-wrapper.page-phonebook
+        .inner
+          +title_bl('titles/title_phonebook.png')
+          form(action)
+            .sort-bl
+              .search
+                select#search_all(name="search_all")
+                  option(value="Искать везде") Искать везде
+                  option(value="Тест 1") Тест 1
+                  option(value="Тест 2") Тест 2
+              .filterform__search
+                  input(type="text", placeholder="Поиск сотрудника по ФИО, должности, подразделению, телефону")
+                  button
+            .hide-show
+              input.custom-checkbox(type="checkbox" id="hs")
+              label(for="hs") Скрыть уволенных сотрудников
+
+          .sort-alphavite
+            a(href="#") А
+            a.active(href="#") Б
+            a(href="#") В
+            a(href="#") Г
+            a(href="#") Д
+            a(href="#") Е
+            a(href="#") Ё
+            a(href="#") Ж
+            a(href="#") З
+            a(href="#") И
+            a(href="#") Й
+            a(href="#") К
+            a(href="#") Л
+            a(href="#") М
+            a(href="#") Н
+            a(href="#") О
+            a(href="#") П
+            a(href="#") Р
+            a(href="#") С
+            a(href="#") Т
+            a(href="#") У
+            a(href="#") Ф
+            a(href="#") Х
+            a(href="#") Ц
+            a(href="#") Ч
+            a(href="#") Ш
+            a(href="#") Щ
+            a(href="#") Ы
+            a(href="#") Э
+            a(href="#") Ю
+            a(href="#") Я
+          .filter-phonebook
+            .fil-title
+              span Фильтр
+            .sort-alphavite-mobile
+              select#alphavite(name="alphavite")
+                option(value="Искать везде") Выбрать первую букву фамилии
+                option(value="А") А
+                option(value="Б") Б
+                option(value="В") В
+                option(value="Г") Г
+                option(value="Д") Д
+                option(value="Е") Е
+                option(value="Ё") Ё
+                option(value="Ж") Ж
+                option(value="З") З
+                option(value="И") И
+                option(value="Й") Й
+                option(value="К") К
+                option(value="Л") Л
+                option(value="М") М
+                option(value="Н") Н
+                option(value="О") О
+                option(value="П") П
+                option(value="Р") Р
+                option(value="С") С
+                option(value="Т") Т
+                option(value="У") У
+                option(value="Ф") Ф
+                option(value="Х") Х
+                option(value="Ц") Ц
+                option(value="Ш") Ш
+                option(value="Щ") Щ
+                option(value="Ы") Ы
+                option(value="Э") Э
+                option(value="Ю") Ю
+                option(value="Я") Я
+              select#city-bl(name="city-bl")
+                option(value="Все регионы (8 908)") Все регионы (8 908)
+                option(value="Москва (200)") Москва (200)
+                option(value="Алтайский край (200)") Алтайский край (200)
+                option(value="Забайкальский край (200)") Забайкальский край (100)
+                option(value="Кемеровская область (1230)") Кемеровская область (1230)
+                option(value="Новосибирская область (200)") Новосибирская область (200)
+                option(value="Приморский край (200)") Приморский край (200)
+                option(value="Республика Бурятия (200)") Республика Бурятия (200)
+          +top_filter
+          .city-bl
+            a.active(href="#")
+              | Все 
+              span (8908)
+            a(href="#")
+              | Москва 
+              span (200)
+            a(href="#")
+              | Алтайский край 
+              span (200)
+            a(href="#")
+              | Забайкальский край 
+              span (100)
+            a(href="#")
+              | Кемеровская область 
+              span (1230)
+            a(href="#")
+              | Новосибирская область 
+              span (200)
+            a(href="#")
+              | Приморский край 
+              span (200)
+            a(href="#")
+              | Республика Бурятия 
+              span (200)
+            a(href="#")
+              | Республика Тыва 
+              span (200)
+            a(href="#")
+              | Республика Хакасия 
+              span (200)
+            a(href="#")
+              | Хабаровский край 
+              span (200)
+          +items_wrap
+          +pagelist
+    +footer_custom
+
+    script(src='../js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+
+    script(src='../js/separate-js/jquery-2.2.4.min.js')
+    script(src='../js/separate-js/owl.carousel.min.js')
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+    script(src='../js/compiled.js')
+    script(src='../js/separate-js/retina.min.js')
+    script(src='../components/modals/modals.js')
+    script(src='../components/footer/footer.js')

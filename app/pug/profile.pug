@@ -1,0 +1,41 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/profile/profile
+    include ../components/footer/footer_custom
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/profile/profile.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header
+                +header_top_custom
+                +header_right
+            +profile
+        +footer_custom
+        +modals('thanks', 'Благодарности')
+        +modals('congrad', 'Поздравления')
+        +modals('awards', 'Награды')
+        +modals('photoedit', 'Выберите фото для загрузки в личный профиль')
+        +modals('removephoto', 'Вы уверены, что хотите удалить фото профиля?')
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')

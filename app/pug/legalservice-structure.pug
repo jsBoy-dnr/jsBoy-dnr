@@ -1,0 +1,121 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_ls_sub_menu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/user_card/user_card
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/legalservice.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ls
+            header.site-header.with-bg.small
+                +header_top_custom
+                +header_right
+            #header_content.header_content--menu
+                +lsheadermenu
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Юридическая служба', 'Структура юридической службы')
+                    +title_bl('titles/title_legalservice.png')
+                    .lk_ds_menu_2#lk_ds_menu_2
+                        span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Дирекция по юридическим вопросам
+                        span(onclick="menu2Change(this, 2)") Правовое управление
+                        span(onclick="menu2Change(this, 3)") Корпоративное управление
+                        span(onclick="menu2Change(this, 4)") Юридические службы станций
+                    #page_tabs.pageTabs
+                        - for (var i = 1; i < 4; i++)
+                            div.pageTabs__item(id='page_tab_'+i)
+                                .users_wrap
+                                    .usercard
+                                        img(src="../../images/temp/avatars/ava03.png", alt)
+                                        a(href="#!")
+                                            h3 Игнатова Юлия Юрьевна
+                                        span.desc Начальник управления
+                                        a(href="mailto:IgnatovaYY@sibgenco.ru") IgnatovaYY@sibgenco.ru, 
+                                            span 33762
+                                .users_wrap
+                                    .usercard__desc 
+                                        .title Отдел договорной и претензионно-исковой работы
+                                        .usercard
+                                            img(src='../../images/new_employees_image1.png', alt)
+                                            a(href="#!")
+                                                h3 Шемчук Юлия Владимировна
+                                            span.desc Начальник отдела
+                                            a(href="mailto:IgnatovaYY@sibgenco.ru") IgnatovaYY@sibgenco.ru, 
+                                                span 33762
+                                        ul
+                                            li Договорная работа по общехозяйственной
+                                            li Претензионно-исковая работа по общехозяйственной деятельности
+                                            li Трудовые отношения
+                                            li Закупочная деятельность 
+                                    .usercard__desc 
+                                        .title Отдел правового сопровождения энергоснабжения, работы с государственными органами
+                                        .usercard
+                                            img(src='../../images/new_employees_image1.png', alt)
+                                            a(href="#!")
+                                                h3 Шемчук Юлия Владимировна
+                                            span.desc Начальник отдела
+                                            a(href="mailto:IgnatovaYY@sibgenco.ru") IgnatovaYY@sibgenco.ru, 
+                                                span 33762
+                                        ul
+                                            li Договорная работа по общехозяйственной
+                                    .usercard__desc 
+                                        .title Отдел правового сопровождения деятельности в сфере эксплуатации теплосетевого хозяйства (г. Кемерово)
+                                        .usercard
+                                            img(src='../../images/new_employees_image1.png', alt)
+                                            a(href="#!")
+                                                h3 Шемчук Юлия Владимировна
+                                            span.desc Начальник отдела
+                                            a(href="mailto:IgnatovaYY@sibgenco.ru") IgnatovaYY@sibgenco.ru, 
+                                                span 33762
+                                        ul
+                                            li Договорная работа по общехозяйственной
+                                            li Трудовые отношения
+                                            li Закупочная деятельность 
+                                    .usercard__desc 
+                                        .title Отдел правового сопровождения деятельности в сфере эксплуатации теплосетевого хозяйства (г. Новокузнецк)
+                                        .usercard
+                                            img(src='../../images/new_employees_image1.png', alt)
+                                            a(href="#!")
+                                                h3 Шемчук Юлия Владимировна
+                                            span.desc Начальник отдела
+                                            a(href="mailto:IgnatovaYY@sibgenco.ru") IgnatovaYY@sibgenco.ru, 
+                                                span 33762
+                                        ul
+                                            li Договорная работа по общехозяйственной
+                                            li Претензионно-исковая работа по общехозяйственной деятельности
+                                            li Трудовые отношения
+                                            li Закупочная деятельность 
+
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

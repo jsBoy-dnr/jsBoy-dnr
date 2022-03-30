@@ -1,0 +1,12 @@
+header.site-header.small {
+  padding-top: 7rem; }
+  @media screen and (max-width: 700px) {
+    header.site-header.small {
+      padding-top: 1.7rem; } }
+  header.site-header.small .header-sub-menu-wrap {
+    position: relative; }
+  header.site-header.small + .header_content--menu {
+    margin-bottom: 5.5rem !important; }
+    @media (max-width: 1024px) {
+      header.site-header.small + .header_content--menu {
+        margin-bottom: 0 !important; } }

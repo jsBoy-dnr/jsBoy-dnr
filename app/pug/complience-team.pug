@@ -1,0 +1,128 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/user_card/user_card
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/libraries/compliance.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.compliance
+            header.site-header.with-bg.small
+                +header_top_custom
+                +header_right
+            #header_content
+                .header_content_top_menu_wrapper
+                    .header_content_top_menu
+                        ul#header_content_top_menu
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Комплаенс-обучение
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.selected(href="#") Комплаенс-команда
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Санкционный комплаенс
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Банк знаний
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Портал комплаенс-менеджера
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Комплаенс', 'Комплаенс-команда')
+                    section.compliance_header
+                        img(src="../../images/compliance/compliance-aim.svg", alt)
+                        span Помогаем предотвратить, найти и устранить проблемы
+                    .safety_content_top.safety_content_top--mod
+                        .safety_content_top_item
+                            img(src="../../images/compliance/icon_n022.svg")
+                            span Памятки
+                            i План компании по совершенству в каждом направлении
+                            a.safety_content_top_footer(href="#")
+                                span Подробнее
+                                    img(src="../../images/icons/small-icon-right.svg")
+                        .safety_content_top_item
+                            img(src="../../images/compliance/icon_n021.svg")
+                            span Онлайн-курс Комплаенс
+                            i Повышение ваших знаний в наиболее важных сферах рабочего процесса. Быстро. Качественно. Интересно.
+                            a.safety_content_top_footer(href="#")
+                                span Подробнее
+                                    img(src="../../images/icons/small-icon-right.svg")
+                        .safety_content_top_item
+                            img(src="../../images/compliance/icon_n023.svg")
+                            span Стратегия
+                            i План компании по совершенству в каждом направлении
+                            a.safety_content_top_footer(href="#")
+                                span Подробнее
+                                    img(src="../../images/icons/small-icon-right.svg")
+                    
+                    section.section.compliance_team
+                        +title_bl('titles/compliance_title.png')
+                        .people_filter_block
+                                .lk_ds_menu_2#lk_ds_menu_2
+                                    span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Бурятия (3)
+                                    span(onclick="menu2Change(this, 2)") Забайкалье (4)
+                                    span(onclick="menu2Change(this, 3)") Краснодарский край (3)
+                                    span(onclick="menu2Change(this, 4)") Кузбасс (4)
+                                    span(onclick="menu2Change(this, 5)") Забайкалье (4)
+                                    span(onclick="menu2Change(this, 6)") Москва (4)
+                                    span(onclick="menu2Change(this, 7)") Мурманск (4)
+                                    span(onclick="menu2Change(this, 8)") Приморье (4)
+                                    span(onclick="menu2Change(this, 9)") Хакасия (4)
+                                    span(onclick="menu2Change(this, 10)") Хабаровский край (4)
+                                #page_tabs.pageTabs
+                                    div.pageTabs__item(id='page_tab_1' style="display: block;")
+                                        .users_wrap
+                                            - for (var e = 0; e < 13; e++)
+                                                .usercard
+                                                    img(src="../../images/temp/avatars/ava03.png", alt)
+                                                    a(href="#!")
+                                                        h3 Васюкович Юлия Анатольевна
+                                                    span.position Директор по подбору персонала
+                                                    a.map(href="#!") АО "СУЭК-Красноярск
+                                                    hr.gray
+                                                    a.go(href="#!") НАПИСАТЬ
+                                    - for (var i = 2; i < 10; i++)
+                                        div.pageTabs__item(id='page_tab_'+i)
+                                            .users_wrap
+                                                - for (var e = 0; e < 13; e++)
+                                                    .usercard
+                                                        img(src="../../images/temp/avatars/ava03.png", alt)
+                                                        a(href="#!")
+                                                            h3 Васюкович Юлия Анатольевна
+                                                        span.position Директор по подбору персонала
+                                                        a.map(href="#!") АО "СУЭК-Красноярск
+                                                        hr.gray
+                                                        a.go(href="#!") НАПИСАТЬ
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

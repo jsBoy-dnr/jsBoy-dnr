@@ -1,0 +1,41 @@
+.jobs_list.news-block.news-block-new.flex_wrap.justify(style="padding-bottom: 0px;")
+    .jobs
+        - for (var i = 0; i < 7; i++)
+            .item
+                span.job_type Внутренний отбор
+                a.info.flex_wrap.justify(href='vacancy-inner.html')
+                    h3 Машинист тепловоза
+                    span от 60 000 ₽
+                .flex.map
+                    a.pin(href="#!") пгт. Чегдомын, Хабаровский край
+                    a.sort(href="#!") Добыча сырья
+                .price.flex_wrap.justify
+                    .flex.tools
+                        a.btn(href="#!") Откликнуться
+                        .order
+                            a.favorite(href="#!" data-toggle="tooltip" data-placement="bottom" title="Добавить вакансию в избранное")
+                            a.share(href="#!" data-toggle="tooltip" data-placement="bottom" title="Поделиться в соц.сетях вакансией" data-popup-trigger="socialshare")
+                            a.copy(href="#!" data-toggle="tooltip" data-placement="bottom" data-copy="https://testtesttest.test" data-copied="Скопировано!" data-err-copied="Не удалось скопировать!" title="Скопипровать пригласительную ссылку")
+                            a.mail(href="mailt:testmail@testmail.com" data-toggle="tooltip" data-placement="bottom" title="Направить пригласительную ссылку письмом")
+                            a.print(href="#!" data-toggle="tooltip" data-placement="bottom" title="Отправить на печать" onclick="window.print();")
+                    data 03 марта 2020, 17:49
+    .jobs_support
+        h2 Подбор и развитие персонала
+
+    .usercard
+        img(src="../../images/temp/avatars/ava03.png", alt)
+        a(href="#!")
+            h3 Васюкович Юлия Анатольевна
+        span.position Директор по подбору персонала
+        a.map(href="#!") АО "СУЭК-Красноярск
+        .phones
+            a(href="tel:+7 (495) 911-12-10") +7 (495) 911-12-10
+            .mobile-code
+                a.code(href="#") 3128
+
+        .skype
+            a(href="mailto:VasukovichUA@suek.ru") VasukovichUA@suek.ru
+        .whatsap
+            a(href="tel:+7 (495) 911-12-10") WhatsApp
+        //- hr.gray
+        //- a.go(href="#!") НАПИСАТЬ

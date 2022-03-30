@@ -1,0 +1,9 @@
+mixin breadcrumbs(data, text)
+    .page-path
+        a(href="/") Главная
+        if data != ''
+            |  / 
+            a(href="#") #{data}
+        if text != ''
+            |  / 
+            span #{text}

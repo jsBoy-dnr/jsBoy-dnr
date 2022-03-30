@@ -1,0 +1,206 @@
+.switch-tmpl{
+    font-size: 1.6rem;
+    position: fixed;
+    top:30%;
+    left:0;
+    padding: 5px 15px;
+    background-color: rgba(0,0,0,.5);
+    height: auto;
+    color:white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: auto;
+    z-index: 11111;
+    box-sizing: border-box;
+    a{
+        color: rgb(0, 204, 255);
+        opacity: .65;
+        margin-left:5px;
+        text-decoration: none;
+        &:hover{
+            opacity: .85;
+            text-decoration: underline;
+        }
+        &:active,
+        &:focus,
+        &:target{
+            opacity: 1;
+        }
+    }
+    @media all and (max-width: 700px) {
+        font-size: 1.4rem;
+    }
+}
+
+.eurochem{
+    .template--aim{
+        .btn{
+            &.btn-primary{
+                background: linear-gradient(225deg, #002e45 0%, #002e45 100%);
+                color:#fff;
+                border:0;
+                &:hover{
+                    background-color: #002e45!important;
+                    border:0;
+                    color:#fdc600;
+                }
+            }
+        }
+    }
+}
+.site-header.site-header-eurochem,
+.site-header.site-header-ntk,
+.site-header.site-header-suek,
+.site-header.site-header-sgk,
+.site-header.site-header-default{
+    &.with-bg {
+        padding-top: 25rem;
+        box-sizing: border-box;
+        .header-top{
+            min-height: 6rem;
+        }
+        @media screen and (max-width: 1024px) {
+            z-index: auto;
+            padding-top: 12rem;
+            box-sizing: border-box;
+        }
+    }
+    .header-time{
+        padding-left:7rem;
+        // padding-right: 0;
+    }
+    .site-logo{
+        @media (max-width:480px){
+            margin-right: 2rem;
+        }
+    }
+    .account-block .account-block-title {
+        margin-right: 2rem;
+        @media (max-width:1024px){
+            margin-right: 0;
+        }
+        .name{
+            background: none;
+        }
+    }
+}
+.site-header.site-header-eurochem .header-top{
+    background:#002e45;
+    background-color:#002e45;
+}
+// .site-header.site-header-sgk .header-top{
+//     background:#f2f2f2;
+//     background-color:#f2f2f2;
+// }
+
+// .site-header.site-header-sgk .header-time{
+//     color:#42474f;
+// }
+// .site-header.site-header-sgk .account-block .account-block-title .name {
+//     color:#42474f;
+// }
+// .site-header.site-header-ntk .header-top{
+//     background:#2c6d9e;
+//     background-color:#2c6d9e;
+// }
+.site-header.site-header-eurochem .settings-block,
+.site-header.site-header-eurochem .menu-burger,
+.site-header.site-header-eurochem .search-block,
+.site-header.site-header-eurochem .notification-block,
+.site-header.site-header-ntk .settings-block,
+.site-header.site-header-ntk .menu-burger,
+.site-header.site-header-ntk .search-block,
+.site-header.site-header-ntk .notification-block,
+.site-header.site-header-suek .settings-block,
+.site-header.site-header-suek .menu-burger,
+.site-header.site-header-suek .search-block,
+.site-header.site-header-suek .notification-block,
+.site-header.site-header-sgk .settings-block,
+.site-header.site-header-sgk .menu-burger,
+.site-header.site-header-sgk .search-block,
+.site-header.site-header-sgk .notification-block{
+    display: none;
+}
+.site-header.site-header-eurochem .account-block .account-block-title .name,
+.site-header.site-header-ntk .account-block .account-block-title .name,
+.site-header.site-header-suek .account-block .account-block-title .name,
+.site-header.site-header-sgk .account-block .account-block-title .name{
+    background: none;
+}
+// .site-header.site-header-default #sitelogo_eurochem,
+// .site-header.site-header-eurochem #sitelogo_default{
+//     display:none;
+// }
+
+.site-header.site-header-eurochem:before {
+    background: url(../../images/eurochem_bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+}
+// .site-header-eurochem .menu-burger {
+//     height: 100%;
+//     background: #002e45;
+//     border-right: 1px solid rgba(255,255,255, .2);
+// }
+// // .site-footer.site-footer-default #media_eurochem,
+// // .site-footer.site-footer-eurochem #media_default,
+// // .site-footer.site-footer-default #link_eurochem,
+// // .site-footer.site-footer-eurochem #link_default,
+// // .site-footer.site-footer-default #phones_eurochem,
+// // .site-footer.site-footer-eurochem #phones_default{
+// //     display:none;
+// // }
+// .site-header-eurochem .menu-burger:before,
+// .site-header-eurochem .menu-burger .lines:before,
+// .site-header-eurochem .menu-burger .lines:after{
+//     background: #fdc600;
+// }
+.site-footer.site-footer-eurochem .footer-in {
+    background: #002e45;
+    border-top: 11px solid #fdc600;
+}
+.site-footer.site-footer-sgk .footer-in {
+    background: #343a4a;
+}
+.site-footer.site-footer-ntk .footer-in {
+    background: #4A4D4F;
+}
+// .site-footer.site-footer-eurochem .footer-in .social{
+//     display:none;
+// }
+// .site-footer.site-footer-eurochem .footer-in .link-site{
+//     margin-left:20px;
+// }
+.site-footer.site-footer-eurochem .footer-in .phones a{
+    color:#fdc600;
+}
+.site-footer.site-footer-sgk .footer-in .copyright,
+.site-footer.site-footer-sgk .footer-in a.agreement,
+.site-footer.site-footer-sgk .footer-in .link-site a,
+.site-footer.site-footer-sgk .footer-in .phones .title,
+.site-footer.site-footer-ntk .footer-in .copyright,
+.site-footer.site-footer-ntk .footer-in a.agreement,
+.site-footer.site-footer-ntk .footer-in .link-site a,
+.site-footer.site-footer-ntk .footer-in .phones .title,
+.site-footer.site-footer-eurochem .footer-in .copyright,
+.site-footer.site-footer-eurochem .footer-in a.agreement,
+.site-footer.site-footer-eurochem .footer-in .link-site a,
+.site-footer.site-footer-eurochem .footer-in .phones .title{
+    color:white;
+}
+
+@media all and (max-width: 1024px){
+    .site-footer.site-footer-eurochem .footer-in {
+        justify-content: center;
+    }
+    .site-header.with-bg.with-nav.outdoor .site-logo{
+        margin:0 auto;
+    }
+}
+@media all and (max-width: 700px) {
+    .site-header-eurochem .site-logo img{
+        max-width: 100px;
+    }
+    .site-footer.site-footer-eurochem .footer-in .link-site{
+        margin-left:0;
+    }
+}

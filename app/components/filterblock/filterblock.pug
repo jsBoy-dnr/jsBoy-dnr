@@ -1,0 +1,167 @@
+mixin filterblock()
+    .filterBlock.selectStyler
+        .filterBlock__title Расширенный поиск:
+        hr
+        .form
+            .flex-top
+                .form-group.w50
+                    .form-field
+                        label.custom-input_label Ключевые слова
+                        input.custom-input(type="text", placeholder="Например, бухгалтер")
+                    .form-field
+                        label.custom-input_label Искать только
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox", checked)
+                            label(for="") в названии вакансии
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox", checked)
+                            label(for="") в названии компании
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox", checked)
+                            label(for="") в описании вакансии
+                    .form-field 
+                        select.select-custom(name="Профессиональная область")
+                            option Профессиональная область
+                            option Презентация
+                            option Переговоры
+                            option Прочее
+                    .form-field 
+                        select.select-custom(name="Отрасль компании")
+                            option Отрасль компании
+                            option Презентация
+                            option Переговоры
+                            option Прочее
+                    .form-field 
+                        select.select-custom(name="Регион")
+                            option Регион
+                            option Презентация
+                            option Переговоры
+                            option Прочее
+                    .form-field
+                        label.custom-input_label Уровень дохода
+                        .flex
+                            input.custom-input.mr-5(type="text", placeholder="")
+                            select.select-custom(name="руб.")
+                                option руб.
+                                option дол.
+                        .checkbox__wrap.mt-4
+                            input.custom-checkbox(type="checkbox", value="Показывать только вакансии с указанным уровнем дохода")
+                            label(for="") Показывать только вакансии с указанным уровнем дохода
+                .form-group.w50
+                    .form-field
+                        label.custom-input_label Требуемый опыт работы
+                        .radiobtns
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r1', name="type", value="Не имеет значения", checked)
+                                label(for="r1") Не имеет значения
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r2', name="type", value="Нет опыта")
+                                label(for="r2") Нет опыта
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r3', name="type", value="От 1 года до 3 лет")
+                                label(for="r3") От 1 года до 3 лет
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r4', name="type", value="в описании вакансии")
+                                label(for="r4") От 3 до 6 лет
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r5', name="type", value="в описании вакансии")
+                                label(for="r5") Более 6 лет
+                    .form-field
+                        label.custom-input_label Тип занятости
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox", checked)
+                            label(for="") Полная занятость
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Частичная занятость
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Проектная работа/разовое задание
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Волонтерство
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Стажировка
+                    .form-field
+                        label.custom-input_label График работы
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox", checked)
+                            label(for="") Полный день
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Сменный график
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Гибкий график
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Удаленная работа
+                        .checkbox__wrap
+                            input.custom-checkbox(type="checkbox")
+                            label(for="") Вахтовый метод
+            hr
+            .flex-top
+                .form-group.w50
+                    .form-field
+                        label.custom-input_label Сортировка
+                        .radiobtns
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r6', name="type", value="Не имеет значения", checked)
+                                label(for="r6") Не имеет значения
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r7', name="type", value="Нет опыта")
+                                label(for="r7") Нет опыта
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r8', name="type", value="От 1 года до 3 лет")
+                                label(for="r8") От 1 года до 3 лет
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r9', name="type", value="в описании вакансии")
+                                label(for="r9") От 3 до 6 лет
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r10', name="type", value="в описании вакансии")
+                                label(for="r10") Более 6 лет
+                .form-group.w50
+                    .form-field
+                        label.custom-input_label Выводить
+                        .radiobtns
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r11', name="type", value="За всё время", checked)
+                                label(for="r11") За всё время
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r12', name="type", value="За месяц")
+                                label(for="r12") За месяц
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r13', name="type", value="За неделю")
+                                label(for="r13") За неделю
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r14', name="type", value="За последние три дня")
+                                label(for="r14") За последние три дня
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r15', name="type", value="За сутки")
+                                label(for="r15") За сутки
+                    .form-field
+                        label.custom-input_label Показывать на странице
+                        .radiobtns
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r16', name="type", value="20 вакансий", checked)
+                                label(for="r16") 20 вакансий
+                            .radiobtns_item
+                                input.custom-radio(type="radio", id='r17', name="type", value="50 вакансий")
+                                label(for="r17") 50 вакансий
+
+            button.btn.btn-primary
+                .btn_inner Найти
+        hr
+        .form.filterBlock__subscribe
+            .filterBlock__title Оформите подписку на обновления:
+            .form-group 
+                .form-field
+                    select.select-custom(name="Профессиональная область")
+                        option Профессиональная область
+                        option test
+                    .checkbox__wrap.mt-4
+                        input.custom-checkbox(type="checkbox", value="Оформить подписку на основе выбранной фильтрации")
+                        label(for="") Оформить подписку на основе выбранной фильтрации
+            button.btn.btn-primary
+                .btn_inner Подписаться

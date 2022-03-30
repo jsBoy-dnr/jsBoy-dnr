@@ -1,0 +1,105 @@
+mixin my_tasks_block_notif()
+    .my_tasks_block__body
+        .block-data-tab#initTabs
+            ul.block-tabs
+                li.active-tab.first
+                    a(href="#noti-tabs-0")
+                        | Новые 
+                        span (4)
+                li.second
+                    a(href="#noti-tabs-1")
+                        | Просмотренные 
+                        span (3)
+            .block-desc
+                .desc-area.active-area#noti-tabs-0
+                    .table
+                        .table__wrap
+                            .table-header
+                                .date Дата
+                                .title Тема | Сервис
+                                .desc Уведомление
+                                .goto
+                            .table-body
+                                .table-row
+                                    .date 01.09.2021
+                                    .title.sb Отпускной план
+                                    .desc До 1.10.2021 заполните график вашего отпуска на 2022 год.
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 21.03.2021
+                                    .title.sb Заявка на отпуск
+                                    .desc Ваша заявка на отпуск подписана одобрена руководителем подразделения. Для просмотра заявки и делай вашего отпуска перейдите в раздел Мои сервисы/ Заявка на отпуск.
+                                    .goto
+                                        a.btn.disabled(href)
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 31.12.2021
+                                    .title.sb Вопросы по задаче №1232
+                                    .desc.
+                                        По задаче №1232 появились новые вопросы. Срок предоставления материалов - …
+    
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 09.02.2021
+                                    .title.sb Кодекс этики
+                                    .desc.
+                                        Поступило новое обращение №1232. Предоставить решение: до 13.02.2021…
+    
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                .desc-area#noti-tabs-1
+                    .table
+                        .table__wrap
+                            .table-header
+                                .date Дата
+                                .title Тема | Сервис
+                                .desc Уведомление
+                                .goto
+                            .table-body
+                                .table-row
+                                    .date 01.09.2021
+                                    .title.sb Отпускной план
+                                    .desc До 01.10.2021 заполните график вашего отпуска на 2022 год.
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 21.03.2021
+                                    .title.sb Заявка на отпуск
+                                    .desc Ваша заявка на отпуск подписана одобрена руководителем подразделения. Для просмотра заявки и делай вашего отпуска перейдите в раздел Мои сервисы/ Заявка на отпуск.
+                                    .goto
+                                        a.btn.disabled(href)
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 31.12.2021
+                                    .title.sb Вопросы по задаче №1232
+                                    .desc.
+                                        По задаче №1232 появились новые вопросы. Срок предоставления материалов - …
+    
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+                                .table-row
+                                    .date 09.02.2021
+                                    .title.sb Кодекс этики
+                                    .desc.
+                                        Поступило новое обращение №1232. Предоставить решение: до 13.02.2021…
+    
+                                    .goto
+                                        a.btn(href="#!")
+                                            svg.w14
+                                                use(href="../../images/sprite.svg#i_arrow")
+        .more-link
+            a(href="/my-notifications.html") Все уведомления

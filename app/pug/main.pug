@@ -1,0 +1,86 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/mainslider/mainslider
+    include ../components/leftmenu_mainslider/leftmenu
+    include ../components/newslist/newslist
+    include ../components/quiz-block/quiz-block
+    include ../components/information-block/information-block
+    include ../components/map_rus/map_rus
+    include ../components/staff/staff
+    include ../components/event-block/event-block
+    include ../components/reports-and-publ/reports-and-publ
+    include ../components/calendar/calendar
+    include ../components/footer/footer_custom
+    include ../components/notify/notify
+    include ../components/formwrapper/formwrapper
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/mainslider/mainslider.css')
+        link(rel='stylesheet', href='../css/leftmenu_mainslider/leftmenu.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/map_rus/map_rus.css')
+        link(rel='stylesheet', href='../css/quiz-block/quiz-block.css')
+        link(rel='stylesheet', href='../css/staff/staff.css')
+        link(rel='stylesheet', href='../css/event-block/event-block.css')
+        link(rel='stylesheet', href='../css/reports-and-publ/reports-and-publ.css')
+        link(rel='stylesheet', href='../css/formwrapper/formwrapper.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+        link(rel='stylesheet', href='../css/notify/notify.css')
+        link(rel='stylesheet', href='../css/libraries/start-page.css')
+        //- link(rel='stylesheet', href='../css/libraries/jquery.mcustomscrollbar.css')
+    body
+        .site-wrapper.innpage.template--aim
+            header.site-header
+                +header_top_custom
+                +header_right
+                .header-bottom
+                    +mainslider
+                    +leftmenu
+            .blocks-wrapper.mainpage
+                .inner
+                    +newslist
+                    +map_rus
+                    +information-block
+                    //- +quiz-block
+                    +staff
+                    //- +event-block
+                    +reports-and-publ
+        +footer_custom
+        +formwrapper
+        +calendar
+        +modals('form-wrapper1_1', 'Сообщение о нарушении норм соответствия')
+        +modals('typical_form', 'Пожелания по работе корпоративного портала')
+        +modals('typical_form_v2', 'Обращение по комплаенс')
+        +notify
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        //- script(src='../js/separate-js/jquery.mcustomscrollbar.concat.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/mainslider/mainslider.js')
+        script(src='../components/map_rus/map_rus.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/staff/staff.js')
+        script(src='../components/reports-and-publ/reports-and-publ.js')
+        //- script(src='../components/calendar/calendar.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')

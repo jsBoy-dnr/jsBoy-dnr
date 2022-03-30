@@ -1,0 +1,440 @@
+.faq * {
+  box-sizing: border-box; }
+
+.faq__inner {
+  padding: 0;
+  padding-bottom: 6rem;
+  width: 100%;
+  max-width: 77rem;
+  margin: 0 auto; }
+  .faq__inner:last-child {
+    border-bottom: none;
+    padding-bottom: 0; }
+    @media screen and (max-width: 767px) {
+      .faq__inner:last-child {
+        padding-bottom: 3rem; } }
+  @media screen and (max-width: 767px) {
+    .faq__inner {
+      padding-bottom: 3rem; } }
+
+.faq h2 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 0 0 3rem; }
+
+.faq-item {
+  transition: .3s;
+  overflow: hidden;
+  border-bottom: 1px solid #B8B9BA; }
+  .faq-item:first-child {
+    border-top: 1px solid #B8B9BA; }
+  .faq-item__header {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #333333;
+    opacity: .95;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0; }
+    .faq-item__header button {
+      padding: 0;
+      margin: 3rem 0 3rem 3rem;
+      height: 3.4rem;
+      background-color: transparent !important; }
+      .faq-item__header button span {
+        background-color: #333;
+        border: 1px solid #333;
+        width: 3.4rem;
+        min-width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 3.4rem;
+        position: relative;
+        transition: .3s;
+        display: inline-block; }
+        .faq-item__header button span:hover {
+          background-color: #f6c358;
+          border-color: #f6c358; }
+        .faq-item__header button span::after {
+          content: "";
+          display: block;
+          width: .2rem;
+          height: 2.2rem;
+          background-color: #fff;
+          margin: auto;
+          transition: .3s;
+          top: .5rem;
+          position: relative; }
+        .faq-item__header button span::before {
+          content: "";
+          display: block;
+          height: .2rem;
+          width: 2.2rem;
+          background-color: #fff;
+          margin: auto;
+          position: absolute;
+          top: 1.5rem;
+          left: .5rem;
+          transition: .3s; }
+    .faq-item__header p {
+      margin: 0;
+      padding: 2rem 6.4rem 2rem 0; }
+  .faq-item__body {
+    font-size: 1.6rem;
+    line-height: 140%;
+    color: #333333;
+    opacity: 0.9; }
+    .faq-item__body button {
+      display: block; }
+    .faq-item__body .content {
+      padding-bottom: 2rem;
+      width: calc(100% - 10rem); }
+      .faq-item__body .content .btn-with-arrow {
+        background-color: transparent;
+        margin-bottom: 1.5rem; }
+      .faq-item__body .content p {
+        margin-top: 0; }
+  .faq-item.open .btn_pluse span {
+    background-color: #fff; }
+    .faq-item.open .btn_pluse span:before, .faq-item.open .btn_pluse span:after {
+      background-color: #333;
+      transform: rotate(-45deg); }
+    .faq-item.open .btn_pluse span:hover {
+      background: transparent; }
+      .faq-item.open .btn_pluse span:hover:before, .faq-item.open .btn_pluse span:hover:after {
+        background-color: #f6c358; }
+
+.filter_btn.btn {
+  display: block;
+  display: none;
+  width: 100%;
+  border-radius: 5px;
+  background: #F5F5F5; }
+  .filter_btn.btn .btn_inner {
+    height: 4rem;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    position: relative; }
+  .filter_btn.btn p {
+    margin: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: left; }
+  .filter_btn.btn .i_filter {
+    position: relative;
+    width: 1rem;
+    height: .2rem;
+    background: #333;
+    border-radius: 4px; }
+    .filter_btn.btn .i_filter:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1.6rem;
+      height: .2rem;
+      border-radius: 4px;
+      top: -.5rem;
+      left: -.3rem;
+      background: inherit;
+      transition: .3s; }
+    .filter_btn.btn .i_filter:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: .4rem;
+      height: .2rem;
+      border-radius: 4px;
+      bottom: -.5rem;
+      left: .3rem;
+      background: inherit;
+      transition: .3s; }
+  .filter_btn.btn.open .i_filter:before {
+    width: .4rem;
+    left: .3rem; }
+  .filter_btn.btn.open .i_filter:after {
+    width: 1.6rem;
+    left: -3px; }
+  .filter_btn.btn.open + .filter_wrap {
+    padding: 1rem 0;
+    height: auto;
+    opacity: 1;
+    overflow: inherit; }
+
+.filter_wrap {
+  padding: 0;
+  padding-bottom: 4rem;
+  transition: .3s; }
+
+@media screen and (min-width: 1025px) {
+  .faq-sel {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
+    padding: 2rem 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .faq-sel hr {
+      display: block;
+      width: 1px;
+      height: 4rem;
+      background: #F0F0F0;
+      margin: auto 1rem;
+      border: none; }
+    .faq-sel__item {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 25%; }
+      .faq-sel__item.of-year {
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative; }
+        .faq-sel__item.of-year .yearpicker input, .faq-sel__item.of-year .yearpicker textarea {
+          font-weight: 400;
+          text-transform: unset;
+          opacity: 0;
+          position: relative;
+          z-index: 2;
+          max-width: 12.7rem; }
+        .faq-sel__item.of-year .yearpicker .arrow {
+          opacity: 0; }
+          .faq-sel__item.of-year .yearpicker .arrow:after {
+            width: 1.2rem;
+            height: 1.2rem;
+            background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M11 1.5L6 6.5L1 1.5' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+            transform: unset; }
+        .faq-sel__item.of-year .yearpicker_placeholder {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          font-size: 1.6rem;
+          font-weight: 400;
+          text-transform: unset;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          width: 13rem; }
+          .faq-sel__item.of-year .yearpicker_placeholder:after {
+            content: "";
+            display: block;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin-left: 1rem;
+            background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M11 1.5L6 6.5L1 1.5' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+            transform: unset; }
+      .faq-sel__item:first-child {
+        width: 18%;
+        padding-right: 4%; }
+        .faq-sel__item:first-child .jq-selectbox__select {
+          -ms-flex-pack: start;
+          justify-content: flex-start; }
+          .faq-sel__item:first-child .jq-selectbox__select-text {
+            padding-left: 0; }
+      .faq-sel__item:last-child {
+        width: 20%;
+        padding-left: 4%; }
+        .faq-sel__item:last-child .jq-selectbox__select {
+          -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .faq .jq-selectbox.jqselect {
+    width: 100%; }
+  .faq .jq-selectbox__select {
+    background: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .faq .jq-selectbox__select-text {
+      padding: 1rem 1rem;
+      padding-right: 3rem;
+      width: auto !important;
+      font-size: 1.6rem;
+      line-height: normal;
+      white-space: nowrap;
+      max-width: 19rem;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  .faq .jq-selectbox__trigger {
+    position: relative; }
+  .faq .jq-selectbox__dropdown {
+    width: 100%;
+    top: calc(100% + 2rem) !important; } }
+
+@media screen and (max-width: 1024px) {
+  .faq {
+    margin-bottom: -30px; }
+    .faq .section-title img {
+      max-height: 73px; }
+    .faq-sel {
+      padding: 2rem 0;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      .faq-sel hr {
+        display: none; }
+      .faq-sel__item {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 25%;
+        padding: 5px; }
+        .faq-sel__item.of-year:hover, .faq-sel__item.of-year:focus {
+          position: relative;
+          z-index: 110; }
+        .faq-sel__item.of-year .yearpicker {
+          background: #f5f5f5;
+          border-radius: 5px;
+          width: 100%; }
+          .faq-sel__item.of-year .yearpicker input {
+            height: 50px;
+            opacity: 0; }
+          .faq-sel__item.of-year .yearpicker .arrow {
+            opacity: 0; }
+          .faq-sel__item.of-year .yearpicker-container {
+            top: 57px; }
+          .faq-sel__item.of-year .yearpicker_placeholder {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            padding: 15px;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+            .faq-sel__item.of-year .yearpicker_placeholder:after {
+              content: "";
+              display: block;
+              width: 1.2rem;
+              height: 1.2rem;
+              margin-left: 1rem;
+              background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M11 1.5L6 6.5L1 1.5' stroke='%23333333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+              transform: unset; }
+    .faq-item__header {
+      position: relative;
+      min-height: 94px; }
+      .faq-item__header button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        min-height: 94px; }
+        .faq-item__header button span {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0; }
+    .faq-item__body .content {
+      width: 100%; }
+    .faq h2 {
+      margin: 5px 0 20px; }
+    .faq .jq-selectbox.jqselect {
+      width: 100%; }
+    .faq .jq-selectbox__select {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      height: 50px;
+      background: #F5F5F5;
+      padding: 0 30px 0 15px; }
+      .faq .jq-selectbox__select-text {
+        height: 50px;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        font-size: 1.2rem;
+        line-height: 1.2; }
+        .faq .jq-selectbox__select-text:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 50px;
+          width: 30px;
+          background: linear-gradient(90deg, #F5F5F500 0%, #f5f5f5 100%); }
+    .faq .jq-selectbox__dropdown ul li {
+      padding: 8px 20px;
+      font-size: 1.2rem;
+      line-height: 1.2; } }
+
+@media screen and (max-width: 767px) {
+  .faq {
+    margin-bottom: -30px; }
+    .faq .section-title img {
+      max-height: 43px !important; }
+    .faq-sel {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 0; }
+      .faq-sel hr {
+        display: none; }
+      .faq-sel__item {
+        width: 100%;
+        padding: 5px; }
+    .faq-item__header button {
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      margin-left: 15px;
+      margin: auto;
+      width: 100%; }
+      .faq-item__header button::after {
+        height: 16px; }
+      .faq-item__header button::before {
+        width: 1.6rem;
+        top: 10px;
+        left: .3rem; }
+    .faq h2 {
+      font-size: 24px;
+      line-height: 29px; }
+    .faq .jq-selectbox.jqselect {
+      width: 100%; }
+    .faq .jq-selectbox__select-text:after {
+      width: 20px; }
+    .faq .jq-selectbox__dropdown ul li {
+      padding: 8px 15px;
+      font-size: 1.2rem;
+      line-height: 1.2; }
+  .filter_btn.btn {
+    display: block; }
+  .filter_wrap {
+    height: 0;
+    opacity: 0;
+    overflow: hidden; } }

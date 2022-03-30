@@ -1,0 +1,123 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/top_slider/top_slider
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/user_card/user_card
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/libraries/aboutus.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+            #bk_1
+            #bk_2
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content
+                #header_content_main_title Моя 
+                    span Компания
+                +top_slider
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Моя Компания')
+                    .safety_content_top
+                        .safety_content_top_item
+                            img(src="../../images/option.svg")
+                            span Стратегия СУЭК
+                        .safety_content_top_item
+                            img(src="../../images/option.svg")
+                            span Бизнес-модель
+                        .safety_content_top_item
+                            img(src="../../images/option.svg")
+                            span История развития
+                    +title_bl('titles/osnovnyye-fakty.png')
+                    #moya-kompaniya-info-text
+                        div
+                            ul
+                                li
+                                    span № 1
+                                    |  в России и 
+                                    span № 6
+                                    |  в мире по объему производства угля — 106,2 млн тонн в 2019 году
+                                li
+                                    span № 4
+                                    |  по объему международных продаж угля — 53,8 млн тонн в 2019 году
+                                li
+                                    span № 5
+                                    |  по объему запасов угля — 7,6 млрд тонн
+                                li
+                                    span № 3
+                                    |  по выработке тепловой энергии в России — свыше 43,5 МГкал в 2019 году
+                                li
+                                    span Ведущий
+                                    |  поставщик тепла и электроэнергии в России — 16,0 ГВт установленная электрическая мощность
+                        div
+                            ul
+                                li
+                                    span 27
+                                    |  шахт и разрезов
+                                li
+                                    span 8
+                                    |  обогатительных фабрик
+                                li
+                                    span 26
+                                    |  ТЭС
+                                li
+                                    span 3
+                                    |  порта
+                                li
+                                    span 53 350
+                                    |  вагонов под управлением
+                                li
+                                    | более 
+                                    span 70 000
+                                    |  сотрудников
+                                li
+                                    span 14
+                                    |  учебных центров и комбинатов
+                                li
+                                    span Мировые
+                                    |  стандарты в области охраны труда и промышленной безопасности
+                    +title_bl('titles/company-management.png')
+                    .lk_ds_menu_2#lk_ds_menu_2
+                        span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Менеджмент
+                        span(onclick="menu2Change(this, 2)") Менеджмент предприятий
+                        span(onclick="menu2Change(this, 3)") Совет директоров
+                        span(onclick="menu2Change(this, 4)") Комитеты Совета директоров
+                    #page_tabs.pageTabs
+                        - for (var i = 1; i < 4; i++)
+                            div.pageTabs__item(id='page_tab_'+i)
+                                .users_wrap
+                                    - for (var e = 0; e < 13; e++)
+                                        +user_card
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

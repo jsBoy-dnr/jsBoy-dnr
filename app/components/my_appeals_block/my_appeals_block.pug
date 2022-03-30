@@ -1,0 +1,193 @@
+mixin my_appeals_block()
+    .appeals_block_tab
+        ul.appeals-tabs.nav.nav-tabs(role="tablist")
+            li.nav-item.active-tab(role="presentation")
+                a.nav-link.active(data-toggle="tab", href="#openapp", role="tab", aria-controls="openapp", aria-selected="true")
+                    | Открытые обращения 
+                    span (4)
+            li.nav-item.second(role="presentation")
+                a.nav-link(data-toggle="tab", href="#allapp", role="tab", aria-controls="allapp", aria-selected="false")
+                    | Все обращения 
+                    span (4)
+        .appeals-desc.tab-content
+            .desc-area.tab-pane.active-area.fade.show.active#openapp(role="tabpanel", aria-labelledby="openapp-tab")
+                .title
+                    .left
+                        .id ID
+                        .type Тип обращения
+                        .name Название
+                    .right
+                        .author Ответственный
+                        .date Дата регистрации
+                        .status Статус
+                        .goto
+                .item
+                    .left
+                        .id #374782
+                        .type IT-поддержка
+                        .name
+                            a(href="#") Легли сервера
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image1.png", alt)
+                            .name Блок IT
+                        .date
+                            | 27.02.2020
+                            span Решение до 05.05.20
+                        .status.received 
+                            a(href="#") Получено
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id #312355
+                        .type Задать вопрос
+                        .name
+                            a(href="#") Точки доступа
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image1.png", alt)
+                            .name Финансово- экономический блок
+                        .date
+                            | 27.02.2020
+                            span Решение до 05.05.20
+                        .status.considered 
+                            a(href="#") Рассмотрено
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id #374782
+                        .type Кодекс этики
+                        .name
+                            a(href="#") Как работать с этическими кейсами
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image2.png", alt)
+                            .name Попкова Елена Владимировна
+                        .date
+                            | 27.02.2020
+                            span Решение до 05.05.20
+                        .status.send
+                            a(href="#")
+                                | Отправлено в
+                                br
+                                | Комиссию по этике
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id #374782
+                        .type Комплаенс
+                        .name
+                            a(href="#") Коррупционная схема руководства
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image3.png", alt)
+                            .name Сысоева Светлана Петровна
+                        .date
+                            | 27.02.2020
+                            span Решение до 05.05.20
+                        .status.received 
+                            a(href="#") Получено
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+            .desc-area.tab-pane.fade#allapp(role="tabpanel", aria-labelledby="allapp-tab")
+                .title
+                    .left
+                        .id ID
+                        .type Тип обращения
+                        .name Название
+                    .right
+                        .author Ответственный
+                        .date Дата регистрации
+                        .status 
+                            a(href="#") Статус
+                        .goto
+                .item
+                    .left
+                        .id #374782
+                        .type IT-поддержка
+                        .name
+                            a(href="#") Не работает 1C
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image1.png", alt)
+                            .name Блок IT
+                        .date 01.02.2020
+                        .status.closed 
+                            a(href="#") Закрыто
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id #374782
+                        .type Кодекс этики
+                        .name
+                            a(href="#") Моя зарплата не соответствует договору
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image4.png", alt)
+                            .name Демко Наталья Васильевна
+                        .date 01.02.2020
+                        .status.closed 
+                            a(href="#") Закрыто
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id #374782
+                        .type IT-поддержка
+                        .name
+                            a(href="#") Легли сервера
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image1.png", alt)
+                            .name Блок IT
+                        .date 27.02.2020
+                            span Решение до 05.05.20
+                        .status.closed 
+                            a(href="#") Закрыто
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id #312355
+                        .type Задать вопрос
+                        .name
+                            a(href="#") Точки доступа
+                    .right
+                        .author
+                            .image
+                                img(src="../../images/appeal_image1.png", alt)
+                            .name Финансово- экономический блок
+                        .date 27.02.2020
+                            span Решение до 05.05.20
+                        .status.closed 
+                            a(href="#") Закрыто
+                        .goto
+                            a.btn(href="#")
+                                svg.w14
+                                    use(href="../../images/sprite.svg#i_arrow")
+        

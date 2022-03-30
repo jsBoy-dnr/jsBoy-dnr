@@ -1,0 +1,288 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    //- include ../components/header_sub_menu/header_ls_sub_menu
+    include ../components/leftmenu_mainslider/leftmenu
+    include ../components/herotab/herotab
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/newslist/newslist
+    include ../components/information-block/information-block-dvz
+    include ../components/documents_tab/documents_tab
+    include ../components/map_rus/map_divizion
+    include ../components/working_groups/working_groups
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/leftmenu_mainslider/leftmenu.css')
+        //- link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/herotab/herotab.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/map_rus/map_rus.css')
+        link(rel='stylesheet', href='../css/information-block/information-block.css')
+        link(rel='stylesheet', href='../css/working_groups/working_groups.css')
+        link(rel='stylesheet', href='../css/documents_tab/documents_tab.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider.header_content--new(style='background-image:url(../images/safety/safetybg.jpg);')
+                nav.LeftMenu.position-absolute
+                    ul.list-unstyled
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_1.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_1_hover.svg")
+                                span.name
+                                    | Новому
+                                    br
+                                    | сотруднику
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_2.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_2_hover.svg")
+                                span.name Моя компания
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_3.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_3_hover.svg")
+                                span.name Подразделения
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_4.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_4_hover.svg")
+                                span.name Новости
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_5.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_5_hover.svg")
+                                span.name
+                                    | Организационная
+                                    br
+                                    | структура
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_6.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_6_hover.svg")
+                                span.name
+                                    | Телефонный
+                                    br
+                                    | справочник
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_7.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_7_hover.svg")
+                                span.name Безопасность
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_8.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_8_hover.svg")
+                                span.name Комплаенс
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_9.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_9_hover.svg")
+                                span.name
+                                    | Кодекс
+                                    br
+                                    | корпоративной этики
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_10.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_10_hover.svg")
+                                span.name
+                                    | Организационное
+                                    br
+                                    | развитие
+                .herotab.herotab--right
+                    .herotab__inner
+                        .herotab__title 
+                            span Производственная 
+                            | безопасность
+                        .herotab__content
+                            .tab__el.tab__el--with-icon.active
+                                .item
+                                    a(href="#!", title="Направления деятельности")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon1')
+                                        | Направления деятельности
+                                .item
+                                    a(href="#!", title="Медиатека")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon2')
+                                        | Медиатека
+                                .item
+                                    a(href="#!", title="Золотые правила безопасности")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon3')
+                                        | Золотые правила безопасности
+                                .item
+                                    a(href="#!", title="Календарь событий")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon4')
+                                        | Календарь событий
+                                .item
+                                    a(href="#!", title="Обучение")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon5')
+                                        | Обучение
+                                .item
+                                    a(href="#!", title="Нормативные документы")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon6')
+                                        | Нормативные документы
+                                .item
+                                    a(href="#!", title="Отчетность")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon7')
+                                        | Отчетность
+                                .item
+                                    a(href="#!", title="Форум")
+                                        svg.icon
+                                            use(xlink:href='../../images/safety/sprite.svg#sf_icon8')
+                                        | Форум
+
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Дивизион «Логистика»', 'Безопасность труда')
+                    .safety_content_top
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/safety/icon_s1.svg")
+                            span Политика производственной безопасности
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/safety/icon_s2.svg")
+                            span Система управления производственной безопасностью
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/safety/icon_s3.svg")
+                            span Функциональная стратегия 
+                    +newslist
+                    +map_divizion
+                    +information-block-dvz
+                    +title_bl('titles/title_norm_docs.png')
+                    +documents_tab
+                    section.section.working_groups
+                        +title_bl('image_work_group/work_group_title.png')
+                        ul.appeals-tabs.nav.nav-tabs(role="tablist")
+                            li.nav-item.active-tab(role="presentation")
+                                a.nav-link.active(data-toggle="tab", href="#openapp", role="tab", aria-controls="openapp", aria-selected="true")
+                                    | Мои группы 
+                                    span (7)
+                        .wg__slider.items-wrap
+                            - for (let i=0; i < 10; i++)
+                                .item
+                                    .left
+                                        .image
+                                            img(src="../../images/image_work_group/w1.png", alt)
+                                        .desc 
+                                            | Формирование проектной
+                                            br
+                                            | группы для проверки шахты
+                                            br
+                                            | под Ростовом-На-Дону
+                                            .adap_text 11 
+                                                span участников
+                                    .right.comblocks
+                                        .title 11 
+                                            span участников
+                                        .images
+                                            img(src="../../images/image_work_group/wm6.png", alt)
+                                            img(src="../../images/image_work_group/wm5.png", alt)
+                                            img(src="../../images/image_work_group/wm4.png", alt)
+                                            img(src="../../images/image_work_group/wm3.png", alt)
+                                            img(src="../../images/image_work_group/wm2.png", alt)
+                                            img(src="../../images/image_work_group/wm1.png", alt)
+                                        a(href="#") и ещё 5
+                                    .more
+                                        a(href="#") Смотреть группу
+                                            span
+                                .item
+                                    .left
+                                        .image
+                                            img(src="../../images/image_work_group/w2.png", alt)
+                                        .desc 
+                                            | 16 лет СУЭК
+                                            .adap_text 11 
+                                                span участников
+                                    .right.comblocks
+                                        .title 11 
+                                            span участников
+                                        .images
+                                            img(src="../../images/image_work_group/wm6.png", alt)
+                                            img(src="../../images/image_work_group/wm5.png", alt)
+                                            img(src="../../images/image_work_group/wm4.png", alt)
+                                            img(src="../../images/image_work_group/wm3.png", alt)
+                                            img(src="../../images/image_work_group/wm2.png", alt)
+                                            img(src="../../images/image_work_group/wm1.png", alt)
+                                        a(href="#") и ещё 5
+                                    .more
+                                        a(href="#") Смотреть группу
+                                            span
+                        .more-link
+                            a(href="#") Все группы
+
+        +footer_custom
+        //- #fade
+        //- #footer_menu_popup
+            #footer_menu_popup_drag_touch
+                #footer_menu_popup_drag_line
+                    #footer_menu_popup_drag_line_ui
+                #footer_menu_popup_title.noselect Проишествия
+            #footer_menu_popup_div_line
+            .header_content_menu_division_legend
+                div
+                    label.header_content_menu_division_c1
+                    span Легкие травмы
+                    span -
+                    span#safety_map_info_popup_legend_v1 14
+                div
+                    label.header_content_menu_division_c2
+                    span Тяжелые травмы
+                    span -
+                    span#safety_map_info_popup_legend_v2 10
+                div
+                    label.header_content_menu_division_c3
+                    span Летальный исход
+                    span -
+                    span#safety_map_info_popup_legend_v3 1
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src='../js/separate-js/jquery.listtopie.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/map_rus/map_rus.js')
+        //- script(src='../components/information-block/information-block-dvz.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/working_groups/working_groups.js')
+        script(src='../components/documents_tab/documents_tab.js')
+        script(src='../components/footer/footer.js')

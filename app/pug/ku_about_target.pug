@@ -1,0 +1,114 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_sub_menu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/kun_template/kun_template
+    include ../components/my_tasks_block/target_block
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/ku.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/my_tasks_block/my_tasks_block.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/kun_template/kun_template.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ku
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider(style='background-image:url(../images/image_ku/ku_bg.png);')
+                nav.header-sub-menu-wrap
+                    ul.header-sub-menu
+                        li
+                            a(href="#") Программы
+                        li
+                            a(href="#") Оценка персонала
+                        li
+                            a(href="#") Дистанционное обучение
+
+                        li
+                            a(href="#") Учебно-курсовые комбинаты
+
+                        li
+                            a(href="#") Онлайн-библиотека
+                        li
+                            a(href="#") Банк Знаний
+                        li
+                            a(href="#") О нас
+                        li
+                            a(href="#") Статистика
+
+                #header_content_main_title Корпоративный 
+                    span университет 
+                .bt_o_top_slider_c.owl-carousel
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/image_ku/prof_1.png")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 Рыкунов Владимир Владимирович
+                                        h6 Генеральный директор АИМ Холдинг
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Наша цель — иметь «правильных людей на правильных позициях» сегодня и в будущем. 
+                                        Обучение — важный инструмент в ее достижении.
+                                        Корпоративный университет создает программы, 
+                                        которые позволяют развить нужные компании компетенции, расширить свои знания о деятельности группы компаний. 
+                                        Учитесь, интересуйтесь, применяйте знания в работе и делитесь ими с коллегами.
+
+                            .more.flex
+                                a(href="#!") Все обращения руководства
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/image_ku/prof_2.png")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 Ямщикова Наталья Александровна
+                                        h6 Заместитель генерального директора - директор по персоналу и организационному развитию АИМ Холдинг
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Уважаемые коллеги!
+                                        Непрерывное обучение — необходимость нашего времени. Осознанное отношение к своему развитию дает нам 
+                                        возможность быть востребованными сегодня и в будущем. 
+                                        Программы Корпоративного университета — вклад компании в своих сотрудников и их будущее.
+                                        Задача каждого — не только принимать участие в корпоративных программах, 
+                                        но и применять новые знания в своей рабочей реальности, улучшая тем самым наш общий результат.
+                            .more.flex
+                                a(href="#!") Все обращения руководства
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Корпоративный университет', 'Наши цели и задачи')
+                    +kun
+                    section.kUn.section.my_tasks_block
+                        h5 Модель компетенций
+                        +target_block
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/footer/footer.js')

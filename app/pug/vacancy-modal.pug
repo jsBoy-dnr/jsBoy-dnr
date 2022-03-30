@@ -1,0 +1,39 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/GUI.css')
+        link(rel='stylesheet', href='../css/vacancy_block/vacancy_block.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.template--aim
+            .blocks-wrapper
+                .inner
+                    section.innpage_tags
+                        a(href="/app/index.html") К списку страниц
+                        br
+                        a.btn.btn--tags(href="#!", data-popup-trigger="otklik") Откликнуться
+                        a.btn.btn--tags(href="#!", data-popup-trigger="recomend-vacancy") Рекомендовать на вакансию
+                        a.btn.btn--tags(href="#!", data-popup-trigger="socialshare") Поделиться в соц.сетях
+                        a.btn.btn--tags(href="#!", data-popup-trigger="friends") Приведи друга
+                        a.btn.btn--tags(href="#!", data-popup-trigger="submitfriends") Откликнуться
+                        a.btn.btn--tags(href="#!", data-popup-trigger="profsearch") Профессиональная область
+        +modals('otklik', 'Отклик на вакансию')
+        +modals('recomend-vacancy', 'Рекомендовать на вакансию')
+        +modals('socialshare', 'Поделиться вакансией')
+        +modals('friends', 'Программа «Приведи друга»')
+        +modals('submitfriends', 'Ваша рекомендация успешно зарегистрирована. Спасибо!')
+        +modals('profsearch', 'Профессиональная область')
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/modals/modals.js')

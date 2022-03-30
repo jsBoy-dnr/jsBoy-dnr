@@ -1,0 +1,30 @@
+mixin typeblock(data)
+    .section.typeblock
+        if data.type === 'imagetable'
+            if data.text
+                !=data.text
+            if data.img
+                img(src='../../images/temp/'+ data.img)
+            .table
+                table(border='1')
+                    //- caption Проекты
+                    tbody
+                        tr
+                            th №
+                            th Название проекта
+                            th(width='15%') Паспорт проекта
+                            th Статус
+                            th(width='20%') Руководитель проекта
+                            th(width='20%') Отчетность по проекту
+                        - for (let i = 1; i < 4; i++)
+                            tr
+                                td #{i}
+                                td Увеличение производственной мощности филиала АО «СУЭК-Красноярск» «Разрез Бородинский им. М.И. Щадова»
+                                td 
+                                    a(href='#!' title='Паспорт проекта') Паспорт проекта
+                                td Открыт
+                                td Фёдоров Андрей Витальевич
+                                td 
+                                    a(href='#!', title='Отчет о статусе проекта') Отчет о статусе проекта
+            br
+            a(href='#!', title='Все темы') Все темы

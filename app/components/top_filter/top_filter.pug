@@ -1,0 +1,12 @@
+mixin top_filter()
+    .result-block
+        .heading
+            | Результаты поиска по запросу 
+            span «Сотрудники на букву “Б”, Все регионы»
+            |  (2 430)
+        .sort_bl
+            select#sort_bl(name="sort_bl_select")
+                option(value="По фамилии от А до Я") По фамилии от А до Я
+                option(value="По фамилии от Я до А") По фамилии от Я до А
+                option(value="По имени от А до Я") По фамилии от А до Я
+                option(value="По имени от Я до А") По фамилии от Я до А

@@ -1,0 +1,134 @@
+.services_block_tab
+    ul.service-tabs.nav.nav-tabs(role="tablist")
+        li.nav-item(role="presentation")
+            a.nav-link(data-toggle="tab", href="#tab-0", role="tab", aria-controls="tab-0", aria-selected="false")
+                | Мои сервисы
+                span (10)
+        li.nav-item.second(role="presentation")
+            a.nav-link(data-toggle="tab", href="#tab-1", role="tab", aria-controls="tab-1", aria-selected="false")
+                | Моя команда
+                span (4)
+        li.nav-item.active-tab(role="presentation")
+            a.nav-link.active(data-toggle="tab", href="#tab-2", role="tab", aria-controls="tab-2", aria-selected="true")
+                | Профильные сервисы
+                span (1)
+        li.nav-item(role="presentation")
+            a.nav-link(data-toggle="tab", href="#tab-3", role="tab", aria-controls="tab-3", aria-selected="false")
+                | Организации
+                span (6)
+    .service-desc.tab-content
+        .desc-area.tab-pane#tab-0.fade(role="tabpanel", aria-labelledby="nav-home-tab")
+            .items-wrap
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block1.svg", alt)
+                    .title
+                        | Планирование
+                        br
+                        | отпуска
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block2.svg", alt)
+                    .title
+                        | Заявка
+                        br
+                        | на отпуск
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block3.svg", alt)
+                    .title
+                        | Личная
+                        br
+                        | информация
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block4.svg", alt)
+                    .title
+                        | Расчетный
+                        br
+                        | лист
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block5.svg", alt)
+                    .title
+                        | Мои
+                        br
+                        | командировки
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block6.svg", alt)
+                    .title
+                        | Административные
+                        br
+                        | заявки
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block7.svg", alt)
+                    .title
+                        | Справки и
+                        br
+                        | документы
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block8.svg", alt)
+                    .title Информирование
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block9.svg", alt)
+                    .title
+                        | Учет затрат
+                        br
+                        | на мобильную связь
+                a.item(href="/app/declareyear.html")
+                    .image
+                        img(src="../../images/image_service/services_block10.svg", alt)
+                    .title
+                        | Ежегодное декларирование
+
+        .desc-area#tab-1.tab-pane.fade(role="tabpanel", aria-labelledby="nav-profile-tab")
+            .items-wrap
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block6.svg", alt)
+                    .title
+                        | Административные
+                        br
+                        | заявки
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block7.svg", alt)
+                    .title
+                        | Справки и
+                        br
+                        | документы
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block8.svg", alt)
+                    .title Информирование
+
+                a.item(href="#!")
+                    .image
+                        img(src="../../images/image_service/services_block9.svg", alt)
+                    .title
+                        | Учет затрат
+                        br
+                        | на мобильную связь
+
+        .desc-area#tab-2.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="nav-profile-tab")
+            .items-wrap
+                a.item(href="/app/declaresettings.html")
+                    .image
+                        img(src="../../images/image_service/services_block11.svg", alt)
+                    .title Управление декларацией
+
+        .desc-area#tab-3.tab-pane.fade(role="tabpanel", aria-labelledby="nav-profile-tab")

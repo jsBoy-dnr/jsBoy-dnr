@@ -1,0 +1,171 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_sub_menu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/kun_template/kun_template
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/ku.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/kun_template/kun_template.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ku
+            header.site-header.with-bg.small
+                +header_top_custom
+                +header_right
+            #header_content.header_content--menu
+                nav.header-sub-menu-wrap
+                    ul.header-sub-menu
+                        li
+                            a(href="#") Корпоративный Универститет
+                        li.-drop-
+                            a(href="#") О нас
+                            ul
+                                li
+                                    a(href="#") Наши цели и задачи
+                                li
+                                    a(href="#") Наша команда
+                        li.-drop-
+                            a(href="#") Каталог программ
+                            ul
+                                li
+                                    a(href="#") Факультет менеджмента и лидерства
+                                li
+                                    a(href="#") Факультет личной эффективности
+                                li.-dropright-
+                                    a(href="#") Факультет по функциям
+                                    ul
+                                        li
+                                            a(href="#") Факультет HR
+                                        li
+                                            a(href="#") Факультет закупок
+                                        li
+                                            a(href="#") Факультет проектного управления
+                                li
+                                    a(href="#") Факультет цифровых навыков и цифровизации
+                                li
+                                    a(href="#") Факультет английского языка
+                                li
+                                    a(href="#") Адаптация в компании и в роли
+
+                        li
+                            a(href="#") Корпоративная библиотека
+
+                        li.-drop-
+                            a(href="#") Банк знаний
+                            ul
+                                li
+                                    a(href="#") Записи вебинаров
+                                li
+                                    a(href="#") Образовательная рассылка
+                                li
+                                    a(href="#") Нормативные документы
+                        li
+                            a(href="#") Нормативные документы
+                        li
+                            a(href="#") FAQ
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Корпоративный университет', 'Корпоративная библиотека')
+                    +section_title('titles/title_kb.png')
+                    .kUn
+                        .kUn__content.kUn__content--userWrap
+                            .kUn__item
+                                p Сегодня особенно важно быстро накапливать, осваивать и передавать знания. 
+                                    | Регулярное чтение книг позволяет создать атмосферу, 
+                                    | где постоянное обучение и самообразование — естественный процесс.
+                                p Корпоративный университет совместно с издательством «МИФ» предлагает вам выбирать 
+                                    |и читать или слушать самые полезные и популярные книги.
+                                .kUn__promoFlex
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_for5.png')
+                                        p 1000> книг по различным направлениям
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_for6.png')
+                                        p 430> аудиокниг в отличном качестве
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_for7.png')
+                                        p Доступность на 
+                                            br
+                                            | разных платформах
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_for8.png')
+                                        p Вебинары, курсы и 
+                                            br
+                                            | статьи по книгам
+                                .kUn__promores
+                                    p
+                                        b Как начать пользоваться библиотекой?
+                                    ul
+                                        li Пройдите регистрацию в браузере по адресу:  
+                                            a(href='#!')  suek.miflib.ru  
+                                            |  или скачайте мобильное приложение.
+                                            br
+                                            .img
+                                                .img__block
+                                                    img(src='../../images/image_ku/qrc1.png')
+                                                    img(src='../../images/image_ku/appstore.png')
+                                                .img__block
+                                                    img(src='../../images/image_ku/qrc2.png')
+                                                    img(src='../../images/image_ku/googleplay.png')
+                                        li Введите свою корпоративную почту или личную (только если нет корпоративной) и нажмите «Получить ссылку и код»
+
+                                        li Пройдите по ссылке из письма, придумайте и введите пароль, свои имя и фамилию
+                                        li Перейдите по адресу библиотеки:  
+                                            a(href="#!")  suek.miflib.ru  
+                                            |  или откройте приложение В окне входа введите вашу электронную почту и пароль
+
+                                        li Отправляйтесь на поиски интересных книг
+                            .kUn__item.jobs_support
+                                h5 Администрация
+                                .usercard
+                                    img(src='../../images/people/employees9.png', alt)
+                                    a(href="#!")
+                                        h3 Алена Аверенкова
+                                    span.desc Куратор Корпоративной библиотеки
+                                    .phones
+                                        a(href="tel:+7 (495) 911-12-10") +7 (495) 911-12-10
+                                        .mobile-code
+                                            a.code(href="#") 3128
+                                    .skype
+                                        a(href="mailto:VAverenkovaAI@aimholding.ru" data-toggle="tooltip" data-placement="top" title="VasukovichUA@suek.ru") AverenkovaAI@aimholding.ru
+                                    .whatsap
+                                        a(href="tel:+7 (495) 911-12-10") WhatsApp
+                    .safety_content_top
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/image_ku/icon_n021.svg")
+                            span Вход в систему дистанционного обучения
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/image_ku/icon_n3.svg")
+                            span Отправить заявку на участие в Программе
+                        a(href='#!').safety_content_top_item
+                            img(src="../../images/image_ku/icon_n2.svg")
+                            span Онлайн-библиотека
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/footer/footer.js')

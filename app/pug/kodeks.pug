@@ -1,0 +1,140 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/user_card/user_card
+    //- include ../components/bg-slider/bg-slider
+    include ../components/safety_top_block/safety_top_block
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/footer/footer_custom
+    include ../components/formwrapper/formwrapper
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+
+        //- link(rel='stylesheet', href='../css/bg-slider/bg-slider.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.list_news.template--aim
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider
+                .header_content_top_menu_wrapper
+                    .header_content_top_menu
+                        ul#header_content_top_menu
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Кодекс корпоративной этики
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Система исполнения
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Горячая Линия
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Банк знаний
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a.noselect(href="#") Конкурсы
+                #header_content_main_line
+                #header_content_main_title Кодекс 
+                    span Корпоративной Этики
+                .bt_o_top_slider_c.owl-carousel
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/rashevsky.jpg")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 ВЛАДИМИР РАШЕВСКИЙ
+                                        h6 Генеральный директор АО «СУЭК»
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Миллионы китайцев стали обращаться в MMM-China и MMM Global. Это вызвало большой спрос на биткоины и резкий скачок цены. Если я завтра перестану использовать биткоин, он рухнет.
+                            .more.flex
+                                a(href="#!") Подробнее
+                                a(href="#!")
+                                    | Все обращения 
+                                    span руководства
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/rashevsky.jpg")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 ВЛАДИМИР РАШЕВСКИЙ
+                                        h6 Генеральный директор АО «СУЭК»
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Миллионы китайцев стали обращаться в MMM-China и MMM Global. Это вызвало большой спрос на биткоины и резкий скачок цены. Если я завтра перестану использовать биткоин, он рухнет.
+                            .more.flex
+                                a(href="#!") Подробнее
+                                a(href="#!")
+                                    | Все обращения 
+                                    span руководства
+            //- +bg-slider
+            .blocks-wrapper.page-news
+                .inner
+                    +breadcrumbs('Кодекс Корпоративной Этики')
+                    +safety_top_block
+                    .news-block.news-block-new
+                        +title_bl('etika_title.png')
+                        .people_filter_block
+                            .lk_ds_menu_2#lk_ds_menu_2
+                                span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Бурятия (3)
+                                span(onclick="menu2Change(this, 2)") Забайкалье (4)
+                                span(onclick="menu2Change(this, 3)") Краснодарский край (3)
+                                span(onclick="menu2Change(this, 4)") Кузбасс (4)
+                                span(onclick="menu2Change(this, 5)") Забайкалье (4)
+                                span(onclick="menu2Change(this, 6)") Москва (4)
+                                span(onclick="menu2Change(this, 7)") Мурманск (4)
+                                span(onclick="menu2Change(this, 8)") Приморье (4)
+                                span(onclick="menu2Change(this, 9)") Хакасия (4)
+                                span(onclick="menu2Change(this, 10)") Хабаровский край (4)
+                            #page_tabs.pageTabs
+                                    //- - for (var e = 1; e < 10; e++)
+                                    div.pageTabs__item(id='page_tab_1')
+                                        .slick_people_filter_block
+                                            - for (var i = 1; i < 10; i++)
+                                                .usercard
+                                                    img(src="../../images/temp/avatars/ava03.png", alt)
+                                                    a(href="#!")
+                                                        h3 Васюкович Юлия Анатольевна
+                                                    span.position Директор по подбору персонала
+                                                    a.map(href="#!") АО "СУЭК-Красноярск
+                                                    hr.gray
+                                                    a.go(href="#!") НАПИСАТЬ
+    
+                                        .more-news
+                                            a(href="#") Все координаторы
+        +footer_custom
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        //- script(src='../components/bg-slider/bg-slider.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

@@ -1,0 +1,243 @@
+.appeals_block
+    .top_link
+        select#selnew.xl.without_btn(name="Все заявки")
+            option Все заявки
+            option Заявки на канцтовары
+            option Заявки на гостевой пропуск
+            option Заявки на автотранспорт
+            option Заказ визиток
+    .appeals_block_tab.r-tabs
+        ul.appeals-tabs.r-tabs-nav
+            li.active-tab.r-tabs-tab.r-tabs-state-active
+                a.r-tabs-anchor(href="#tab-10")
+                    | Открытые заявки 
+                    span (8)
+            li.second.r-tabs-state-default.r-tabs-tab
+                a.r-tabs-anchor(href="#tab-11")
+                    | Все заявки 
+                    span (10)
+        .appeals-desc
+            .r-tabs-accordion-title.r-tabs-state-active
+                a.r-tabs-anchor(href="#tab-10")
+                    | Открытые заявки 
+                    span (8)
+            .desc-area.active-area.r-tabs-panel.r-tabs-state-active#tab-10(style="display: block;")
+                .title
+                    .left
+                        .id.s150 ID
+                        .type.s200 Тип заявки
+                    .right.wpad
+                        .date.s200 Дата заявки
+                        .docs.s150 Документы
+                        .status.s200 Статус
+                        .goto
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.wait На согласовании
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на пропуск
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                        .status.s200.considered Выполнена
+                        .goto
+                            a.btn(href="/zayavka-info-propusk.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на автотранспорт
+                    .right.wpad
+                        .date.s200 01.02.2020
+                        .docs.s150
+                        .status.s200.wait На рассмотрении
+                        .goto
+                            a.btn(href="/zayavka-info-avto.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.send Отправлена
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+            .r-tabs-accordion-title
+                a.r-tabs-anchor(href="#tab-11")
+                    | Все заявки 
+                    span (10)
+            .desc-area.r-tabs-state-default.r-tabs-panel#tab-11
+                .title
+                    .left
+                        .id.s150 ID
+                        .type.s200 Тип заявки
+                    .right.wpad
+                        .date.s200 Дата заявки
+                        .docs.s150 Документы
+                        .status.s200 Статус
+                        .goto
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на автотранспорт
+                    .right.wpad
+                        .date.s200 01.02.2020
+                        .docs.s150
+                        .status.s200.wait На рассмотрении
+                        .goto
+                            a.btn(href="/zayavka-info-avto.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.send Отправлена
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.wait На согласовании
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на пропуск
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                        .status.s200.considered Выполнена
+                        .goto
+                            a.btn(href="/zayavka-info-propusk.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.wait На согласовании
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на пропуск
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                        .status.s200.considered Выполнена
+                        .goto
+                            a.btn(href="/zayavka-info-propusk.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item
+                    .left
+                        .id.s150 #374782
+                        .type.s200 Заявка на автотранспорт
+                    .right.wpad
+                        .date.s200 01.02.2020
+                        .docs.s150
+                        .status.s200.wait На рассмотрении
+                        .goto
+                            a.btn(href="/zayavka-info-avto.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+                .item.odd
+                    .left
+                        .id.s150 #312355
+                        .type.s200 Заявка на канцтовары
+                    .right.wpad
+                        .date.s200 27.02.2020
+                        .docs.s150
+                            .docs__wrap
+                                .docs__item
+                                    a.btn(href="#!")
+                                        svg.ifile(fill="#219653")
+                                            use(href="../images/sprite.svg#ifile")
+                                            text(x="50%", y="80%") csv
+                        .status.s200.send Отправлена
+                        .goto
+                            a.btn(href="/zayavka-info-kanctovary.html")
+                                svg.w14
+                                    use(href="../images/sprite.svg#i_arrow")
+        .pagelist
+            ul
+                li.prev
+                    a(href="#")
+                li.active
+                    a(href="#") 01
+                li
+                    a(href="#") 02
+                li
+                    a(href="#") 03
+                li
+                    a(href="#") ...
+                li
+                    a(href="#") 15
+                li.next
+                    a(href="#")

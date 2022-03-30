@@ -1,0 +1,74 @@
+mixin header_notif()
+    .notification-block
+        .notification-block-title
+            .count 15
+        .notification-block-body
+            .blocks.empty(style="display:none")
+                p У вас нет новых уведомлений
+                a(href="#!") Архив уведомлений
+            .blocks
+                .blocks-title
+                    | Мои задачи 
+                    a(href="#") Смотреть все
+                .tasks
+                    .task.red
+                        .count 39
+                        a(href="#") Срочные
+                    .task.yellow
+                        .count 3
+                        a(href="#") Текущие
+                    .task.green
+                        .count 1
+                        a(href="#") Прочие
+            .blocks
+                .blocks-title
+                    | Общие (12) 
+                    a(href="#") Смотреть все
+                .blocks-body
+                    .links
+                        a.jpopup(href="#") Создаём день независимости от ПК
+                    .links
+                        a.jpopup(href="#") Отпускной план
+                    .links
+                        a.jpopup(href="#") Расписание новогодних праздников
+                    .links
+                        a.jpopup(href="#") Пройдите обязательный опрос “Сколько необхождимо времени для понятия всех обстоятельств”
+                    .links
+                        a.jpopup(href="#") Вопросы по задаче № 1341
+            .blocks
+                .blocks-title
+                    | Мои заявки (1) 
+                    a(href="#") Смотреть все
+                .blocks-body
+                    .links
+                        a.jpopup(href="#") Ваш пропуск готов
+                    .links
+                        a.jpopup(href="#") Ваш пропуск #2 готов тоже
+            .blocks
+                .blocks-title
+                    | Поздравления (2) 
+                    a(href="#") Смотреть все
+                .congratulation
+                    .item
+                        .pic
+                            img(src="../../images/congratulation_pic.png", alt="Валентина Михайлова")
+                        .text
+                            .title Валентина Михайлова
+                            .body
+                                .jmodal С днём рождения. Вы самый лучший руководитель! Желаю всего всего всего всего всего всего
+                            .date 2 декабря
+                    .item
+                        .pic
+                            img(src="../../images/congratulation_pic.png", alt="Валентина Михайлова")
+                        .text
+                            .title Валентина Михайлович
+                            .body
+                                .jmodal С днём рождения. Вы самый лучший руководитель! Желаю много много много много много много много много много
+                            .date 2 декабря
+                    .item
+                        .pic
+                            img(src="../../images/congratulation_pic.png", alt="Валентина Михайлова")
+                        .text
+                            .title Валентина Михайлова
+                            .body С днём рождения. Вы самый лучший руководитель!
+                            .date 2 декабря

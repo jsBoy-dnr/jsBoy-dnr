@@ -1,0 +1,120 @@
+@media screen and (max-width: 1450px) {
+    .zayavki {
+        &_kanctovary {
+            .appeals_block .appeals-tabs li a {
+                padding-right: 21px;
+                margin-right: 20px;
+                font-size: 19px;
+            }
+        }
+    }
+}
+.lk .appeals_block .top_link .jq-selectbox.without_btn {
+    top: 15px;
+}
+.zayavki {
+    h3 {
+        font-weight: 400;
+    }
+    .btn-with-arrow {
+        font-weight: 500;
+    }
+}
+.zayavka {
+    &-info {
+        .page-subtitle{
+            margin-bottom: 0;
+        }
+        .block {
+            padding: 15px 30px 15px 0;
+            box-sizing: border-box;
+            &-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+        .label {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 140%;
+            text-transform: uppercase;
+            color: #707274;
+            margin: 8px 0;
+            display: block;
+        }
+        .text {
+            font-weight: 500;
+            i {
+                opacity: .7;
+                font-weight: 400;
+            }
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            color: #333;
+            text-decoration: none;
+            transition: .3s;
+            img {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                border-radius: 40px;
+                border: 1px solid #fff;
+                margin: 0 10px 0 0;
+            }
+            &:hover{
+                color: #949300;
+            }
+        }
+        .btn-toolbar{
+            margin: 0 -10px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-bottom: 50px;
+            .btn{
+                margin: 10px;
+                font-size: inherit;
+                padding: 0 30px;
+            }
+            i{
+                margin-left: 10px;
+            }
+        }
+    }
+}
+.status {
+    font-size: inherit;
+    line-height: inherit;
+    position: relative;
+    padding-left: 20px;
+    &:before {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        left: 0;
+        top: 50%;
+        margin-top: -5px;
+        -webkit-border-radius: 250px;
+        -moz-border-radius: 250px;
+        border-radius: 250px;
+        background: transparent;
+    }
+    &.gray:before {
+        background: #acc0cc;
+    }
+    &.green:before {
+        background: #74b422;
+    }
+    &.red:before {
+        background: #ff4a4a;
+    }
+    &.orange:before {
+        background: #f6c358;
+    }
+    &.black:before {
+        background: #707274;
+    }
+}

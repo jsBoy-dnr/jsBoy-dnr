@@ -1,0 +1,210 @@
+.urservice {
+    * {
+        box-sizing: border-box;
+    }
+    .idea-block {
+        .items-wrap {
+            padding-top: 20px;
+            @media screen and (max-width: 767px) {
+                margin: -10px 0;
+                .item {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+            }
+        }
+        .item {
+            @media screen and (max-width: 850px) {
+                .title {
+                    font-size: 21px;
+                }
+            }
+        }
+        .title {
+            padding-top: 0;
+        }
+        .image {
+            margin-left: 15px;
+            @media screen and (max-width: 850px) {
+                margin-left: 0;
+            }
+            @media screen and (max-width: 760px) {
+                margin-left: 10px;
+            }
+        }
+    }
+    .ku-desc {
+        margin-top: -20px;
+    }
+    .ku-sidebar {
+        margin-top: 10px;
+        .card {
+            background: #F0F0F0;
+            border-radius: 5px;
+            padding: 20px;
+            h5 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+                // color: #707274;
+            }
+            .link {
+                // font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                text-decoration: none;
+                color: #949300;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .bottom {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-top: 10px;
+                margin-top: 10px;
+                padding: 10px;
+                background: #fff;
+                border-radius: 5px;
+            }
+            .tooltip {
+                &__btn {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .ur_step_blocks {
+        padding-top: 0;
+        padding-bottom: 0;
+        .str-block-body {
+            background: none;
+            padding: 0;
+            margin: 0;
+        }
+        .itabs_content {
+            display: block !important;
+            .step_four {
+                .step_blocks_name {
+                    display: block;
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .urservice {
+        .ur_step_blocks {
+            .str-block-body {
+                background: none;
+                border-radius: 0;
+                padding: 0;
+                margin: 0;
+            }
+            .choose-button {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 120%;
+                padding-left: 50px;
+                margin-bottom: 30px;
+            }
+            .choose-button:before {
+                width: 40px;
+                height: 40px;
+                margin-top: -20px;
+            }
+            .choose-button .info .text {
+                width: auto;
+                right: 0;
+                left: auto;
+                top: 30px;
+            }
+            .choose-button .info .text:before {
+                display: none;
+            }
+            .step_blocks .step_blocks_name {
+                font-size: 28px;
+                line-height: 34px;
+                padding-bottom: 20px;
+            }
+            .step_blocks .step_one .step_one_blocks a {
+                margin-right: 20px;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 22px;
+                padding: 10px 15px;
+            }
+            .step_blocks .step_one .step_one_blocks a .pic {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .step-two_m.open .btn-close {
+        z-index: 31;
+        top: 10px;
+        left: 0;
+        border-radius: 0 40px 40px 0;
+        width: auto;
+        padding: 10px 15px;
+        height: 40px;
+    }
+    .step-two_m.open .btn-close span {
+        width: 14px;
+        height: 14px;
+    }
+    .step-two_m__wrap {
+        left: 0;
+        padding: 60px 10px 20px;
+    }
+}
+@media (max-width: 600px) {
+    .step-two_m__header p {
+        font-size: 17px;
+        margin: 0 0 5px;
+    }
+}
+@media (max-width: 480px) {
+    .urservice {
+        .ur_step_blocks {
+            .str-block-body {
+                .choose-button {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 120%;
+                    padding-left: 28px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    margin-bottom: 20px;
+                }
+                .choose-button:before {
+                    width: 24px;
+                    height: 24px;
+                    margin-top: -12px;
+                    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9731 11.4885H20V8.1761H11.9731V0H8.07175V8.1761H0V11.4885H8.07175V20H11.9731V11.4885Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% / 12px no-repeat, linear-gradient(225deg, #ffdf07 0%, #969300 100%) #333;
+                }
+                .choose-button .info .text {
+                    font-size: 14px;
+                }
+                .step_blocks .step_blocks_name {
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px;
+                }
+                .step_blocks .step_one .step_one_blocks a {
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

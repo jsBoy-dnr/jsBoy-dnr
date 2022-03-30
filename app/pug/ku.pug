@@ -1,0 +1,153 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_sub_menu
+    include ../components/header_slider/header_slider
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/newslist/newslist
+    //- include ../components/event-block/event-block
+    include ../components/quiz-block/quiz-block
+    include ../components/section_title/title_bl
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/ku.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_slider/header_slider.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/quiz-block/quiz-block.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        //- link(rel='stylesheet', href='../css/event-block/event-block.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ku
+            header.site-header
+                +header_top_custom
+                +header_right
+                .header-bottom
+                    +header_sub_menu
+                    .header_slider_title.-absolute_title-
+                        | Корпоративный 
+                        strong университет
+                    +header_slider
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Корпоративный университет')
+                    +newslist
+                    //- .news-block.news-block-new
+                        +title_bl('image_news/news_title.png')
+
+                        .right-side
+                            .popular-quiz
+                                .title-bl Опросы
+                                .item
+                                    .image
+                                        img(src="../../images/image_quiz/quiz_img_2.png", alt)
+                                    .date Осталось 3 дня
+                                    .title
+                                        a(href="#") Какие возможности открывает программа «Целевой подготовки»?
+                                .item
+                                    .image
+                                        img(src="../../images/image_quiz/quiz_img_3.png", alt)
+                                    .date.result Завершен
+                                    .title
+                                        a(href="#") Какие возможности открывает программа «Целевой подготовки»?
+                                .more-quiz
+                                    a(href="#") Смотреть все опросы
+
+                        .big_news
+                            .item
+                                .image
+                                    img(src="../images/image_news/news_image.png", alt)
+                                a.title(href="/stranica-novosti.html") Польские энергокомпании вынуждены покупать российский уголь
+                                .body.
+
+                                    Польские угольные шахты не в состоянии покрыть спрос, и даже контролируемые государством энергетические компании PGE и Tauron уже используют сырье из России, пишет польское издание DGP. Так же, хотелось бы отмети ...
+
+                                .date_news 27 ноября 2019
+                                .btns-wrap
+                                    a.like(href="#") 153
+                                    a.comment(href="#") 36
+                                    a.see(href="#") 256
+                                    a.favorite(href="#")
+                        .item_bl
+                            a.title(href="#") Пенсионерам хотят снизить компенсацию за уголь в ЕАО
+                            .body.
+
+                                Вопрос об ограничении размера компенсации возник не случайно. Относительно недавно комитет социальной защиты случайно столкнулся с тем, что жители ...
+
+                            .date_news 27 ноября 2019
+                            .btns-wrap
+                                a.like(href="#") 153
+                                a.comment(href="#") 36
+                                a.see(href="#") 256
+                                a.favorite(href="#")
+                        .item_bl
+                            a.title(href="#") Германия отказалась от угля. От этого выиграет Россия
+                            .body.
+
+                                Вопрос об ограничении размера компенсации возник не случайно. Относительно недавно комитет социальной защиты случайно столкнулся с тем, что жители ...
+
+                            .date_news 27 ноября 2019
+                            .btns-wrap
+                                a.like(href="#") 153
+                                a.comment(href="#") 36
+                                a.see(href="#") 256
+                                a.favorite(href="#")
+                        .item_bl
+                            a.title(href="#") Для кузбасского угля будет расширен железнодорожный...
+                            .body.
+
+                                Вопрос об ограничении размера компенсации возник не случайно. Относительно недавно комитет социальной защиты случайно столкнулся с тем, что жители ...
+
+                            .date_news 27 ноября 2019
+                            .btns-wrap
+                                a.like(href="#") 153
+                                a.comment(href="#") 36
+                                a.see(href="#") 256
+                                a.favorite(href="#")
+                        .item_bl
+                            a.title(href="#") В Приморье начали добывать уголь открытым способом
+                            .body.
+
+                                Вопрос об ограничении размера компенсации возник не случайно. Относительно недавно комитет социальной защиты случайно столкнулся с тем, что жители ...
+
+                            .date_news 27 ноября 2019
+                            .btns-wrap
+                                a.like(href="#") 153
+                                a.comment(href="#") 36
+                                a.see(href="#") 256
+                                a.favorite(href="#")
+                        .clear
+                        .more-news
+                            a(href="#") Все новости
+
+                    //- +event-block
+                    +quiz-block   
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/header_slider/header_slider.js')
+        script(src='../components/footer/footer.js')

@@ -1,0 +1,84 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_sub_menu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/modals/modals
+    include ../components/user_card/user_card
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/legalservice.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ls
+            header.site-header.with-bg.small
+                +header_top_custom
+                +header_right
+            #header_content.header_content--menu
+                nav.header-sub-menu-wrap
+                    ul.header-sub-menu
+                        li.-drop-
+                            a(href="#") Документы
+                            ul
+                                li
+                                    a(href="#") Документы
+                                li
+                                    a(href="#") Документы
+                                li
+                                    a(href="#") Документы
+                        li.-drop-
+                            a(href="#") Структура
+                            ul
+                                li
+                                    a(href="#") Документы
+                                li
+                                    a(href="#") Документы
+                        li.-drop-
+                            a(href="#") Констультации
+                            ul
+                                li
+                                    a(href="#") Документы
+                                li
+                                    a(href="#") Документы
+                        li
+                            a(href="#") Часто задаваемые вопросы
+                        li
+                            a(href="#") Часто встречающиеся ошибки
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Юридическая служба', 'Модальное окно')
+                    .lk_ds_menu_2#lk_ds_menu_2
+                        span(data-popup-trigger='lsmodal') Открыть окно
+
+
+        +footer_custom
+        +modals('lsmodal', 'Создать заявку на юридическую консультацию')
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/footer/footer.js')

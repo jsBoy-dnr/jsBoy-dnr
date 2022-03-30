@@ -1,0 +1,133 @@
+.popular-quiz {
+    padding: 20px;
+    padding-top: 0;
+    box-sizing: border-box;
+    .title-bl {
+        text-align: left;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        color: #333;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #333;
+    }
+    .item {
+        padding: 14px 0 18px;
+        border-bottom: 1px solid #f0f0f0;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        .title {
+            font-weight: 600;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            color: #333;
+            a {
+                text-decoration: none;
+                color: #333;
+                display: inline-block;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .image img {
+            border-radius: 5px;
+            width: 100%;
+        }
+        .left {
+            margin-right: 20px;
+        }
+        .right {
+            margin-left: 20px;
+        }
+        &.with-image {
+            display: flex;
+            .image {
+                min-width: 36px;
+                max-width: 50px;
+            }
+        }
+        .date {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            color: rgba(112, 114, 116, 0.6);
+            margin: 4px 0;
+            padding: 3px 2px 3px 25px;
+            background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z' fill='%23B8B9BA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 4.95459C10.2761 4.95459 10.5 5.17845 10.5 5.45459V10.4091H14.5454C14.8216 10.4091 15.0454 10.633 15.0454 10.9091C15.0454 11.1853 14.8216 11.4091 14.5454 11.4091H10C9.72386 11.4091 9.5 11.1853 9.5 10.9091V5.45459C9.5 5.17845 9.72386 4.95459 10 4.95459Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 0 45% no-repeat;
+            &.result {
+                background: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.4213 10.0685C22.4213 4.5166 17.9045 0 12.3524 0C6.80048 0 2.28369 4.5166 2.28369 10.0685C2.28369 15.6202 6.80048 20.1368 12.3524 20.1368C17.9045 20.1368 22.4213 15.6202 22.4213 10.0685ZM10.5576 14.3635L7.11997 10.9259L8.16195 9.88407L10.5576 12.2797L16.543 6.29444L17.585 7.33624L10.5576 14.3635Z' fill='%23F6C358'/%3E%3Cpath d='M3.04794 16.8884L0 21.3339L4.5063 20.4935L5.34668 25L8.20084 20.8372C6.12869 20.0356 4.34418 18.6523 3.04794 16.8884Z' fill='%23009696'/%3E%3Cpath d='M21.6573 16.8884C20.3611 18.6523 18.5765 20.0356 16.5044 20.8372L19.3586 25L20.1989 20.4935L24.7052 21.3339L21.6573 16.8884Z' fill='%23009696'/%3E%3C/svg%3E%0A") 0 45% no-repeat;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    
+
+    .popular-quiz {
+        padding-top: 20px;
+    }
+
+    .popular-quiz .title-bl {
+        max-width: 100%;
+    }
+
+    .popular-quiz .item {
+        padding: 18px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .popular-quiz .item.with-image .image {
+        min-width: 55px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .popular-quiz .item .image img {
+        width: 100%;
+    }
+
+    .popular-quiz .item.with-image .image img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-quiz .item.with-image {
+        flex-wrap: wrap;
+    }
+
+    .popular-quiz .item.with-image .left,
+    .popular-quiz .item.with-image .right {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+}
+
+.news-block .more-quiz {
+    flex-basis: 100%;
+    margin-top: 14px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.news-block .more-quiz a {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1;
+    text-decoration-line: underline;
+    color: #949300;
+    padding-right: 18px;
+    background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.7564e-08 4C5.19421e-08 3.63181 0.299234 3.33333 0.668359 3.33333L9.69397 3.33333L7.45175 1.14296C7.18803 0.885344 7.18361 0.463257 7.44189 0.200206C7.70016 -0.0628451 8.12332 -0.0672482 8.38704 0.190371L11.7993 3.5237C11.9277 3.6491 12 3.82078 12 4C12 4.17922 11.9277 4.3509 11.7993 4.4763L8.38704 7.80963C8.12332 8.06725 7.70016 8.06285 7.44189 7.79979C7.18361 7.53674 7.18803 7.11466 7.45175 6.85704L9.69397 4.66667L0.668358 4.66667C0.299234 4.66667 4.31858e-08 4.36819 4.7564e-08 4Z' fill='%23949300'/%3E%3C/svg%3E%0A") 100% 50% no-repeat;
+}
+
+.news-block .more-quiz a:hover {
+    color: #009696;
+    background: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.7564e-08 4C5.19421e-08 3.63181 0.299234 3.33333 0.668359 3.33333L9.69397 3.33333L7.45175 1.14296C7.18803 0.885344 7.18361 0.463257 7.44189 0.200206C7.70016 -0.0628451 8.12332 -0.0672482 8.38704 0.190371L11.7993 3.5237C11.9277 3.6491 12 3.82078 12 4C12 4.17922 11.9277 4.3509 11.7993 4.4763L8.38704 7.80963C8.12332 8.06725 7.70016 8.06285 7.44189 7.79979C7.18361 7.53674 7.18803 7.11466 7.45175 6.85704L9.69397 4.66667L0.668358 4.66667C0.299234 4.66667 4.31858e-08 4.36819 4.7564e-08 4Z' fill='%23009696'/%3E%3C/svg%3E%0A") 100% 50% no-repeat;
+}

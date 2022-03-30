@@ -1,0 +1,65 @@
+.toast{
+    &--container {
+        position: fixed;
+        top: 9rem;
+        right: 10rem;
+        z-index: 100000;
+        width: 61.3rem;
+        max-width: calc(100% - 3rem);
+        @media (max-width: 768px) {
+            right: 1.5rem;
+        }
+    }
+    &--item {
+        background: white;
+        border-radius: .4rem;
+        padding: 2rem 2.4rem;
+        margin-bottom: 1rem;
+        position: relative;
+        box-shadow: 0 .5rem 2rem 0 rgba(0,0,0, .1);
+    }
+    &--close {
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        font-size: 200%;
+        cursor: pointer;
+        color: #919CAF;
+    }
+    &--header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &--label {
+        min-width: 9.3rem;
+        padding: .5rem 1rem;
+        border-radius: 100rem;
+        background: gray;
+        color: white;
+        text-align: center;
+        margin-right: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        &__green {
+            background: #96BB20;
+        }
+        &__yellow {
+            background: #F6C358;
+        }
+    }
+    &--pin {
+        max-width: 3rem;
+        max-height: 3rem;
+        margin-right: 3rem;
+        img {
+            width: 100%;
+            cursor: pointer;
+            display: block;
+        }
+    }
+    &--date {
+        color: #B8B9BA;
+        font-size: 1.4rem;
+    }
+}

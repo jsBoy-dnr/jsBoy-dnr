@@ -1,0 +1,201 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_ls_sub_menu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/pagelist/pagelist
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/legalservice.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/herotab/herotab.css')
+        link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ls
+            header.site-header.with-bg.small
+                +header_top_custom
+                +header_right
+            #header_content.header_content--menu
+                +lsheadermenu
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Юридическая служба', 'Компании группы')
+                    +title_bl('titles/title_legalservice.png')
+                    section.section
+                        .sort-bl
+                            form(action).form
+                                input#jsSearch(type="text", placeholder="Поиск по названию")
+                                button(type="submit")
+                        .herotab.herotab--dark
+                            .herotab__inner
+                                .herotab__nav 
+                                    .nav__item.active(data-tabs-trigger="1")
+                                        .item
+                                            img(src="../../images/corp_logo/min-logo-aim.svg", alt)
+                                            span АИМ Холдинг
+                                                i.count 1
+                                    .nav__item(data-tabs-trigger="2")
+                                        .item
+                                            img(src="../../images/corp_logo/min-logo-suek.svg", alt)
+                                            span ГК СУЭК
+                                                i.count 4
+                                    .nav__item(data-tabs-trigger="3")
+                                        .item
+                                            img(src="../../images/corp_logo/min-logo-sgk.svg", alt)
+                                            span ГК СГК
+                                                i.count 5
+                                    .nav__item(data-tabs-trigger="4")
+                                        .item
+                                            img(src="../../images/corp_logo/min-logo-eurochem.svg", alt)
+                                            span ГК ЕвроХим
+                                                i.count 1
+                                    .nav__item(data-tabs-trigger="5")
+                                        .item
+                                            img(src="../../images/corp_logo/min-logo-ntk.png", alt)
+                                            span ГК НТК
+                                                i.count 10
+                                .herotab__content.herotab__content--data
+                                    .tab__headers
+                                        .overflow
+                                            .item
+                                                span Адрес места нахождения
+                                            .item
+                                                span Руководители Обществ 
+                                    .tab__noresult
+                                        | К сожалению по запросу «
+                                        span Ленинград
+                                        | » ничего не найдено.
+                                    .tab__el.active(data-tabs='1')
+                                        .overflow
+                                            .item
+                                                .company.itemtext.
+                                                    Акционерное общество «Сибирская Угольная Энергетическая Компания»
+                                                .addres.itemtext.
+                                                    115054, Российская Федерация, г. Москва, вн.тер.г. муниципальный округ Даниловский, ул. Дубининская, д. 53, стр. 7
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees1.png", alt)
+                                                    .txt.itemtext
+                                                        span Солженицын Степан Александрович
+                                            .item
+                                                .company.itemtext.
+                                                    Акционерное общество «Кабактинское»
+                                                .addres.itemtext.
+                                                    678960, Российская Федерация, Республика Саха (Якутия), город Нерюнгри, проспект Дружбы Народов, дом 29
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees2.png", alt)
+                                                    .txt.itemtext
+                                                        span Власницкий Станислав Витальевич
+                                            .item
+                                                .company.itemtext Акционерное общество «СУЭК-Красноярск»
+                                                .addres.itemtext 660049, Российская Федерация, город Красноярск, улица Ленина, дом 35, строение 2
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees3.png", alt)
+                                                    .txt.itemtext
+                                                        span Фёдоров Андрей Витальевич
+                                            .item
+                                                .company.itemtext Акционерное общество «Разрез Назаровский»
+                                                .addres.itemtext 662200, Российская Федерация, Красноярский край, город Назарово, улица Березовая роща, дом 1
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees4.png", alt)
+                                                    .txt.itemtext
+                                                        span Фёдоров Андрей Витальевич
+                                            .item
+                                                .company.itemtext Акционерное общество «Разрез Березовский»
+                                                .addres.itemtext.
+                                                    662330, Российская Федерация, Красноярский край, Шарыповский район, село Родники,  территория промплощадки ОАО Разрез Березовский-1, строение 1
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees5.png", alt)
+                                                    .txt.itemtext
+                                                        span Фёдоров Андрей Витальевич
+                                            .item
+                                                .company.itemtext.
+                                                    Акционерное общество «Черногорский ремонтно-механический завод»
+                                                .addres.itemtext.
+                                                    662330, Российская Федерация, Красноярский край, Шарыповский район, село Родники,  территория промплощадки ОАО Разрез Березовский-1, строение 1
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees6.png", alt)
+                                                    .txt.itemtext
+                                                        span Фёдоров Андрей Витальевич
+                                            .item
+                                                .company.itemtext Акционерное общество «Разрез Тугнуйский»
+                                                .addres.itemtext.
+                                                    671353, Российская Федерация, Республика Бурятия, Мухоршибирский район, поселок Саган-Нур, проспект 70 лет Октября, дом 49
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees7.png", alt)
+                                                    .txt.itemtext
+                                                        span Килин Алексей Богданович 
+                                            .item
+                                                .company.itemtext.
+                                                    Акционерное общество «Управление по профилактике и рекультивации» 
+                                                .addres.itemtext.
+                                                    652500, Российская Федерация, Кемеровская область - Кузбасс, город Ленинск-Кузнецкий, улица Ламповая, дом 16
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees8.png", alt)
+                                                    .txt.itemtext
+                                                        span Мешков Анатолий Алексеевич
+                                                        i Управляющая компания АО «СУЭК-Кузбасс» Генеральный директор 
+                                                    .img
+                                                        img(src="../../images/people/employees-empty.png", alt)
+                                                    .txt.itemtext
+                                                        span Лебедев Евгений Вячеславович
+                                                        i Исполнительный директор
+                                            .item
+                                                .company.itemtext.
+                                                    Акционерное общество «Черногорский ремонтно-механический завод»
+                                                .addres.itemtext 655162, Российская Федерация, Республика Хакасия, город Черногорск, улица Советская, дом 26
+                                                .name
+                                                    .img
+                                                        img(src="../../images/people/employees9.png", alt)
+                                                    .txt.itemtext
+                                                        span  Романов Евгений Владимирович
+                                        +pagelist
+                                    - for (let i=2; i < 6; i++)
+                                        .tab__el(data-tabs=i)
+                                            .overflow
+                                                - for (let e=1; e < 9; e++)
+                                                    .item
+                                                        .company.itemtext.
+                                                            Акционерное общество «Черногорский ремонтно-механический завод»
+                                                        .addres.itemtext 65516#{e}, Российская Федерация, Республика Хакасия, город Черногорск, улица Советская, дом 26
+                                                        .name
+                                                            .img
+                                                                img(src="../../images/people/employees"+ e +".png", alt)
+                                                            .txt.itemtext
+                                                                span  Романов#{e} Евгений Владимирович
+
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/herotab/herotab.js')
+        script(src='../components/footer/footer.js')

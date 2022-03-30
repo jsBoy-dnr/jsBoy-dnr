@@ -1,0 +1,603 @@
+.ui-datepicker {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    box-sizing: border-box;
+    box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    max-width: 325px;
+    padding: 20px 25px 20px;
+    box-sizing: border-box;
+    z-index: 100001 !important;
+    .ui-widget-header {
+        background: none;
+        border: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: #333;
+        padding: 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:before, &:after {
+            display: none;
+        }
+        .ui-datepicker {
+            &-prev {
+                order: 1;
+                position: static;
+                width: 14px;
+                height: 14px;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.68239 13.6533C7.23267 14.1156 6.48161 14.1156 6.0319 13.6533L0.317611 7.77916C-0.10587 7.34383 -0.10587 6.65618 0.317612 6.22086L6.0319 0.346742L6.52043 0.779755L6.0319 0.346741C6.48162 -0.115556 7.23267 -0.115556 7.68239 0.346741L7.19386 0.779755L7.68239 0.346742C8.10587 0.782068 8.10587 1.46971 7.68239 1.90504L7.19815 1.47583L7.68239 1.90504L2.72605 7.00001L7.68239 12.095C8.10587 12.5303 8.10587 13.218 7.68239 13.6533Z' fill='%23949300'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+                border: none;
+                cursor: pointer;
+                span {
+                    display: none;
+                }
+                &:hover {
+                    border: none;
+                }
+            }
+            &-next {
+                order: 3;
+                position: static;
+                width: 14px;
+                height: 14px;
+                background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 13.6533C0.767329 14.1156 1.51839 14.1156 1.9681 13.6533L7.68239 7.77916C8.10587 7.34383 8.10587 6.65618 7.68239 6.22086L1.9681 0.346742L1.47957 0.779755L1.9681 0.346741C1.51838 -0.115556 0.767328 -0.115556 0.31761 0.346741L0.806138 0.779755L0.317609 0.346742C-0.105871 0.782068 -0.105871 1.46971 0.317609 1.90504L0.80185 1.47583L0.31761 1.90504L5.27395 7.00001L0.31761 12.095C-0.10587 12.5303 -0.10587 13.218 0.317611 13.6533Z' fill='%23949300'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+                border: none;
+                cursor: pointer;
+                span {
+                    display: none;
+                }
+                &:hover {
+                    border: none;
+                }
+            }
+            &-title {
+                order: 2;
+                margin: 0 30px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 120%;
+                text-align: center;
+                color: #333;
+            }
+        }
+    }
+    .ui-datepicker-calendar {
+        thead tr th {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 15px;
+            text-align: center;
+            color: #b8b9ba;
+            text-transform: uppercase;
+        }
+        tbody tr {
+            margin-bottom: 10px;
+            td {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 15px;
+                text-align: center;
+                color: #333;
+                padding: 0;
+                a {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: normal;
+                    text-align: center;
+                    color: #333;
+                    background: none;
+                    border: none;
+                    width: 30px;
+                    height: 30px;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 0 auto;
+                    &:hover,
+                    &.ui-state-active {
+                        background: #949300;
+                        border-radius: 5px;
+                        color: #fff;
+                    }
+                }
+                &.dp-highlight {
+                    background: rgba(148, 148, 0, 0.1);
+                    &:first-child {
+                        a {
+                            background: #949300;
+                            border-radius: 5px;
+                            color: #fff;
+                        }
+                    }
+                }
+                &.ui-state-disabled {
+                    color: #b8b9ba;
+                    a {
+                        color: #b8b9ba;
+                    }
+                }
+            }
+        }
+    }
+}
+.daterangepicker {
+    .calendar-table {
+        .prev {
+            order: 1;
+            position: static;
+            width: 14px;
+            height: 14px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.68239 13.6533C7.23267 14.1156 6.48161 14.1156 6.0319 13.6533L0.317611 7.77916C-0.10587 7.34383 -0.10587 6.65618 0.317612 6.22086L6.0319 0.346742L6.52043 0.779755L6.0319 0.346741C6.48162 -0.115556 7.23267 -0.115556 7.68239 0.346741L7.19386 0.779755L7.68239 0.346742C8.10587 0.782068 8.10587 1.46971 7.68239 1.90504L7.19815 1.47583L7.68239 1.90504L2.72605 7.00001L7.68239 12.095C8.10587 12.5303 8.10587 13.218 7.68239 13.6533Z' fill='%23949300'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+            border: none;
+            cursor: pointer;
+            span {
+                display: none;
+            }
+            &:hover {
+                border: none;
+            }
+            span {}
+        }
+        .next {
+            order: 3;
+            position: static;
+            width: 14px;
+            height: 14px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 13.6533C0.767329 14.1156 1.51839 14.1156 1.9681 13.6533L7.68239 7.77916C8.10587 7.34383 8.10587 6.65618 7.68239 6.22086L1.9681 0.346742L1.47957 0.779755L1.9681 0.346741C1.51838 -0.115556 0.767328 -0.115556 0.31761 0.346741L0.806138 0.779755L0.317609 0.346742C-0.105871 0.782068 -0.105871 1.46971 0.317609 1.90504L0.80185 1.47583L0.31761 1.90504L5.27395 7.00001L0.31761 12.095C-0.10587 12.5303 -0.10587 13.218 0.317611 13.6533Z' fill='%23949300'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+            border: none;
+            cursor: pointer;
+            span {
+                display: none;
+            }
+            &:hover {
+                border: none;
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 5px solid transparent;
+                border-top: 5px solid transparent;
+                box-sizing: border-box;
+            }
+            td {
+                position: relative;
+                border: 0;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 18px;
+                height: 30px;
+                position: relative;
+                &.available:hover {
+                    background-color: transparentize(#949300, .9);
+                }
+                &.in-range {
+                    background-color: transparentize(#949300, .9);
+                }
+                &.active,
+                &.active:hover {
+                    background-color: #949300;
+                    border-color: transparent;
+                    color: #fff;
+                    border-radius: 20px;
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 32px;
+                        border: 4px solid #949300;
+                        border-radius: 6px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+        thead {
+            tr:last-child {
+                border-bottom: 10px solid transparent;
+            }
+            th.month {
+                tr {
+                    border: 0;
+                }
+            }
+        }
+        th {
+            font-size: 16px;
+            line-height: 15px;
+            text-align: center;
+            color: #B8B9BA;
+            font-weight: 400;
+            text-transform: uppercase;
+            height: 36px;
+            &.month {
+                order: 2;
+                margin: 0 30px;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 120%;
+                color: #333;
+                width: auto;
+                text-transform: inherit;
+                height: 39px;
+                border: 0;
+            }
+        }
+    }
+}
+.monthpicker {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    font-family: Proxima Nova;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    color: #333333;
+    outline: none;
+    &-input {
+        background: none;
+        position: absolute;
+        transform: translateX(-2400px);
+    }
+    &_input {
+        min-width: 150px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        color: #fff;
+        outline: none;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin-left: 10px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 0.346723C0.767329 -0.115574 1.51839 -0.115574 1.9681 0.346723L7.68239 6.22084C8.10587 6.65617 8.10587 7.34381 7.68239 7.77914L1.9681 13.6533C1.51839 14.1156 0.767329 14.1156 0.317611 13.6533C-0.105869 13.2179 -0.10587 12.5303 0.31761 12.095L5.27395 6.99999L0.317611 1.90502C-0.10587 1.4697 -0.10587 0.782049 0.317611 0.346723Z' fill='white' /%3E%3C/svg%3E%0A ") 50% 50% no-repeat;
+            transform: rotate(90deg);
+            transition: .3s;
+        }
+        &.opened {
+            &:after {
+                transform: rotate(-90deg)
+            }
+        }
+    }
+    &_selector {
+        position: absolute;
+        z-index: 20;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        box-sizing: border-box;
+        box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        table {
+            border-spacing: 10px;
+            width: 325px;
+        }
+        .month {
+            width: 92px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0 10px;
+            cursor: Pointer;
+            transition: .3s;
+            &:hover {
+                background-color: transparentize(#949300, .9);
+            }
+            &.selected {
+                background: #949300;
+                color: #fff;
+                &:hover {
+                    background: #949300;
+                }
+            }
+        }
+    }
+    .t-header {
+        td {
+            height: 40px;
+        }
+    }
+    .yearValue {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: #333333;
+        &:after {
+            content: 'год';
+            margin-left: 5px;
+        }
+    }
+    .yearSwitch {
+        cursor: pointer;
+        &:after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin: auto;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 0.346723C0.767329 -0.115574 1.51839 -0.115574 1.9681 0.346723L7.68239 6.22084C8.10587 6.65617 8.10587 7.34381 7.68239 7.77914L1.9681 13.6533C1.51839 14.1156 0.767329 14.1156 0.317611 13.6533C-0.105869 13.2179 -0.10587 12.5303 0.31761 12.095L5.27395 6.99999L0.317611 1.90502C-0.10587 1.4697 -0.10587 0.782049 0.317611 0.346723Z' fill='%23949300' /%3E%3C/svg%3E%0A ") 50% 50% no-repeat;
+            transition: .3s;
+        }
+        &:hover {
+            &:after {
+                transform: translateX(10px);
+            }
+        }
+        &.down {
+            &:after {
+                transform: rotate(180deg);
+            }
+            &:hover {
+                &:after {
+                    transform: rotate(180deg) translateX(10px);
+                }
+            }
+        }
+    }
+}
+.yearpicker {
+    position: relative;
+    z-index: 20;
+    width: auto;
+    font-family: Proxima Nova;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    outline: none;
+    &-input {
+        background: none;
+        position: absolute;
+        transform: translateX(-2400px);
+    }
+    input, textarea {
+        font-family: Proxima Nova;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        color: inherit;
+        background: none;
+        outline: none;
+        border: none;
+        max-width: 93px;
+        min-width: auto;
+        margin: auto;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+        background: transparent;
+        border: none;
+        resize: none;
+        height: 24px;
+        text-align: middle;
+        &:focus {
+            outline: none;
+        }
+    }
+    &-year {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 315px;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        margin: 0;
+        &:after {
+            content: "–";
+            display: block;
+            opacity: .5;
+            width: 30%;
+            margin: 1.5%;
+        }
+        .yearpicker-items {
+            list-style: none;
+            margin: 1.5%;
+            box-sizing: border-box;
+            flex: 0 0 30%;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                background-color: transparentize(#949300, .9);
+            }
+            &.selected {
+                background: #949300;
+                color: #fff;
+                &:hover {
+                    background: #949300;
+                }
+            }
+            &.disabled {
+                display: flex;
+                pointer-events: none;
+                color: #bbb;
+            }
+        }
+    }
+    &-container {
+        position: absolute;
+        z-index: 20;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        color: #333333;
+        box-sizing: border-box;
+        box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        &.hide {
+            &~.arrow {
+                &:after {
+                    transform: rotate(90deg)
+                }
+            }
+        }
+    }
+    .arrow {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        &.hide {
+            display: block;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin-left: 10px;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 0.346723C0.767329 -0.115574 1.51839 -0.115574 1.9681 0.346723L7.68239 6.22084C8.10587 6.65617 8.10587 7.34381 7.68239 7.77914L1.9681 13.6533C1.51839 14.1156 0.767329 14.1156 0.317611 13.6533C-0.105869 13.2179 -0.10587 12.5303 0.31761 12.095L5.27395 6.99999L0.317611 1.90502C-0.10587 1.4697 -0.10587 0.782049 0.317611 0.346723Z' fill='white' /%3E%3C/svg%3E%0A ") 50% 50% no-repeat;
+            transform: rotate(-90deg);
+            transition: .3s;
+        }
+    }
+    &-header {
+        height: 40px;
+        justify-content: space-around;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding-top: 10px;
+    }
+    &-current {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: #333333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li {
+            list-style: none;
+            &.disabled {
+                display: flex;
+            }
+        }
+    }
+    &-prev,
+    &-next {
+        cursor: pointer;
+        padding: 12px 20px;
+        &:after {
+            content: "";
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin: auto;
+            background: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.317611 0.346723C0.767329 -0.115574 1.51839 -0.115574 1.9681 0.346723L7.68239 6.22084C8.10587 6.65617 8.10587 7.34381 7.68239 7.77914L1.9681 13.6533C1.51839 14.1156 0.767329 14.1156 0.317611 13.6533C-0.105869 13.2179 -0.10587 12.5303 0.31761 12.095L5.27395 6.99999L0.317611 1.90502C-0.10587 1.4697 -0.10587 0.782049 0.317611 0.346723Z' fill='%23949300' /%3E%3C/svg%3E%0A ") 50% 50% no-repeat;
+            transition: .3s;
+        }
+        &:hover {
+            &:after {
+                transform: translateX(10px);
+            }
+        }
+        &.disabled {
+            display: block;
+            filter: brightness(.3);
+            opacity: .2;
+            cursor: default;
+            &:hover {
+                transform: unset;
+            }
+        }
+    }
+    &-prev {
+        &:after {
+            transform: rotate(180deg);
+        }
+        &:hover {
+            &:after {
+                transform: rotate(180deg) translateX(10px);
+            }
+        }
+        &.disabled {
+            display: block;
+            &:hover {
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+.hide {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .monthpicker {
+        font-size: 14px;
+        line-height: 140%;
+        .t-header td {
+            height: 30px;
+        }
+        &_selector {
+            top: 20px;
+            table {
+                border-spacing: 6px;
+                width: 250px;
+            }
+            .month{
+                height: 27px;
+                width: auto;
+            }
+        }
+    }
+    .yearpicker {
+        font-size: 14px;
+        line-height: 140%;
+        &-header {
+            height: 30px;
+        }
+        &-year {
+            width: 250px;
+            padding: 0px 5px 5px;
+            .yearpicker-items{
+                height: 27px;
+                margin: 2px 1.5%;
+            }
+        }
+        &-container{
+            top: 25px;
+        }
+    }
+}

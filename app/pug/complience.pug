@@ -1,0 +1,130 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/newslist/newslist
+    include ../components/event-block/event-block
+    include ../components/section_title/title_bl
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/event-block/event-block.css')
+        link(rel='stylesheet', href='../css/libraries/compliance.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.compliance
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider
+                nav.header-sub-menu-wrap
+                    ul.header-sub-menu
+                        li
+                            a(href="#") Главная
+                        li
+                            a(href="#") Обучение
+                        li
+                            a(href="#") Команда
+                        li
+                            a(href="#") Санкционный комплаенс
+                        li
+                            a(href="#") Банк знаний
+                
+                        li
+                            a(href="#") Портал комплаенс-менеджера
+                        
+                //- .header_content_top_menu_wrapper
+                    .header_content_top_menu
+                        ul#header_content_top_menu
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Главная
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Обучение
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Команда
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Санкционный комплаенс
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Банк знаний
+                            li.header_content_top_menu_ref
+                                .header_content_top_menu_inner
+                                    a(href="#") Портал комплаенс-менеджера
+                //- #header_content_main_line
+                #header_content_main_title Комплаенс
+                .bt_o_top_slider_c.owl-carousel
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/rashevsky.jpg")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 Дмитрий Кантеров
+                                        h6 Руководитель службы контроля за соблюдением правил и управлением рисками
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Я призываю каждого из вас, уважаемые коллеги, активно включиться в работу по развитию комплаенс культуры и внедрению комплаенс процедур и регламентов. В ближайшее время в компании будет проходить серия внутренних тренингов и семинаров, на которых будет подробно рассказываться о том, что такое комплаенс и каким образом каждый из сотрудников может и должен внедрять его в свою ежедневную работу.
+                            .more.flex
+                                a(href="#!") Подробнее
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row_1
+                                img(src="../../images/rashevsky.jpg")
+                                .bt_o_top_slider_c_item_row_1_text
+                                    .bt_o_top_slider_c_item_row_1_text_1
+                                        h5 Дмитрий Кантеров
+                                        h6 Руководитель службы контроля за соблюдением правил и управлением рисками
+                                    .bt_o_top_slider_c_item_row_1_text_2.bt_font_size_21.
+                                        Я призываю каждого из вас, уважаемые коллеги, активно включиться в работу по развитию комплаенс культуры и внедрению комплаенс процедур и регламентов. В ближайшее время в компании будет проходить серия внутренних тренингов и семинаров, на которых будет подробно рассказываться о том, что такое комплаенс и каким образом каждый из сотрудников может и должен внедрять его в свою ежедневную работу.
+                            .more.flex
+                                a(href="#!") Подробнее
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Комплаенс')
+                    section.compliance_header
+                        img(src="../../images/compliance/compliance-aim.svg", alt)
+                        span Помогаем предотвратить, найти и устранить проблемы
+                    .safety_content_top
+                        .safety_content_top_item
+                            img(src="../../images/compliance/icon_k011.svg")
+                            span Стратегия СУЭК
+                        .safety_content_top_item
+                            img(src="../../images/compliance/icon_k022.svg")
+                            span Бизнес-модель
+                        .safety_content_top_item
+                            img(src="../../images/temp/avatars/ava05.png")
+                            span История развития
+                    +newslist
+                    +event-block
+                        
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/footer/footer.js')

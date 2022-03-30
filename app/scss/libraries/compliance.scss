@@ -1,0 +1,190 @@
+.compliance {
+    * {
+        box-sizing: border-box;
+    }
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #EBEBEB;
+        padding-bottom: 2rem;
+        img {
+            width: 22.7rem;
+            max-height: 2.6rem;
+        }
+            object-fit: contain;
+        span {
+            font-weight: 400;
+            font-size: 2.6rem;
+            color: #707274;
+            display: flex;
+            align-items: center;
+            &:before {
+                content: "";
+                display: block;
+                width: 2px;
+                height: 3.4rem;
+                background: #B8B9BA;
+                margin: 10px;
+            }
+        }
+    }
+    &_team {
+        margin-bottom: -6rem;
+        &__wrap {
+            padding: 3rem 0;
+        }
+    }
+}
+.features {
+    margin-bottom: -6rem;
+    &_wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 -1.5rem;
+    }
+    &_item {
+        width: 33.3333%;
+        padding: 4.5rem 1.5rem;
+        .card {
+            background: #FFFFFF;
+            border: 1px solid #F0F0F0;
+            box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 20.8rem;
+            text-align: left;
+            transition: .3s;
+            &:hover {
+                box-shadow: 0 17px 40px rgba(0, 0, 0, .1);
+            }
+        }
+        img {
+            max-width: 12rem;
+            margin: 0 3rem;
+            height: 12rem;
+            object-fit: contain;
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 1.2;
+            color: #333333;
+            margin: 0;
+            a {
+                color: #333333;
+                text-decoration: none;
+                transition: .3s;
+                &:hover {
+                    color: #2E7CC3;
+                }
+            }
+        }
+        p {
+            margin: 5px 0 0 0;
+            color: #707274;
+        }
+        .rside {
+            width: 160px;
+        }
+        .profile {
+            img {
+                width: 100px;
+                min-width: 100px;
+                height: 100px;
+                border-radius: 100px;
+                margin: 0 30px 0 0;
+            }
+            .rside {
+                width: 175px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .features {
+        &_item {
+            .card {
+                height: 125px;
+                justify-content: flex-start;
+            }
+            img {
+                width: 60px;
+                max-width: 60px;
+                min-width: 60px;
+                margin: 0 20px;
+                height: 60px;
+                object-fit: contain;
+            }
+            h3 {
+                font-size: 1.6rem;
+                line-height: 1.2;
+                padding-right: 10px;
+            }
+            p {
+                font-size: 1.1rem;
+                line-height: 1.1;
+            }
+            .rside {
+                width: auto;
+            }
+            .profile {
+                img {
+                    width: 60px;
+                    max-width: 60px;
+                    min-width: 60px;
+                    margin: 0 20px;
+                    height: 60px;
+                }
+                .rside {
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    .compliance {
+        &_header {
+            flex-direction: column;
+            span {
+                margin-top: 10px;
+                text-align: center;
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        &_team {
+            margin-top: 0px;
+        }
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .compliance {
+        &_header {
+            span {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+        }
+    }
+    .features {
+        &_wrap {
+            flex-direction: column;
+            width: 100%;
+            margin: 10px 0 40px;
+        }
+        &_item {
+            padding: 0;
+            margin: 10px 0;
+            width: 100%;
+        }
+    }
+}

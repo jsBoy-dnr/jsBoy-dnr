@@ -1,0 +1,255 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+
+    include ../components/section_title/title_bl
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/pagelist/pagelist
+    //- include ../components/my_appeals_block/my_appeals_block
+    include ../components/modals/modals
+
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        //- link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+        //- link(rel='stylesheet', href='../css/my_appeals_block/my_appeals_block.css')
+        link(rel='stylesheet', href='../css/libraries/account.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.lk.zayavki.zayavki_kanctovary.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Личный кабинет', 'Административные заявки')
+                    section.section
+                        +title_bl('titles/zayavka_avto.png')
+
+                        .section-body.zayavka-info
+                            .list-block
+                                .left-block
+                                    .block-row
+                                        .block
+                                            .label Номер заявки
+                                            .text №23434
+                                        .block
+                                            .label Дата подачи заявки
+                                            .text 20.03.2021
+                                        .block
+                                            .label Статус
+                                            .text
+                                                .status.orange На согласовании
+                                    .block
+                                        .label Мобильный телефон
+                                        .text +7 926 906 5436
+                                    .block-row
+                                        .block
+                                            .label Дата подачи
+                                            .text 01.02.2021
+                                        .block
+                                            .label Время подачи
+                                            .text 10:00
+                                    .block
+                                        .label Адрес подачи автомобиля
+                                        .text Красная площадь, д1
+                                    .block
+                                        .label Адрес пункта назначения
+                                        .text Шереметьево, терминал Д
+                                    .block
+                                        .label Класс автомобиля
+                                        .text В дропдауне выбран БИЗНЕС
+                                    .block
+                                        .label Решение
+                                        .text Для вас заказан автомобиль Chevrolet Lacceti
+                                            br
+                                            | Госномер С812СК77
+                                            br
+                                            | Телефон водителя +7 903 4595467
+                                            br
+                                            | Безопасной поездки!
+                                .right-block
+                                    .block
+                                        .label Прогресс заявки
+                                    .progress-application
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow-first
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Заявка отправлена
+                                                .name
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Согласование ассистентом подразделения
+                                                .name Артемий Лебедянский
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.green
+                                                .circle-green
+                                                    img(src="../../images/dots.png")
+                                            .info
+                                                .status-application Согласование специалистом по закупке
+                                                .name Богдан Фролов
+                                        .row
+                                            .date-time
+                                                .date-inactive
+                                                .time-inactive
+                                            .progress-bar.inactive-last
+                                                .circle-inactive
+                                            .info
+                                                .status-inactive Заявка исполнена
+                                                .name-inactive
+                                    .progress-application
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow-first
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Заявка отправлена
+                                                .name
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Согласование ассистентом подразделения
+                                                .name Артемий Лебедянский
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Согласование специалистом по закупке
+                                                .name Богдан Фролов
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.cancel
+                                                .circle-cancel
+                                                    img(src="../../images/cancel.png")
+                                            .info
+                                                .status-application Заявка отклонена
+    
+                                                .name Арнольд Зебелян
+    
+                                                    .tooltip-text
+                                                        img(src="../../images/Vector.svg")
+                                                        span.tooltip-title
+                                                            .tooltip-window-top
+                                                                .tooltip-avatar
+                                                                    img(src="../../images/account_image.png", alt="Александр Конев")
+                                                                .tooltip-window-top-right
+                                                                    .tooltip-name Зебелян Арнольд Тирганович
+                                                                    .tooltip-job-title Координатор по этике
+                                                            .tooltip-window-bottom
+                                                                .phone
+                                                                    img(src="../../images/phone.svg")
+                                                                    | 12-30-94
+                                                                a(href="#").send-message Написать
+                                                    .comments
+                                                        img(src="../../images/comments.svg")
+                                                        | Необходимо внести правки согласно техзаданию.
+    
+                                        .row
+                                            .date-time
+                                                .date-inactive
+                                                .time-inactive
+                                            .progress-bar.inactive-last
+                                                .circle-inactive
+                                            .info
+                                                .status-inactive Заявка исполнена
+                                                .name-inactive
+                                    .progress-application
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow-first
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Заявка отправлена
+                                                .name
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.yellow
+                                                .circle-yellow
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Согласование ассистентом подразделения
+                                                .name Артемий Лебедянский
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.green-success
+                                                .circle-green
+                                                    img(src="../../images/dots.png")
+                                            .info
+                                                .status-application Согласование специалистом по закупке
+                                                .name Богдан Фролов
+                                        .row
+                                            .date-time 2021-07-25
+                                                br
+                                                | 14:05
+                                            .progress-bar.green-last
+                                                .circle-green
+                                                    img(src="../../images/check.svg")
+                                            .info
+                                                .status-application Заявка исполнена
+                                                .name
+
+        +footer_custom
+        +modals('m_zayavka_kanctovary', 'Сообщение о нарушении норм соответствия')
+        +modals('m_zayavka_propusk', 'Сообщение о нарушении норм соответствия')
+        +modals('m_zayavka_propuskm_zayavka_group_propusk', 'Сообщение о нарушении норм соответствия')
+        +modals('m_zayavka_auto', 'Сообщение о нарушении норм соответствия')
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+
+        script(src='../js/compiled.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')

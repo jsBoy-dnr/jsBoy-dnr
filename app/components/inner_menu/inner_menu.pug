@@ -1,0 +1,172 @@
+mixin inner_menu()
+    .menu-inner-top
+        ul
+            li
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_fifth_y.svg", alt)
+                    span.name Опросы
+            li.submenu
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_f_y.svg", alt)
+                    span.name Системы
+                ul.dropdown-content.systems(tabindex='-1')
+                    .div_one_level
+                        span.icon
+                            img(src="../../images/menu_icon_inner/icon_third_y.svg", alt)
+                        span.name Документы
+                        .close_m
+                    .docContent__items
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_sap.svg", alt)
+                                span SAP System
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_saper.svg", alt)
+                                span Saperion
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_skrep.svg", alt)
+                                span Docsvision
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_doc.svg", alt)
+                                span Доверенности
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_1c.svg", alt)
+                                span 1С: Инвестпроекты
+                        li.docContent__item
+                            a.doc(href='#!')
+                                img(src="../../images/menu_icon_inner/icon_proof.svg", alt)
+                                span E-proof
+            li
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_sec_y.svg", alt)
+                    span.name Избранное
+            li.submenu
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_third_y.svg", alt)
+                    span.name Документы
+                ul.dropdown-content.docs(tabindex='-1')
+                    .div_one_level
+                        span.icon
+                            img(src="../../images/menu_icon_inner/icon_third_y.svg", alt)
+                        span.name Документы
+                        .close_m
+                    .docContent__items
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#1571c6')
+                                    use(href="../../images/sprite.svg#i_doc")
+                                span 15 лет СУЭК.doc
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#ff4a4a')
+                                    use(href="../../images/sprite.svg#i_pdf")
+                                span Отчет об устойчивом развитии.pdf
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#219653')
+                                    use(href="../../images/sprite.svg#i_xls")
+                                span Отчет фонда «СУЭК-регионам».xls
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#1571c6')
+                                    use(href="../../images/sprite.svg#i_doc")
+                                span 15 лет СУЭК.doc
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#ff4a4a')
+                                    use(href="../../images/sprite.svg#i_pdf")
+                                span Отчет об устойчивом развитии.pdf
+                        li.docContent__item
+                            a.doc(href='#!')
+                                svg.ifile(fill='#219653')
+                                    use(href="../../images/sprite.svg#i_xls")
+                                span Отчет фонда «СУЭК-регионам».xls
+
+            li
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_fourth_y.svg", alt)
+                    span.name Здоровье
+            li
+                a(href="#")
+                    span.icon
+                        img(src="../../images/menu_icon_inner/icon_six_y.svg", alt)
+                    span.name Котировки
+            //- li
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_f_y.svg", alt)
+            //-         span.name Системы
+            //- li
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_sec_y.svg", alt)
+            //-         span.name Избранное
+            //- li.docs.submenu
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_third_y.svg", alt)
+            //-         span.name Документы
+            //-     ul.dropdown-content
+            //-         .div_one_level
+            //-             span.icon
+            //-                 img(src="../../images/menu_icon_inner/icon_third_y.svg", alt)
+            //-             span.name Документы
+            //-             .close_m
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_doc.png", alt)
+            //-                 span.name
+            //-                     | 15 лет СУЭК
+            //-                     i .doc
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_xls.png", alt)
+            //-                 span.name Отчет фонда «СУЭК-регионам».xls
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_pdf.png", alt)
+            //-                 span.name Отчет об устойчивом развитии.pdf
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_doc.png", alt)
+            //-                 span.name
+            //-                     | 15 лет СУЭК
+            //-                     i .doc
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_xls.png", alt)
+            //-                 span.name Отчет фонда «СУЭК-регионам».xls
+            //-         li
+            //-             a(href="#")
+            //-                 span.image
+            //-                     img(src="../../images/menu_icon_inner/icon_pdf.png", alt)
+            //-                 span.name Отчет об устойчивом развитии.pdf
+            //- li
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_fourth_y.svg", alt)
+            //-         span.name Здоровье
+            //- li
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_fifth_y.svg", alt)
+            //-         span.name Опросы
+            //- li
+            //-     a(href="#")
+            //-         span.icon
+            //-             img(src="../../images/menu_icon_inner/icon_six_y.svg", alt)
+            //-         span.name Котировки

@@ -1,0 +1,485 @@
+// body > .site-wrapper:before {
+//     content: '';
+//     position: absolute;
+//     // top: -29rem;
+//     right: 0;
+//     left: 0;
+//     height: 67.6rem;
+//     background: url(../../images/bg-bank-znanii.png) 0 0 no-repeat;
+//     -webkit-background-size: cover;
+//     background-size: cover;
+//     z-index: auto;
+// }
+
+.site-header.with-bg {
+  &:before{
+    height: 96rem;
+  }
+}
+
+.bank_znanii_header_menu_tabs {
+    background: #F0F0F0;
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 1.1rem 2rem 0 2rem;
+    overflow: hidden;
+    font-size: 0;
+    position: relative;
+    height: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.bank_znanii_header_menu_tabs > nav {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+.bank_znanii_header_menu_tabs a {
+    padding: .9rem 1.5rem 1.5rem 1.5rem;
+    margin-right: 1.5rem;
+    display: inline-block;
+    border-bottom: 4px solid #F0F0F0;
+    color: #333333;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.bank_znanii_header_menu_tabs a.bank_znanii_header_menu_tabs_current {
+    color: #007BC4 !important;
+    border-bottom: 4px solid #007BC4;
+    font-weight: 600;
+}
+#bank_znanii_header_menu_tabs_btn_area_input {
+    display: none;
+}
+#bank_znanii_header_menu_tabs_btn_area_close {
+    display: none;
+}
+#bank_znanii_header_menu_tabs_btn_area img {
+    width: 2rem;
+    height: 2rem;
+}
+#bank_znanii_header_menu_tabs_btn_area span {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: right;
+    color: #333333;
+}
+#bank_znanii_header_menu_tabs_btn_area input {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #333333;
+    opacity: 0.5;
+    outline: none;
+    background: none;
+    border: none;
+    flex-grow: 1;
+}
+#bank_znanii_header_menu_tabs_btn_area {
+    position: absolute;
+    right: 3rem;
+    top: 1.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0;
+}
+#bank_znanii_header_menu_tabs_btn_area > img:first-child {
+    margin-right: 7px;
+}
+
+.bz-tab-1-item {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #F0F0F0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 37rem;
+    // margin-bottom: -1px;
+    text-align: left;
+}
+.bz-tab-1-item-title {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 120%;
+    color: #333333;
+    text-decoration: none;
+    // margin-bottom: 1rem;
+    margin-right: .2rem;
+    display: block;
+    & + .bz-tab-1-item-line{
+        margin-top:1rem;
+    }
+}
+.bz-tab-1-item-title span {
+    margin-left: 1rem;
+    color: #ccc;
+    font-weight: normal;
+}
+#bank_znanii_references {
+    font-size: 0;
+    display: grid;
+    grid-gap: 4rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+    grid-template-columns: repeat(3,1fr);
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: 660px) {
+        grid-template-columns: repeat(1,1fr);
+    }
+    & + .bank_znanii_tab_btn{
+        margin-top: 4rem;
+    }
+}
+.bz-tab-1-item-line {
+    margin-bottom: 1rem;
+    display: block;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 140%;
+    color: #333333;
+    text-decoration: none;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+.bz-tab-1-item-line:hover {
+    text-decoration: underline;
+}
+
+.bank_znanii_tab_btn {
+    text-align: center;
+}
+.bank_znanii_tab_btn > a {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 126%;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 1.5rem 5rem;
+    
+    background: #F1B043;
+    border: 1px solid #F1B043;
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    text-decoration: none;
+}
+.bank_znanii_tab_btn > a:hover {
+    box-shadow: 0 0 18px #aaa;
+}
+
+#bank_znanii_filter_1 {
+    display: none;
+    margin-bottom: 3rem;
+}
+#bank_znanii_filter_1 > select {
+    width: 100%;
+}
+
+#bank_znanii_filter_1 .jq-selectbox__select-text {
+    padding-left: 2.2rem;
+}
+
+#bank_znanii_header_tab_1_wrapper_2_title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 120%;
+    color: #333333;
+    
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+#bank_znanii_header_tab_1_wrapper_2_top_btn_wrapper {
+    flex-grow: 1;
+    text-align: right;
+}
+#bank_znanii_header_tab_1_wrapper_2_top_btn_wrapper > span {
+    padding: 1.5rem 2rem;
+    background: #F0F0F0;
+    border-radius: 5px;
+    font-weight: normal;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-align: center;
+    color: #333333;
+    cursor: pointer;
+}
+#bank_znanii_header_tab_1_wrapper_2_title span {
+    font-weight: normal;
+    color: grey;
+    display: inline-block;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+.bank_znanii_tab_1_wrapper_2_grid_item {
+    width: 37rem;
+    height: 25rem;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 5px;
+    
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+}
+.bank_znanii_tab_1_wrapper_2_grid_item:hover .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer {
+    background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #000 100%);
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_bg {
+    position: absolute;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_video {
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    transform: translate(-50%, 69px);
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_top_title {
+    padding: .6rem 1.5rem;
+    background: rgba(51, 51, 51, 0.4);
+    border-radius: 5px 0px;
+    
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(51, 51, 51, 0) 0%, #333333 100%);
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_c2 {
+    display: flex;
+    align-items: center;
+    font-size: 0;
+}
+.divnews_content_colum_type_footer_item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.divnews_content_colum_type_footer_item span {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: #B8B9BA;
+    display: inline-block;
+    margin-left: 6px;
+}
+.divnews_content_colum_type_footer_item_bookmarks {
+    flex-grow: 1;
+    text-align: right;
+}
+.divnews_content_colum_type_footer_item_bookmarks img {
+    width: 3rem;
+    height: 3rem;
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_c1 {
+    flex-grow: 1;
+    z-index: 4;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 127%;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 1rem;
+    margin-right: 1.6rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.bank_znanii_tab_1_wrapper_2_grid_item_c2 {
+    padding: 1rem 0 1rem 0;
+    z-index: 4;
+    border-top: 1px solid #FFF;
+    margin-left: 1rem;
+    margin-right: 1.6rem;
+}
+#bank_znanii_tab_1_wrapper_2_grid {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+    @media (max-width: 1100px) {
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media (max-width: 660px) {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_c1_icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.bank_znanii_tab_1_wrapper_2_grid_item_c1_icon > img {
+    margin-right: 5px;
+}
+#bank_znanii_tab_1_wrapper_2_grid_footer {
+    text-align: center;
+    margin-top: 3rem;
+}
+#bank_znanii_tab_1_wrapper_2_grid_footer a {
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #007BC4;
+}
+#bank_znanii_header_tab_1_wrapper_2_title_name {
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 120%;
+    color: #333333;
+}
+
+@media (max-width: 1039px) {
+    #bank_znanii_tab_1_wrapper_2_grid {
+        grid-gap: 20px;
+    }
+    #bank_znanii_tab_1_wrapper_2_grid {
+        grid-template-columns: repeat(auto-fill, 354px);
+    }
+    .bank_znanii_tab_1_wrapper_2_grid_item {
+        width: 354px;
+        height: 250px;
+    }
+}
+@media (max-width: 1024px) {
+  #header_content {
+    z-index: 11;
+    margin-bottom: 30px;
+  }
+  body > .site-wrapper:first-child::before {
+      top: -211px;
+  }
+  #bank_znanii_header_tab_1_wrapper_2_title_name {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #333333;
+  }
+}
+
+@media (max-width: 866px) {
+    body > .site-wrapper:first-child::before {
+        left: -99px;
+        height: 658px;
+    }
+}
+@media (max-width: 810px) {
+    #bank_znanii_references {
+        grid-gap: 2rem;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .bz-tab-1-item-title {
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 120%;
+        color: #333333;
+    }
+    .bz-tab-1-item {
+        padding-bottom: 2rem;
+        width: 30rem;
+    }
+
+}
+@media (max-width: 659px) {
+    #bank_znanii_filter_1 {
+        display: block;
+    }
+    .bank_z_search_btn {
+        width: 50px;
+        height: 50px;
+    }
+    .bz-tab-1-item {
+        width: 100%;
+    }
+}
+@media (max-width: 632px) {
+    #bank_znanii_header_tab_1_wrapper_2_title {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #bank_znanii_header_tab_1_wrapper_2_top_btn_wrapper {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #bank_znanii_header_tab_1_wrapper_2_top_btn_wrapper > span {
+        display: block;
+    }
+}
+@media (max-width: 529px) {
+    #bank_znanii_header_tab_1_wrapper_2_title_name {
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 120%;
+        color: #333333;
+    }
+    body > .site-wrapper:first-child::before {
+	left: -238px;
+	height: 658px;
+    }
+}
+@media (max-width: 452px) {
+    #bank_znanii_tab_1_wrapper_2_grid {
+        grid-gap: 30px;
+    }
+    #bank_znanii_tab_1_wrapper_2_grid {
+        grid-template-columns: 1fr;
+    }
+    .bank_znanii_tab_1_wrapper_2_grid_item {
+        width: 100%;
+        height: 200px;
+    }
+    .bank_znanii_tab_1_wrapper_2_grid_item_c1 {
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #FFFFFF;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+    .bank_znanii_tab_1_wrapper_2_grid_item_top_title {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+@media (max-width: 411px) {
+    .bank_znanii_tab_btn > a {
+        width: 100%;
+    }
+    body > .site-wrapper:first-child::before {
+	left: -269px;
+	height: 619px;
+	top: -214px;
+    }
+}
+

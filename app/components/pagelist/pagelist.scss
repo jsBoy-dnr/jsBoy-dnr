@@ -1,0 +1,60 @@
+
+.pagelist {
+    margin-top: 3rem;
+    text-align: center;
+    @media (max-width: 1024px) {
+        margin-bottom: 4rem;
+    }
+    & + .more-link{
+        margin-bottom: 0;
+    }
+    ul {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+        list-style: none;
+        li a {
+            width: 2rem;
+            min-width: 2rem;
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1;
+            color: #333;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            text-decoration: none;
+            &:hover {
+                color: #2E7CC3;
+                // text-decoration: underline;
+            }
+        }
+        li.active a {
+            color: #2E7CC3;
+            font-weight: 600;
+            // text-decoration: underline;
+        }
+        li:first-child a{
+            margin-right: 3rem;
+            @media(max-width:480px){
+                margin-right: 1.5rem;
+            }
+        }
+        li:last-child a{
+            margin-left: 3rem;
+            @media(max-width:480px){
+                margin-left: 1.5rem;
+            }
+        }
+        li.prev a,
+        li.next a {
+            height: 1.2rem;
+            background: url("data:image/svg+xml,%3Csvg width='11' height='12' viewBox='0 0 11 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.1464 0.646447C10.3417 0.451184 10.6583 0.451184 10.8536 0.646447C11.0488 0.841709 11.0488 1.15829 10.8536 1.35355L6.20711 6L10.8536 10.6464C11.0488 10.8417 11.0488 11.1583 10.8536 11.3536C10.6583 11.5488 10.3417 11.5488 10.1464 11.3536L5.14645 6.35355C4.95118 6.15829 4.95118 5.84171 5.14645 5.64645L10.1464 0.646447ZM5.14645 0.646447C5.34171 0.451184 5.65829 0.451184 5.85355 0.646447C6.04882 0.841709 6.04882 1.15829 5.85355 1.35355L1.20711 6L5.85355 10.6464C6.04882 10.8417 6.04882 11.1583 5.85355 11.3536C5.65829 11.5488 5.34171 11.5488 5.14645 11.3536L0.146446 6.35355C-0.0488157 6.15829 -0.0488157 5.84171 0.146446 5.64645L5.14645 0.646447Z' fill='%23333333'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+        }
+        li.next a {
+            transform: rotate(180deg);
+        }
+    }
+}

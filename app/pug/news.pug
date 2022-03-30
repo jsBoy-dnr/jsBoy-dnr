@@ -1,0 +1,88 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/newslist/newslist
+    include ../components/newslist/newslist_big
+    include ../components/newslist/newslist_slider
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/top_filter/top_filter.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.list_news.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper.blocks-news
+                .inner
+                    .news-block.news-block-new
+                        +title_bl('image_news/news_title.png')
+                        .sort-news
+                            .sort_bl
+                                .sort_bl_title
+                                    span Фильтр
+                                .sort_bl_body
+                                    .to-date
+                                        input#date_date2.init-calendar(type="text", size="15", readonly, value="Выбрать период", name="date_date", placeholder="Выбрать период")
+                                    .to-region
+                                        select#region-select(name="region")
+                                            option(value="Выбрать регион") Выбрать регион
+                                            option(value="Тестовый регион") Тестовый регион
+                                            option(value="Тестовый регион 2") Тестовый регион 2
+                                    .to-heading
+                                        select#heading-select(name="heading")
+                                            option(value="Выбрать регион") Выбрать рубрику
+                                            option(value="Тестовая рубрика") Тестовая рубрика
+                                            option(value="Тестовая рубрика 2") Тестовая рубрика 2
+                            form.form-news(action)
+                                button
+                                input(type="text", placeholder="Поиск по новостям")
+                        +newslist_big
+                        +newslist_slider
+                        .banner_news
+                            .date Осталось 3 дня
+                            .title
+                                | Обновление корпоративной
+                                br
+                                | библиотеки
+                            a.go-to(href="#") Пройти опрос
+                        +newslist
+                        .banner_news_second
+                            .date 21 января
+                            .title
+                                | СУЭК предложит на региональной ярмарке
+                                br
+                                | вакансий 80 стабильных рабочих мест.
+                                br
+                                | Новый этап!
+
+                        .more_news_link
+                            a(href="#") Показать ещё
+        +footer_custom
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/calendar/calendar.js')
+        script(src='../components/footer/footer.js')

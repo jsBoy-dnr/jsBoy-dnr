@@ -1,0 +1,93 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/newslist/newslist_big
+    include ../components/newslist/newslist_slider
+    include ../components/footer/footer_custom
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/top_filter/top_filter.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper.blocks-news
+                .inner
+                    .news-block.news-block-new
+                        +title_bl('titles/new_employees_title.png')
+                        .sort-news.sort-news-min
+                            .sort_bl
+                                .sort_bl_title
+                                    span Фильтр
+                                .sort_bl_body
+                                    .to-date
+                                        input#date_date2.init-calendar(type="text", size="15", readonly, value="Выбрать период", name="date_date", placeholder="Выбрать период")
+                                    .to-heading
+                                        select#heading-select(name="region")
+                                            option(value="Выбрать организацию") Выбрать организацию
+                                            option(value="Тестовая рубрика") Тестовая рубрика
+                                            option(value="Тестовая рубрика 2") Тестовая рубрика 2
+                            form.form-news(action)
+                                button
+                                input(type="text", placeholder="Поиск по сотрудникам")
+                        .employees
+                            .heading Сегодня
+                            .users_wrap
+                                .usercard
+                                    img(src="../../images/new_employees_image1.png", alt)
+                                    a(href="#!")
+                                        h3 Елена Саранская
+                                    span.desc Директор по персоналу  и администрации
+                                    a.map(href="#!") АО "СУЭК"
+                                    span.position Управление по работе с персоналом
+                                .usercard
+                                    img(src="../../images/none_img_women.png", alt)
+                                    a(href="#!")
+                                        h3 Вера Иванцова
+                                    span.desc Директор по персоналу  и администрации
+                                    a.map(href="#!") АО "СУЭК-Красноярск"
+                                    span.position Управление по работе с персоналом
+                            .heading Март 2020
+                            .users_wrap 
+                                - for (var i = 3; i < 15; i++)
+                                    .usercard
+                                        img(src='../../images/new_employees_image' + i + '.png', alt)
+                                        a(href="#!")
+                                            h3 Елена Саранская
+                                        span.desc Директор по персоналу  и администрации
+                                        a.map(href="#!") АО "СУЭК"
+                                        span.position Управление по работе с персоналом
+                            .more_days_link
+                                a(href="#") Показать ещё
+        +footer_custom
+        +modals('happybirthday', 'Сообщение с поздравлением')
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')
+        script(src='../components/calendar/calendar.js')

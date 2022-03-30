@@ -1,0 +1,329 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_sub_menu
+    include ../components/leftmenu_mainslider/leftmenu
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/kun_template/kun_template
+    include ../components/my_tasks_block/target_block
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/libraries/ku.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/leftmenu_mainslider/leftmenu.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/my_tasks_block/my_tasks_block.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/kun_template/kun_template.css')
+        link(rel='stylesheet', href='../css/top_filter/top_filter.css')
+        link(rel='stylesheet', href='../css/lk_ds_menu/lk_ds_menu.css')
+        link(rel='stylesheet', href='../css/safety_top_block/safety_top_block.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ku
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider.header_content--new(style='background-image:url(../images/image_ku/banner1.png);')
+                nav.LeftMenu.position-absolute
+                    ul.list-unstyled
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_1.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_1_hover.svg")
+                                span.name
+                                    | Новому
+                                    br
+                                    | сотруднику
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_2.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_2_hover.svg")
+                                span.name Моя компания
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_3.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_3_hover.svg")
+                                span.name Подразделения
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_4.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_4_hover.svg")
+                                span.name Новости
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_5.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_5_hover.svg")
+                                span.name
+                                    | Организационная
+                                    br
+                                    | структура
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_6.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_6_hover.svg")
+                                span.name
+                                    | Телефонный
+                                    br
+                                    | справочник
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_7.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_7_hover.svg")
+                                span.name Безопасность
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_8.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_8_hover.svg")
+                                span.name Комплаенс
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_9.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_9_hover.svg")
+                                span.name
+                                    | Кодекс
+                                    br
+                                    | корпоративной этики
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_10.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_10_hover.svg")
+                                span.name
+                                    | Организационное
+                                    br
+                                    | развитие
+                nav.header-sub-menu-wrap
+                    ul.header-sub-menu
+                        li
+                            a(href="#") Корпоративный Универститет
+                        li.-drop-
+                            a(href="#") О нас
+                            ul
+                                li
+                                    a(href="#") Наши цели и задачи
+                                li
+                                    a(href="#") Наша команда
+                        li.-drop-
+                            a(href="#") Каталог программ
+                            ul
+                                li
+                                    a(href="#") Факультет менеджмента и лидерства
+                                li
+                                    a(href="#") Факультет личной эффективности
+                                li.-dropright-
+                                    a(href="#") Факультет по функциям
+                                    ul
+                                        li
+                                            a(href="#") Факультет HR
+                                        li
+                                            a(href="#") Факультет закупок
+                                        li
+                                            a(href="#") Факультет проектного управления
+                                li
+                                    a(href="#") Факультет цифровых навыков и цифровизации
+                                li
+                                    a(href="#") Факультет английского языка
+                                li
+                                    a(href="#") Адаптация в компании и в роли
+
+                        li
+                            a(href="#") Корпоративная библиотека
+
+                        li.-drop-
+                            a(href="#") Банк знаний
+                            ul
+                                li
+                                    a(href="#") Записи вебинаров
+                                li
+                                    a(href="#") Образовательная рассылка
+                                li
+                                    a(href="#") Нормативные документы
+                        li
+                            a(href="#") Нормативные документы
+                        li
+                            a(href="#") FAQ
+
+                #header_content_main_title Факультет
+                    br
+                    span Менеджмента и лидерства 
+                .bt_o_top_slider_c.owl-carousel
+                    .bt_o_top_slider_c_item_c
+                        .bt_o_top_slider_c_item
+                            .bt_o_top_slider_c_item_row
+                                p.
+                                    В рамках факультета можно подобрать программу для руководителя любого уровня. 
+                                    Целью обучения является развитие менеджерских компетенций, повышение личной эффективности руководителей, 
+                                    освоение современных инструментов управления командой, мотивацией и вовлеченностью
+                                    сотрудников. 
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('Корпоративный университет', 'Факультет менеджмента и лидерства')
+                    .kUn
+                        .result-block
+                            .sort_bl
+                                select#sort_bl(name="sort_bl_select")
+                                    option(value="#1") Программа развития среднего менеджмента
+                                    option(value="#2") Программа развития среднего менеджмента
+                                    option(value="#3") Программа развития среднего менеджмента
+                                    option(value="#4") Программа развития среднего менеджмента
+                        .kUn__content
+                            h2 Программа развития среднего менеджмента
+                            p   Программа направлена на развитие управленческих компетенций посредством современных моделей
+                                br
+                                | и инструментов менеджмента. Обучение позволяет видеть более широкий бизнес-контекст и целостную систему
+                                br
+                                | управления. Программа включает в себя изучение и отработку стандартов регулярного менеджмента (СРМ) для
+                                br
+                                | повышения качества управления операционной деятельностью.
+                        .kUn__content.kUn__content--flex
+                            .kUn__item
+                                .kUn__block.kUn__block--withIcon
+                                    img(src='../../images/image_ku/icon_for1.png')
+                                    p 
+                                        b Для кого
+                                    p Руководители среднего уровня
+                                .kUn__block.kUn__block--withIcon
+                                    img(src='../../images/image_ku/icon_for2.png')
+                                    p 
+                                        b Формат
+                                    p Смешанный (очно и онлайн)
+                                .kUn__block.kUn__block--withIcon
+                                    img(src='../../images/image_ku/icon_for3.png')
+                                    p 
+                                        b Сколько длится
+                                    p 8 модулей по 2 дня
+                                        br
+                                        |и межмодульная часть
+                                .kUn__block.kUn__block--withIcon
+                                    img(src='../../images/image_ku/icon_for4.png')
+                                    p 
+                                        b Кто проводит
+                                    p Внешние тренеры
+                            .kUn__item
+                                .kUn__block.kUn__block--withBigImg
+                                    img(src='../../images/image_ku/man.svg')
+                                    h5 Ожидаемый результат
+                                    .kUn__promores
+                                        p
+                                            b После обучения участники:
+                                        ul 
+                                            li повысят уровень управленческих компетенций
+                                            li улучшат качество принимаемых решений
+                                            li укрепят горизонтальные связи с коллегами
+                                            li научатся создавать мотивирующую среду в своих командах
+                                            li смогут находить индивидуальный подход к сотрудникам
+                        .kUn__content
+                            .kUn__block
+                                h2 Содержание программы
+                                p Наполнение практическими кейсами и дополнительными фокусами зависит 
+                                    br
+                                    | от уровня целевой аудитории и специфики ее деятельности.
+                            .lk_ds_menu_2#lk_ds_menu_2
+                                span.lk_ds_menu_2_current(onclick="menu2Change(this, 1)") Стартовая сессия
+                                span(onclick="menu2Change(this, 2)") МОДУЛЬ 1
+                                span(onclick="menu2Change(this, 3)") МОДУЛЬ 2
+                                span(onclick="menu2Change(this, 4)") МОДУЛЬ 3
+                                span(onclick="menu2Change(this, 5)") МОДУЛЬ 4
+                                span(onclick="menu2Change(this, 6)") МОДУЛЬ 5
+                                span(onclick="menu2Change(this, 7)") МОДУЛЬ 6
+                                span(onclick="menu2Change(this, 8)") МОДУЛЬ 7
+                                span(onclick="menu2Change(this, 9)") МОДУЛЬ 8
+                                span(onclick="menu2Change(this, 10)") Финальная сессия
+                            #page_tabs.pageTabs
+                                div.pageTabs__item(id='page_tab_1' style="display: block;")
+                                    .kUn__content.kUn__content--flex.reverse
+                                        .kUn__item
+                                            p 
+                                                b Управление исполнением
+                                            ul 
+                                                li Специфика роли и ответственности руководителя
+                                                li Планирование и постановка задач в формате SMART
+                                                li Как ставить мотивирующую задачу
+                                                li Компетентность и готовность сотрудника для выполнения задачи. Четыре уровня развития сотрудника
+                                                li Уровни развития и ответственность за решение проблем. Поиск и принятие решений. Когда и в какой мере привлекать подчиненных
+                                                li Связь стилей руководства и мотивации сотрудников. Практика навыков ситуационного руководства
+                                                li Практика применения четырех стилей руководства в беседах с подчиненными
+                                        .kUn__item
+                                            p 
+                                                b СРМ МОДУЛЯ
+                                            ul 
+                                                li Постановка задач и контроль
+                                                li Делегирование
+                                                li Обратная связь
+                                                li Диалог о целях
+                                - for (var i = 2; i < 10; i++)
+                                    div.pageTabs__item(id='page_tab_'+i)
+                                        .kUn__content.kUn__content--flex.reverse
+                                            .kUn__item
+                                                p 
+                                                    b Модуль #{i}
+                                                ul 
+                                                    li Специфика роли и ответственности руководителя
+                                                    li Планирование и постановка задач в формате SMART
+                                                    li Как ставить мотивирующую задачу
+                                                    li Компетентность и готовность сотрудника для выполнения задачи. Четыре уровня развития сотрудника
+                                                    li Уровни развития и ответственность за решение проблем. Поиск и принятие решений. Когда и в какой мере привлекать подчиненных
+                                                    li Связь стилей руководства и мотивации сотрудников. Практика навыков ситуационного руководства
+                                                    li Практика применения четырех стилей руководства в беседах с подчиненными
+                        .kUn__content.kUn__content--flex.light
+                            .kUn__item
+                                .kUn__block.kUn__block--withSmallIcon
+                                    img(src='../../images/image_ku/icon_modul1.svg')
+                                    p 
+                                        b Программа включает в себя изучение стандартов регулярного менеджмента (СРМ)
+                                    p.
+                                        Это конкретные управленческие действия, 
+                                        повторяющиеся с определенной периодичностью или в ответ на стандартные обстоятельства.
+                                    a(href='#!') Узнать больше
+                            .kUn__item
+                                .kUn__promogrey
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_modul2.svg')
+                                        h5 Междумодульная часть
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_modul3.svg')
+                                        p Межмодульная работа
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_modul4.svg')
+                                        p Онлайн-сессия с тренером
+                                    .kUn__block.kUn__block--withIcon
+                                        img(src='../../images/image_ku/icon_modul5.svg')
+                                        p Внедрение инструментов в вашу работу
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/top_slider/top_slider.js')
+        script(src='../components/lk_ds_menu/lk_ds_menu.js')
+        script(src='../components/kun_template/kun_template.js')
+        script(src='../components/footer/footer.js')

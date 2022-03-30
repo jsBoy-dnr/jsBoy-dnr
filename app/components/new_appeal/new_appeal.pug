@@ -1,0 +1,35 @@
+mixin new_appeal()
+    .section-body.spravka_new
+        h3.page-subtitle Выберите тип справки или документа
+        select.select-custom.w-25
+            option(value="Справка") Справка
+            option(value="Документ") Документ
+        br
+        br
+        .zayavka-info
+            h3.page-subtitle Информация о сотруднике
+            .block
+                .label Табельный номер
+                .text 00006076
+            .block
+                .label ФИО
+                .text Соснин Иван Викторович
+            .block
+                .label Телефон
+                .text +7(926)-982-88-46
+            .block
+                .label E-mail
+                .text SosninV@gmail.com
+            .block
+                .label Место работы
+                .text СУЭК Москва
+            .block
+                .label Подразделение
+                .text Внештатные сотрудники
+            .block
+                .label Должность
+                .text Внештатный сотрудник
+            .block
+                .btn-toolbar
+                    button.btn.btn-primary#m_spravka_sended__btn
+                        .btn-inner Отправить запрос

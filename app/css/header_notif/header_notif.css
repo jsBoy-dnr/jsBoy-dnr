@@ -1,0 +1,281 @@
+.notification-block {
+  position: relative; }
+  .notification-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: .1rem;
+    left: 0;
+    width: .1rem;
+    background: #fff;
+    opacity: 0.2; }
+  .notification-block-title {
+    cursor: pointer;
+    width: 8rem;
+    min-width: 8rem;
+    height: 7rem;
+    background: url("data:image/svg+xml,%3Csvg width='24' height='30' viewBox='0 0 24 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.9502 22.1515C22.3159 21.5717 21.9521 20.7496 21.9521 19.896V14.0625C21.9521 13.7389 21.6898 13.4765 21.3662 13.4765C21.0426 13.4765 20.7803 13.7389 20.7803 14.0625V19.896C20.7803 21.0778 21.283 22.2152 22.1596 23.0165C22.4746 23.3045 22.6553 23.7142 22.6553 24.1408C22.6553 24.9807 21.9719 25.6641 21.1319 25.6641H2.85047C2.01053 25.6641 1.32715 24.9807 1.32715 24.1408C1.32715 23.7143 1.5078 23.3045 1.82285 23.0165C2.69942 22.2152 3.20215 21.0778 3.20215 19.896V13.125C3.20215 8.27867 7.14494 4.33589 11.9912 4.33589C13.3241 4.33589 14.637 4.63899 15.826 5.2155L16.5955 4.29141C15.7221 3.83585 14.7852 3.5137 13.8176 3.33376C14.0335 2.99684 14.1592 2.59688 14.1592 2.16791C14.1592 0.972541 13.1867 0 11.9912 0C10.7958 0 9.82326 0.972541 9.82326 2.16791C9.82326 2.59641 9.94871 2.9959 10.1641 3.33264C5.54128 4.19309 2.03028 8.25646 2.03028 13.125V19.896C2.03028 20.7496 1.66653 21.5717 1.03219 22.1515C0.474903 22.6609 0.155273 23.386 0.155273 24.1407C0.155273 25.6269 1.36436 26.8359 2.85047 26.8359H8.28728C8.56947 28.6263 10.1228 30 11.9912 30C13.8597 30 15.413 28.6263 15.6952 26.8359H21.132C22.6181 26.8359 23.8272 25.6269 23.8272 24.1407C23.8272 23.386 23.5076 22.6609 22.9502 22.1515ZM12.9873 2.16786C12.9873 1.61866 12.5405 1.17182 11.9912 1.17182C11.442 1.17182 10.9951 1.61866 10.9951 2.16786C10.9951 2.71711 11.442 3.16395 11.9912 3.16395C12.5405 3.16395 12.9873 2.71711 12.9873 2.16786ZM9.48107 26.8359C9.74721 27.9761 10.7713 28.8281 11.9912 28.8281C13.2112 28.8281 14.2353 27.9761 14.5014 26.8359H9.48107Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+    position: relative;
+    z-index: 1; }
+    @media (max-width: 700px) {
+      .notification-block-title {
+        height: 6rem; } }
+    .notification-block-title:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background: #fff;
+      opacity: 0; }
+    .notification-block-title.active:before {
+      opacity: 0.3; }
+    .notification-block-title .count {
+      position: absolute;
+      top: 2.2rem;
+      right: 1.9rem;
+      min-width: 2rem;
+      height: 2rem;
+      background: #fff;
+      border-radius: 50%;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.2rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #333;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+  .notification-block-body {
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    height: calc(100vh - 7rem);
+    overflow-y: auto;
+    width: 42rem;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0px 1rem 3rem rgba(148, 148, 148, 0.1), 0px 7px 10px rgba(152, 152, 152, 0.05);
+    box-sizing: border-box;
+    visibility: hidden;
+    opacity: 0; }
+    .notification-block-body::-webkit-scrollbar {
+      width: .8rem;
+      border-radius: 3rem; }
+    .notification-block-body::-webkit-scrollbar-track {
+      background-color: #F0F0F0;
+      border-radius: 3rem; }
+    .notification-block-body::-webkit-scrollbar-thumb {
+      background-color: #acc0cc;
+      border-radius: 3rem;
+      outline: none; }
+    @media (max-width: 480px) {
+      .notification-block-body {
+        top: 6rem;
+        height: calc(100vh - 6rem); } }
+    .notification-block-body.opened {
+      opacity: 1;
+      visibility: visible; }
+    .notification-block-body .blocks-title {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      color: #333; }
+      .notification-block-body .blocks-title a {
+        font-size: 1.8rem;
+        text-align: right;
+        text-decoration: none; }
+    .notification-block-body .blocks .tasks {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      padding: 1.5rem 0 3rem; }
+      .notification-block-body .blocks .tasks .task {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center; }
+        .notification-block-body .blocks .tasks .task .count {
+          min-width: 2.8rem;
+          height: 2.8rem;
+          padding: 0 .4rem;
+          border-radius: 1rem;
+          margin-right: 1rem;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-align: center;
+          align-items: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 1.8rem;
+          line-height: 1.2; }
+        .notification-block-body .blocks .tasks .task a {
+          text-decoration: none;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 1.8rem;
+          line-height: 1.2;
+          color: #333;
+          opacity: 0.7; }
+          .notification-block-body .blocks .tasks .task a:hover {
+            text-decoration: underline; }
+        .notification-block-body .blocks .tasks .task.red .count {
+          background: #ff4a4a; }
+        .notification-block-body .blocks .tasks .task.yellow .count {
+          background: #f6c358; }
+        .notification-block-body .blocks .tasks .task.green .count {
+          background: #74b422; }
+    .notification-block-body .blocks-body {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      color: #333;
+      padding: 1rem 0 2rem; }
+      .notification-block-body .blocks-body .links {
+        padding-bottom: 1rem; }
+      .notification-block-body .blocks-body a {
+        color: #333;
+        text-decoration: none;
+        opacity: 0.7; }
+        .notification-block-body .blocks-body a:hover {
+          text-decoration: underline; }
+    .notification-block-body .blocks .congratulation .item {
+      padding: 1rem 0 0;
+      display: -ms-flexbox;
+      display: flex; }
+      .notification-block-body .blocks .congratulation .item .pic {
+        width: 6rem;
+        height: 6rem;
+        min-width: 6rem;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 2rem; }
+      .notification-block-body .blocks .congratulation .item .text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        color: #333; }
+        .notification-block-body .blocks .congratulation .item .text .title {
+          font-weight: bold; }
+        .notification-block-body .blocks .congratulation .item .text .body {
+          padding-bottom: 5px; }
+        .notification-block-body .blocks .congratulation .item .text .date {
+          opacity: 0.7; }
+    .notification-block-body .blocks .congratulation .owl-nav {
+      padding: 1rem 0 0 1rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center; }
+      .notification-block-body .blocks .congratulation .owl-nav button {
+        padding: 0;
+        margin: 0;
+        width: 3.4rem;
+        height: 3.4rem;
+        border-radius: 50%;
+        font-size: 0;
+        outline: none;
+        border: none;
+        background: #ebebeb url("data:image/svg+xml,%3Csvg width='6' height='11' viewBox='0 0 6 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.52413 10.7276C4.86137 11.0908 5.42459 11.0908 5.76183 10.7276C6.07939 10.3856 6.07939 9.8454 5.76183 9.50341L2.0451 5.50078L5.76183 1.49816L5.3987 1.16097L5.76183 1.49816C6.07939 1.15617 6.07939 0.61595 5.76182 0.273955C5.42458 -0.0892267 4.86137 -0.0892266 4.52413 0.273955L0.23903 4.88868C-0.0785361 5.23068 -0.0785365 5.77089 0.239029 6.11289L4.52413 10.7276Z' fill='%23333333'/%3E%3C/svg%3E%0A") 50% 50% no-repeat;
+        cursor: pointer;
+        transition: .3s; }
+        .notification-block-body .blocks .congratulation .owl-nav button.owl-prev {
+          margin-right: 1rem; }
+        .notification-block-body .blocks .congratulation .owl-nav button.owl-next {
+          transform: rotate(180deg); }
+        .notification-block-body .blocks .congratulation .owl-nav button.disabled {
+          display: block;
+          opacity: .5;
+          cursor: default; }
+    .notification-block-body .empty {
+      color: #333;
+      text-align: center;
+      padding: 1rem 0; }
+      .notification-block-body .empty p {
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0.5rem; }
+      .notification-block-body .empty a {
+        text-align: right;
+        text-decoration: none;
+        font-weight: 500; }
+        .notification-block-body .empty a:hover {
+          text-decoration: underline; }
+
+.congratulation .wrap {
+  padding: 1rem 0 0;
+  display: -ms-flexbox;
+  display: flex; }
+  .congratulation .wrap .pic {
+    width: 6rem;
+    height: 6rem;
+    min-width: 6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .congratulation .wrap .text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #333; }
+    .congratulation .wrap .text .title {
+      font-weight: bold; }
+    .congratulation .wrap .text .body {
+      padding-bottom: .5rem; }
+    .congratulation .wrap .text .date {
+      opacity: 0.7; }
+
+@media screen and (max-width: 700px) {
+  .notification-block-title {
+    width: 6rem;
+    min-width: 6rem;
+    height: 6rem; }
+    .notification-block-title .count {
+      top: 1.6rem;
+      right: 1.1rem; }
+  .notification-block-body {
+    top: 6rem;
+    position: fixed;
+    height: calc(100vh - 6rem);
+    right: 0;
+    left: 0;
+    width: auto; } }
+
+@media screen and (max-width: 375px) {
+  .notification-block-body .blocks-body {
+    font-size: 1.6rem; }
+  .notification-block-body .blocks-title {
+    font-size: 2rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .notification-block-body .blocks .tasks {
+    padding: 5rem 0; }
+    .notification-block-body .blocks .tasks .task {
+      margin-top: .5rem;
+      margin-bottom: .5rem; }
+      .notification-block-body .blocks .tasks .task a {
+        font-size: 1.6rem; } }
+
+.notification-block .links .jpost {
+  float: inherit; }

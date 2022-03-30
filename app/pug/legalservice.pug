@@ -1,0 +1,142 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/header_sub_menu/header_ls_sub_menu
+    include ../components/leftmenu_mainslider/leftmenu
+    include ../components/herotab/herotab
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/newslist/newslist
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/header_content/header_content.css')
+        link(rel='stylesheet', href='../css/leftmenu_mainslider/leftmenu.css')
+        link(rel='stylesheet', href='../css/header_sub_menu/header_sub_menu.css')
+        link(rel='stylesheet', href='../css/herotab/herotab.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/top_slider/top_slider.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim.ls
+            header.site-header
+                +header_top_custom
+                +header_right
+            #header_content._bg_for_slider.header_content--new(style='background-image:url(../images/legalservice/legalmenubg.png);')
+                nav.LeftMenu.position-absolute
+                    ul.list-unstyled
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_1.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_1_hover.svg")
+                                span.name
+                                    | Новому
+                                    br
+                                    | сотруднику
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_2.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_2_hover.svg")
+                                span.name Моя компания
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_3.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_3_hover.svg")
+                                span.name Подразделения
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_4.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_4_hover.svg")
+                                span.name Новости
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_5.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_5_hover.svg")
+                                span.name
+                                    | Организационная
+                                    br
+                                    | структура
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_6.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_6_hover.svg")
+                                span.name
+                                    | Телефонный
+                                    br
+                                    | справочник
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_7.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_7_hover.svg")
+                                span.name Безопасность
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_8.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_8_hover.svg")
+                                span.name Комплаенс
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_9.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_9_hover.svg")
+                                span.name
+                                    | Кодекс
+                                    br
+                                    | корпоративной этики
+                        li
+                            a(href="#")
+                                span.pic
+                                    img.normal(src="../../images/menu_icon/menuleft_icon_10.svg")
+                                    img.hover(src="../../images/menu_icon/menuleft_icon_10_hover.svg")
+                                span.name
+                                    | Организационное
+                                    br
+                                    | развитие
+                +lsheadermenu
+                +herotab
+
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Юридическая служба')
+                    +newslist
+                    .section.uselinks
+                        .uselinks__title Полезные ссылки
+                        .uselinks__items
+                            a(href='#!' title='#') Картотека арбитражных дел
+                            a(href='#!' title='#') Федеральный портал проектов правовых актов
+                            a(href='#!' title='#') Сведения из ЕГРЮЛ
+                            a(href='#!' title='#') ПРАВО.ru
+                            a(href='#!' title='#') КонсультантПлюс
+
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/herotab/herotab.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/footer/footer.js')

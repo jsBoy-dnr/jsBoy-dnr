@@ -1,0 +1,32 @@
+.filter
+    button.btn.filter_btn
+        span.btn_inner
+            p Фильтр
+            span.i_filter
+    .filter_wrap
+        .faq-sel
+            .faq-sel__item
+                select#sel_reg(name="region")
+                    option(selected, disabled, value="Выбрать регион") Выбрать регион
+                    option(value="Тестовый регион") Тестовый регион
+                    option(value="Тестовый регион 2") Тестовый регион 2
+            hr
+            .faq-sel__item
+                select#sel_comp(name="comp")
+                    option(selected, disabled, value="Выбрать предприятие").
+                        Выбрать предприятие
+
+                    option(value="Тестовый регион") Предприятие 1
+                    option(value="Тестовый регион 2") Предприятие 2
+            hr
+            .faq-sel__item
+                select#sel_block(name="block")
+                    option(selected, disabled, value="Выбрать блок") Выбрать блок
+                    option(value="Тестовый регион") Тестовый Блок 1
+                    option(value="Тестовый регион 2") Тестовый Блок 2
+            hr
+            .faq-sel__item
+                select#sel_serv(name="serv")
+                    option(selected, disabled, value="Выбрать службу") Выбрать службу
+                    option(value="Тестовый регион") Служба 1
+                    option(value="Тестовый регион 2") Служба 2

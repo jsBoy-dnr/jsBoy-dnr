@@ -1,0 +1,78 @@
+.jobs_inner.flex_wrap.justify
+    .info
+        h3 Машинист тепловоза
+        .job_type Внутренний отбор
+        span.cost от 60 000 ₽
+    .flex.map
+        span.pin(href="#!") пгт. Чегдомын, Хабаровский край
+        span.sort(href="#!") Добыча сырья
+        span.calendar(href="#!") 03 марта 2020, 08:49
+    .jobs
+        .price.flex_wrap.justify
+            .flex.tools
+                a.btn(href="#!", data-popup-trigger="otklik") Откликнуться
+                a.btn.btn--primary(href="#!", data-popup-trigger="friends" data-toggle="tooltip" data-placement="bottom" title="Поррекомендовать товарища и получить вознаграждение")
+                    span.rub ₽
+                    | Приведи друга
+                //- a.btn.btn--primary(href="#!", data-popup-trigger="recomend-vacancy" data-toggle="tooltip" data-placement="bottom" title="Поррекомендовать вакансию")
+                //-     | Рекомендовать вакансию
+                .order.order-1
+                    a.favorite(href="#!" data-toggle="tooltip" data-placement="bottom" title="Добавить вакансию в избранное")
+                    a.share(href="#!" data-toggle="tooltip" data-placement="bottom" title="Поделиться в соц.сетях вакансией" data-popup-trigger="socialshare")
+                .order.order-2
+                    a.copy(href="#!" data-toggle="tooltip" data-placement="bottom" data-copy="https://testtesttest.test" data-copied="Скопировано!" data-err-copied="Не удалось скопировать!" title="Скопипровать пригласительную ссылку")
+                    a.mail(href="mailt:testmail@testmail.com" data-toggle="tooltip" data-placement="bottom" title="Направить пригласительную ссылку письмом")
+                    a.print(href="#!" data-toggle="tooltip" data-placement="bottom" title="Отправить на печать" onclick="window.print();")
+                a.hidden__link.order-last(href="#!" data-slide-down="Развернуть подбор и развитие персонала" data-slide-up="Свернуть подбор и развитие персонала") Развернуть подбор и развитие персонала
+                //- .hidden__content
+                //-     +user_card
+            a.mt-2(href="#") Изучить программу “Приведи друга” 
+        .jobs_support.absolute.hidden__content
+            h2 Подбор и развитие персонала
+        .usercard
+            img(src="../../images/temp/avatars/ava03.png", alt)
+            a(href="#!")
+                h3 Васюкович Юлия Анатольевна
+            span.position Директор по подбору персонала
+            a.map(href="#!") АО "СУЭК-Красноярск
+            .phones
+                a(href="tel:+7 (495) 911-12-10") +7 (495) 911-12-10
+                .mobile-code
+                    a.code(href="#") 3128
+
+            .skype
+                a(href="mailto:VasukovichUA@suek.ru") VasukovichUA@suek.ru
+            .whatsap
+                a(href="tel:+7 (495) 911-12-10") WhatsApp
+            //- hr.gray
+            //- a.go(href="#!") НАПИСАТЬ
+    section.innpage_content
+        p
+            b Требуемый опыт работы:
+            | 3–6 лет
+        p Полная занятость, сменный график.
+        h4 Обязанности:
+        ul 
+            li Управление тепловозом серия ТГМ 23В;
+            li Маневровые работы на производственных путях;
+            li Знание устройства ТТХ тепловоза;
+            li Умение поиска и оперативное устранение неисправностей тепловоза.
+        h4 Требования:
+        ul 
+            li Образование средне-специальное, техническое.
+        h4 Условия:
+        ul 
+            li Трудоустройство согласно ТК РФ;
+            li Рабочее место в пгт. Чегдомын;
+            li Ежедневная транспортная доставка до места работы.
+        section.innpage_tags 
+            .section__title Ключевые навыки:
+            a.btn.btn--tags(href="#!") Маневрирование
+            a.btn.btn--tags(href="#!") Знание устройства
+            a.btn.btn--tags(href="#!") Ремонтные работы
+        section.innpage_footer
+            .backto
+                a.btn_backto(href="/vacancy.html")
+                    svg
+                        use(href="../../images/sprite.svg#i_arrow_long")
+                    | Все вакансии

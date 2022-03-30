@@ -1,0 +1,24 @@
+mixin notify()
+    .toast--container
+        .toast--item
+            .toast--header
+                .toast--label.toast--label__green Заметка
+                .toast--pin
+                    img(src="../../images/helpers/pin.svg")
+                .toast--date 03 марта 2020, 17:49
+            .toast--body.
+
+                Старая версия корпоративного портала доступна по ссылке
+
+            .toast--close(onclick="this.parentNode.style.display = \'none\';") ×
+        .toast--item
+            .toast--header
+                .toast--label.toast--label__yellow Объявление
+                .toast--pin
+                    img(src="../../images/helpers/pin.svg")
+                .toast--date 03 марта 2020, 17:49
+            .toast--body.
+
+                С целью улучшения качества предоставляемых сервисов с 19.08.2021 по 20.08.2021 на портале будут проводиться плановые обновления. Во время проведения работ возможны сбои отображения данных. Приносим извинения за неудобства.
+
+            .toast--close(onclick="this.parentNode.style.display = \'none\';") ×

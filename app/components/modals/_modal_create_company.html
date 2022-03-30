@@ -1,0 +1,58 @@
+
+<div class="modal" data-popup="create_com" tabindex="-1" role="dialog">
+  <div class="modal__bg modal-dialog" role="document"></div>
+  <div class="modal__wrap modal_lg modal-content">
+    <div class="modal__inner">
+      <div class="modal__header modal-header">
+        <h2 class="title-bl bleft">Создать предприятие</h2>
+        <div class="close-modal">
+          <button class="btn close-modal__button modal_close"></button>
+        </div>
+      </div>
+      <div class="modal__body modal-body padtop0">
+        <form class="form form--validation">
+          <div class="form-group">
+            <div class="form-field">
+              <label class="custom-input_label">Введите наименование предприятия<b class="red">*</b></label>
+              <input class="custom-input form-control" type="text" placeholder="Наименование предприятия" autocorrect="off" required>
+              <div class="errortext">Введите введите наименование предприятия</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-field">
+              <label class="custom-input_label">Введите код<b class="red">*</b></label>
+              <input class="custom-input form-control" type="text" placeholder="Код" autocorrect="off" required>
+              <div class="errortext">Введите введите код</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-field">
+              <label class="custom-input_label">Введите БЕ<b class="red">*</b></label>
+              <input class="custom-input form-control" type="text" placeholder="БЕ" autocorrect="off" required>
+              <div class="errortext">Введите БЕ</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-field"> 
+              <label class="custom-input_label">Отображать ссылку на скачивание вложений?<b class="red">*</b></label>
+              <select class="select-custom" name="Отображать ссылку на скачивание вложений" required>
+                <option>Нет</option>
+                <option>Да</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group justify-content-start">
+            <div class="form-field wa">
+              <button class="btn btn-primary btn-submit disabled" type="submit">
+                <div class="btn_inner">Создать</div>
+              </button>
+            </div>
+            <div class="form-field w50">
+              <div class="note"> <b class="red">* </b><span>Поля, отмеченные звездочкой, обязательны к заполнению</span></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

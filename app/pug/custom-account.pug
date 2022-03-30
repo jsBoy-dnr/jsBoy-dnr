@@ -1,0 +1,94 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_lk
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/template_switcher/template_switcher
+
+    include ../components/section_title/title_bl
+    include ../components/inner_menu/inner_menu
+    include ../components/my_tasks_block/my_tasks_block_notif
+    include ../components/my_tasks_block/my_tasks_block
+    include ../components/work_services_block/work_services_block
+    include ../components/my_appeals_block/my_appeals_block
+    include ../components/working_groups/working_groups
+    include ../components/newslist/newslist
+
+    include ../components/footer/footer_lk
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/template_switcher/template_switcher.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+
+        link(rel='stylesheet', href='../css/inner_menu/inner_menu.css')
+        link(rel='stylesheet', href='../css/my_tasks_block/my_tasks_block.css')
+        link(rel='stylesheet', href='../css/work_services_block/work_services_block.css')
+        link(rel='stylesheet', href='../css/my_appeals_block/my_appeals_block.css')
+        link(rel='stylesheet', href='../css/working_groups/working_groups.css')
+        link(rel='stylesheet', href='../css/libraries/account.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.lk.template--aim
+            +template_switcher
+
+            header.site-header.with-bg.site-header-default(
+                    data-tmpl-btn="default" 
+                    data-tmpl-name="АИМ Холдинг" 
+                    data-tmpl-text="Внешний сайт АИМ" 
+                    data-tmpl-link="http://aimholding.ru/" 
+                    data-tmpl-logo="logo-aim.svg" 
+                    data-tmpl-phone="8 (800) 200 - 12 - 40"
+                    data-tmpl-vk="http://vk.com/#" 
+                    data-tmpl-fb="http://fb.com/#" 
+                    data-tmpl-inst="http://instagram.com/#"
+                    data-tmpl-youtube="http://youtube.com/#" 
+                )
+                +header_lk
+            .blocks-wrapper
+                .inner
+                    +inner_menu
+                    section.section.my_tasks_block.my_notifications
+                        +title_bl('titles/my_notifications.png')
+                        .section-body 
+                            +my_tasks_block_notif
+                    section.section.my_tasks_block
+                        +title_bl('titles/my_tasks_block.png')
+                        .section-body 
+                            +my_tasks_block
+                    .work_services_block
+                        +title_bl('image_service/services_block_title.png')
+                        +work_services_block
+                        .more-link
+                            a(href="#") Все сервисы
+                    .appeals_block
+                        +title_bl('appeals_title.png')
+                        .top_link
+                            a(href="#") Создать новое обращение
+                            select#selnew(name="Выберите тип")
+                                option Блок Закупок
+                                option Блок Закупок 2
+                                option Блок Закупок 3
+                        +my_appeals_block
+                    +working_groups
+                    +newslist
+        +footer_lk
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+
+        script(src='../js/compiled.js')
+        script(src='../components/template_switcher/template_switcher.js')
+        script(src='../components/footer/footer.js')

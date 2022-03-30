@@ -1,0 +1,41 @@
+mixin lk(data)
+    if data === 'zayavki_admin'
+        section.section
+            h3 Уважаемые коллеги!
+            p В этом разделе вы можете создавать заявки и отслеживать статус их выполнения
+            ul.custom
+                li
+                    //  ID кнопки не обязательно?,data-popup-trigger должен совпадать с data-popup модального окна
+                    button.btn.btn-with-arrow.m_zayavka_kanctovary__btn(data-popup-trigger="m_zayavka_kanctovary")
+                        span.endarrow Заявка на канцтовары
+                li
+                    //  ID кнопки не обязательно?,data-popup-trigger должен совпадать с data-popup модального окна
+                    button.btn.btn-with-arrow.m_zayavka_propusk__btn(data-popup-trigger="m_zayavka_propusk")
+                        span.endarrow Заявка на гостевой пропуск
+                li
+                    //  ID кнопки не обязательно?,data-popup-trigger должен совпадать с data-popup модального окна
+                    button.btn.btn-with-arrow(data-popup-trigger="m_zayavka_group_propusk")
+                        span.endarrow Заявка на пропуск для группы гостей (до 8 чел. включительно)
+                li
+                    //  ID кнопки не обязательно?,data-popup-trigger должен совпадать с data-popup модального окна
+                    button.btn.btn-with-arrow.m_zayavka_auto__btn(data-popup-trigger="m_zayavka_auto")
+                        span.endarrow Заявка на автотранспорт
+            p Мы постоянно работаем над расширением количества доступных административных сервисов.
+            section.grid-block(style="display: none;")
+                .items-wrap
+                    a.item(href="#")
+                        span.image
+                            img(src="../../images/image_service/services_block6.png", alt)
+                        span.title Заявка на канцтовары
+                    a.item(href="#")
+                        span.image
+                            img(src="../../images/image_service/services_block6.png", alt)
+                        span.title Заявка на гостевой пропуск
+                    a.item(href="#")
+                        span.image
+                            img(src="../../images/image_service/services_block6.png", alt)
+                        span.title Заявка на груповой гостевой пропуск
+                    a.item(href="#")
+                        span.image
+                            img(src="../../images/image_service/services_block6.png", alt)
+                        span.title Заявка на автотранспорт

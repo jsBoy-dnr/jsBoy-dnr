@@ -1,0 +1,87 @@
+.modal(id=data, data-popup=data, tabindex="-1" role="dialog")
+    .modal__bg.modal-dialog(role="document")
+    .modal__wrap.modal_lg.modal-content
+        .modal__inner
+            .modal__header.modal-header
+                h2.title-bl.bleft Обращение по комплаенс
+                .close-modal
+                    button.btn.close-modal__button.modal_close
+            .modal__body.modal-body.padtop0
+                form.form.form--validation
+                    .form-group.agree
+                        .form-field
+                            .fstart
+                                input.custom-checkbox(type="checkbox", id="anon")
+                                label(for="anon") Отправить анонимное обращение
+                                .tooltip
+                                    button.btn.tooltip__btn
+                                        svg.w20
+                                            use(href="../../images/sprite.svg#i_info").
+                                    .tooltip__wrap
+                                        p Для сохранения анонимности обращение не будет отображаться в вашем Личном кабинете. Обратная связь по анонимному обращению не предоставляется. 
+                    .form-group
+                        .form-field 
+                            select.select-custom(name="Выберите тему обращения", required)
+                                option Выберите тему обращения
+                                option Тема обращения
+                                option Тема обращения 2
+                    .form-group
+                        .form-field
+                            input.custom-input.form-control.error(
+                                type="text", 
+                                placeholder="* Введите имя"
+                                autocorrect="off"
+                                required,
+                                pattern=".{6,}"
+                                )
+                            .errortext Введите Ваше Имя
+                    .form-group
+                        .form-field
+                            input.custom-input.form-control.valid(
+                                type="email", 
+                                placeholder="* Ваш email...", 
+                                autocorrect="off"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$",
+                                required
+                                )
+                            .errortext Введите Ваше email
+                    .form-group
+                        .form-field
+                            textarea.custom-textarea.form-control(placeholder="* Наименование контрагента (указываются все имеющиеся варианты (полное, сокращенное, на иностранном языке))", required, disabled)
+                            .errortext Введите сообщение
+                    .form-group
+                        .form-field
+                            textarea.custom-textarea.form-control(placeholder="* Идентификаторы контрагента: ОГРН/ ИНН/ др.", required, disabled)
+                            .errortext Введите сообщение
+                    .form-group
+                        .form-field
+                            textarea.custom-textarea.form-control(placeholder="* Местонахождение контрагента (указывается в соответствии с учредительными документами)", required, disabled)
+                            .errortext Введите сообщение
+                    .form-group
+                        .form-field
+                            textarea.custom-textarea.form-control(placeholder="Ваше сообщение...", required, disabled)
+                            .errortext Введите сообщение
+                    .form-group
+                        .form-field
+                            label.custom-input_label
+                                | Прикрепить файл
+                            input(name="file" type="file" id="input__file" class="input_hide")
+                            label(for="input__file" class="btn btn-secondary") Выберите файл
+                    .form-group
+                        .form-field.w50
+                            .captcha
+                                img(src="../../images/helpers/captcha.png")
+                        .form-field.w50
+                            input.custom-input.form-control(type="text", placeholder="Слово с картинки", required, disabled)
+                    .form-group.agree
+                        .form-field
+                            input.custom-checkbox(type="checkbox", id="dscl")
+                            label(for="dscl") Заполняя данную форму, Вы даете свое согласие на обработку Компанией Ваших персональных данных, указанных в данной форме, включая их передачу внутри Группы Компаний (подробная информация об обработке данных представлена в разделе Условия использования).
+                    .form-group.justify-content-start
+                        .form-field.wa
+                            button.btn.btn-primary.btn-submit.disabled(type="submit")
+                                .btn_inner Отправить
+                        .form-field.w50
+                            .note 
+                                b.red * 
+                                span Поля, отмеченные звездочкой, обязательны к заполнению

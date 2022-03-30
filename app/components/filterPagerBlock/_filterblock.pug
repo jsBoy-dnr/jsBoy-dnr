@@ -1,0 +1,15 @@
+.top_filter
+    form(action).top_filter_form
+        .top_filter_item.width-4
+            select.select-custom(name="Выбрать действие")
+                option(selected, value="default") Выбрать действие
+                option Отправить уведомление о необходимости заполнить декларацию
+                option Сформировать отчет Комплаенс
+                option Сформировать подробный отчет
+                option(disabled) Сформировать декларацию участников
+            button.btn.btn-primary.disabled(disabled) Применить
+        .top_filter_item.width-7
+            .sort-bl
+                .form
+                    input#jsSearch(type="text", placeholder="Поиск участника декларирования", value="", data-user="Всего участников (2)", data-org="Всего организаций (6)")
+                    button(type="submit")

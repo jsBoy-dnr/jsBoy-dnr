@@ -1,0 +1,62 @@
+.modal(id=data, data-popup='create_com', tabindex="-1" role="dialog")
+    .modal__bg.modal-dialog(role="document")
+    .modal__wrap.modal_lg.modal-content
+        .modal__inner
+            .modal__header.modal-header
+                h2.title-bl.bleft Создать предприятие
+                .close-modal
+                    button.btn.close-modal__button.modal_close
+            .modal__body.modal-body.padtop0
+                form.form.form--validation
+                    .form-group
+                        .form-field
+                            label.custom-input_label
+                                | Введите наименование предприятия
+                                b.red *
+                            input.custom-input.form-control(
+                                type="text", 
+                                placeholder="Наименование предприятия"
+                                autocorrect="off"
+                                required,
+                                )
+                            .errortext Введите введите наименование предприятия
+                    .form-group
+                        .form-field
+                            label.custom-input_label
+                                | Введите код
+                                b.red *
+                            input.custom-input.form-control(
+                                type="text", 
+                                placeholder="Код", 
+                                autocorrect="off"
+                                required
+                                )
+                            .errortext Введите введите код
+                    .form-group
+                        .form-field
+                            label.custom-input_label
+                                | Введите БЕ
+                                b.red *
+                            input.custom-input.form-control(
+                                type="text", 
+                                placeholder="БЕ", 
+                                autocorrect="off"
+                                required
+                                )
+                            .errortext Введите БЕ
+                    .form-group
+                        .form-field 
+                            label.custom-input_label
+                                | Отображать ссылку на скачивание вложений?
+                                b.red *
+                            select.select-custom(name="Отображать ссылку на скачивание вложений", required)
+                                option Нет
+                                option Да
+                    .form-group.justify-content-start
+                        .form-field.wa
+                            button.btn.btn-primary.btn-submit.disabled(type="submit")
+                                .btn_inner Создать
+                        .form-field.w50
+                            .note 
+                                b.red * 
+                                span Поля, отмеченные звездочкой, обязательны к заполнению

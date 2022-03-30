@@ -1,0 +1,397 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+
+    include ../components/section_title/title_bl
+    include ../components/inner_menu/inner_menu
+    include ../components/my_tasks_block/my_tasks_block_notif
+    include ../components/work_services_block/work_services_block_new
+    include ../components/my_appeals_block/my_appeals_block
+    include ../components/filterPagerBlock/filterblock
+    include ../components/filterPagerBlock/pagerblock
+    include ../components/pagelist/pagelist
+
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+
+        link(rel='stylesheet', href='../css/inner_menu/inner_menu.css')
+        link(rel='stylesheet', href='../css/my_tasks_block/my_tasks_block.css')
+        link(rel='stylesheet', href='../css/work_services_block/work_services_block.css')
+        link(rel='stylesheet', href='../css/my_appeals_block/my_appeals_block.css')
+        link(rel='stylesheet', href='../css/filterPagerBlock/filterPagerBlock.css')
+        link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+        link(rel='stylesheet', href='../css/libraries/account.css')
+
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.lk.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +inner_menu
+                    section.section
+                        +title_bl('titles/title_declare_set.png')
+                        .table__block
+                            +filterblock
+                            +pagerblock('Всего организаций (6)')
+                            .appeals-desc.tab-content
+                                .desc-area
+                                    .title
+                                        .left
+                                            .check
+                                                input.custom-checkbox(type="checkbox" id='q')
+                                                label(for="q")
+                                            .org Организация
+                                            .date-notif Дата отправки уведомления
+                                        .right
+                                            .progres Статус формирования отчета по декларации
+                                            .archive Архив отчетов
+                                    .overflowBlock
+                                        .item
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='w')
+                                                    label(for="w")
+                                                .org
+                                                    img(src="../../images/corp_logo/min-logo-sgk.svg", alt)
+                                                    span СГК
+                                                .date-notif 05.12.2021
+                                            .right
+                                                .progres
+                                                    span Отчет по задолженности
+                                                    .progress
+                                                        .progress-bar.progress-bar-striped.progress-bar-animated(role="progressbar", style="width: 42%;", aria-valuenow="42", aria-valuemin="0", aria-valuemax="100") 
+                                                    .progress-info
+                                                        span.percent (42%)
+                                                        .timer 03 декабря 2021, 17:49
+                                                .archive.dropContent Развернуть архив
+                                                    .btn(class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1")
+                                                        svg.w14
+                                                            use(href="../../images/sprite.svg#i_arrow")
+                                        .docContent(id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent=".desc-area")
+                                            .docContent__items
+                                                - for (var i = 0; i < 3; i++)
+                                                    .docContent__item
+                                                        .head 2022 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2021 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2020 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2019 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                        .item.odd
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='s')
+                                                    label(for="s")
+                                                .org
+                                                    img(src="../../images/corp_logo/min-logo-eurochem.svg", alt)
+                                                    span ЕвроХим
+                                                .date-notif 05.12.2021
+                                            .right
+                                                .progres
+                                                    span Формирование отчета не задано
+                                                .archive.dropContent Развернуть архив
+                                                    .btn(class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2")
+                                                        svg.w14
+                                                            use(href="../../images/sprite.svg#i_arrow")
+            
+                                        .docContent(id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent=".desc-area")
+                                            .docContent__items
+                                                - for (var i = 0; i < 3; i++)
+                                                    .docContent__item
+                                                        .head 2022 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2021 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2020 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2019 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                        .item
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='e')
+                                                    label(for="e")
+                                                .org
+                                                    img(src="../../images/corp_logo/min-logo-suek.svg", alt)
+                                                    span СУЕК
+                                                .date-notif 05.12.2021
+                                            .right
+                                                .progres
+                                                    span Хозяйственный отчет
+                                                    .progress
+                                                        .progress-bar.progress-bar-striped.progress-bar-animated(role="progressbar", style="width: 0%;", aria-valuenow="0", aria-valuemin="0", aria-valuemax="100") 
+                                                    .progress-info
+                                                        span.percent (0%)
+                                                        .timer 07 декабря 2021, 10:05
+                                                .archive.dropContent Развернуть архив
+                                                    .btn(class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3")
+                                                        svg.w14
+                                                            use(href="../../images/sprite.svg#i_arrow")
+                                        .docContent(id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent=".desc-area")
+                                            .docContent__items
+                                                - for (var i = 0; i < 3; i++)
+                                                    .docContent__item
+                                                        .head 2022 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2021 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2020 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                                    .docContent__item
+                                                        .head 2019 год
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#1571c6')
+                                                                use(href="../../images/sprite.svg#i_doc")
+                                                            span 15 лет СУЭК.doc
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#ff4a4a')
+                                                                use(href="../../images/sprite.svg#i_pdf")
+                                                            span Отчет об устойчивом развитии.pdf
+                                                        a.doc(href='#!')
+                                                            svg.ifile(fill='#219653')
+                                                                use(href="../../images/sprite.svg#i_xls")
+                                                            span Отчет фонда «СУЭК-регионам».xls
+                                .appeals-desc.search-content
+                                    .desc-area.active-area.tab-pane.fade.show.active#04(role="tabpanel", aria-labelledby="04-tab")
+                                        .title
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='c')
+                                                    label(for="qc")
+                                                .name Имя участника
+                                                .tab-number Табельный номер
+                                                .index ИНН
+                                            .right
+                                                .archive Архив отчетов
+            
+                                        .item
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='x')
+                                                    label(for="x")
+                                                .name Савельев Игорь Николаевич
+                                                .tab-number 5699-995-66
+                                                .index 3102050599
+                                            .right
+                                                .archive.dropContent 
+                                                    a(href="javascript:void(0);") Декларация за 2020 год
+                                                    a(href="javascript:void(0);") Декларация за 2021 год
+                                                    a.btn.dropContent(class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4")
+                                                        svg.w14
+                                                            use(href="../../images/sprite.svg#i_arrow")
+                                        .docContent(id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent=".desc-area")
+                                            .docContent__items
+                                                .head Полный архив отчетов участника
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2021 год.pdf
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2020 год.pdf
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2019 год.pdf
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2018 год.pdf
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2017 год.pdf
+                                        .item.odd
+                                            .left
+                                                .check
+                                                    input.custom-checkbox(type="checkbox" id='z')
+                                                    label(for="z")
+                                                .name Савченко Петр Сергеевич
+                                                .tab-number 4554-854-10
+                                                .index 3102050599
+                                            .right
+                                                .archive.dropContent 
+                                                    a(href="javascript:void(0);") Декларация за 2020 год
+                                                    a(href="javascript:void(0);") Декларация за 2021 год
+                                                    a.btn.dropContent(class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5")
+                                                        svg.w14
+                                                            use(href="../../images/sprite.svg#i_arrow")
+                                        .docContent(id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent=".desc-area")
+                                            .docContent__items
+                                                .head Полный архив отчетов участника
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2020 год.pdf
+                                                .docContent__item
+                                                    a.doc(href='#!')
+                                                        svg.ifile(fill='#ff4a4a')
+                                                            use(href="../../images/sprite.svg#i_pdf")
+                                                        span Декларация за 2021 год.pdf
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/my_appeals_block/my_appeals_block.js')
+        script(src='../components/filterPagerBlock/filterPagerBlock.js')
+        script(src='../components/only_front/only_front.js')
+        script(src='../components/footer/footer.js')

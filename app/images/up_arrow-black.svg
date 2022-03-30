@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14"
+   height="8"
+   viewBox="0 0 14 8"
+   fill="none"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="up_arrow-black.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="851"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="20.214286"
+     inkscape:cx="12.100999"
+     inkscape:cy="4"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="m 13.6533,6.0318999 c 0.4623,0.44971 0.4623,1.200771 0,1.650489 -0.4353,0.423481 -1.123,0.423481 -1.5583,0 L 7.00001,2.7260499 1.90504,7.6823909 c -0.43533,0.423479 -1.122972,0.423479 -1.558299,-10e-7 -0.462297,-0.449719 -0.462297,-1.20077 0,-1.65049 l 0.433014,0.48853 -0.433013,-0.48853 5.874118,-5.71429003 c 0.43532,-0.42348 1.12297,-0.42348 1.5583,0 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="clip-rule:evenodd;opacity:0.8;fill:#707274;fill-rule:evenodd" />
+</svg>

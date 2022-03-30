@@ -1,0 +1,193 @@
+.obhod {
+    .inner {
+        &>* {
+            max-width: 968px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .innpage {
+        &_header {
+            .title {
+                font-size: 48px;
+                line-height: 110%;
+                color: #333;
+                margin-bottom: 0;
+            }
+            &__bottom {
+                margin: 10px 0 10px;
+                .item {
+                    color: #B8B9BA;
+                    font-weight: 300;
+                }
+                .views {
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 18px;
+                        height: 12px;
+                        margin-bottom: 1px;
+                        margin-right: 5px;
+                        background: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.02688 5.94826C9.69917 5.46071 10.3339 4.80839 10.9094 4.00122C10.3344 3.19375 9.70029 2.54128 9.02866 2.05353C9.38063 2.7018 9.56069 3.46188 9.51699 4.24001L9.5169 4.24159C9.48189 4.84801 9.30949 5.43304 9.02688 5.94826ZM11.9061 4.31846C10.3719 6.59712 8.29273 8 6 8C3.70727 8 1.62811 6.59712 0.0938938 4.31572C-0.0312979 4.12903 -0.0312979 3.86822 0.0938938 3.68154C1.62811 1.40288 3.70727 0 6 0C8.29273 0 10.3719 1.40288 11.9061 3.68428C12.0313 3.87097 12.0313 4.13178 11.9061 4.31846ZM1.09055 3.99878C1.66561 4.80625 2.29971 5.45872 2.97134 5.94647C2.61941 5.29827 2.43936 4.5383 2.48299 3.76026M1.09055 3.99878C1.66489 3.19334 2.29811 2.54208 2.96881 2.05488C2.68782 2.5697 2.51691 3.15411 2.48301 3.76M5.83553 1.18325C4.57871 1.27111 3.55999 2.41043 3.48144 3.81606C3.3857 5.52093 4.64253 6.92382 6.16447 6.81675C7.41884 6.72615 8.43756 5.58682 8.51856 4.18394C8.6143 2.47907 7.35747 1.07618 5.83553 1.18325ZM6.08837 5.51544C5.26849 5.5731 4.59098 4.81812 4.64498 3.90117C4.68671 3.14345 5.23658 2.53123 5.91408 2.48181C6.73397 2.42416 7.41148 3.17914 7.35747 4.09609C7.31329 4.85655 6.76342 5.46877 6.08837 5.51544ZM5.98557 3.47926C6.05363 3.47486 6.13649 3.49894 6.21841 3.59045C6.30309 3.68505 6.37078 3.84073 6.3592 4.03729L6.35916 4.03808C6.35004 4.19498 6.28932 4.32281 6.21448 4.40639C6.1401 4.48947 6.0677 4.51448 6.0194 4.51782L6.01823 4.51791C5.94992 4.52271 5.8665 4.49892 5.78405 4.40681C5.69937 4.31221 5.63168 4.15653 5.64326 3.95996L5.64347 3.95616C5.65193 3.80263 5.71138 3.67642 5.78613 3.59292C5.85988 3.51056 5.93348 3.4834 5.98557 3.47926Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 100% 50% no-repeat;
+                    }
+                }
+            }
+        }
+        &_content {
+            padding-right: 0;
+            h2 {
+                font-size: 48px;
+            }
+        }
+        &_footer {
+            padding-right: 0;
+        }
+    }
+    .users_wrap {
+        margin-bottom: 60px;
+        display: flex;
+    }
+    .user-card {
+        width: 270px;
+        min-width: 270px;
+        margin-right: 20px;
+        h3 {
+            font-size: 18px;
+            line-height: 120%;
+        }
+    }
+    .table {
+        .date {
+            text-align: right;
+            padding: 0 10px;
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+    }
+    .inntabs_content {
+        margin-top: 30px;
+    }
+    .comments {
+        .title-bl{
+            margin: 0;
+        }
+        .items-wrap {
+            border: none;
+            padding: 0;
+            box-shadow: none;
+        }
+    }
+}
+@media screen and(max-width: 1024px) {
+    .obhod {
+        .inner {
+            padding: 30px 30px 60px;
+        }
+        .innpage {
+            &_header {
+                .title {
+                    font-size: 36px;
+                    line-height: 110%;
+                    margin-top: 30px;
+                }
+            }
+            &_gallery {
+                border-bottom: none;
+                margin-bottom: 10px;
+            }
+            &_content {
+                padding-right: 20px;
+                h2 {
+                    font-size: 32px;
+                }
+            }
+            &_footer {
+                padding-right: 20px;
+            }
+        }
+        .inntabs_header {
+            margin-top: 0;
+        }
+        .users_wrap {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        .table-row .desc {
+            max-width: inherit;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .obhod {
+        .inner {
+            padding: 20px 0 60px;
+        }
+        .innpage {
+            &_header {
+                .title {
+                    font-size: 24px;
+                    margin-top: 0;
+                }
+            }
+            &_content {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+            &_footer{
+                &__toolbar{
+                    margin-top: 20px;
+                }
+            }
+        }
+        .users_wrap {
+            display: flex;
+            overflow-x: auto;
+            width: calc(100% + 40px);
+            margin: 15px -20px 40px;
+            &:before,
+            &:after{
+                content: "";
+                display: inline-block;
+                min-width: 20px;
+            }
+        }
+        .user-card {
+            min-width: 250px;
+            margin-top: 15px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            &__wrap {
+                box-shadow: 0 17px 20px rgba(0, 0, 0, .01);
+            }
+        }
+        .table {
+            font-size: 12px;
+            line-height: 130%;
+            width: calc(100% + 40px);
+            margin: 0 -20px;
+            display: flex;
+            &:before,
+            &:after{
+                content: "";
+                display: inline-block;
+                min-width: 20px;
+            }
+            &-header {
+                font-size: 12px;
+                line-height: 130%;
+                font-weight: 400;
+            }
+            &-row {
+                .theme {
+                    min-width: 120px;
+                }
+                .rate {
+                    min-width: 200px
+                }
+            }
+        }
+    }
+}

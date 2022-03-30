@@ -1,0 +1,360 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/title_bl
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/block_org_struct/block_org_struct.css')
+        link(rel='stylesheet', href='../css/libraries/knowledge-data.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Банк знаний')
+                    +title_bl('titles/bank-znanii.png')
+                    .sort-bl
+                        //- .search
+                            select#search_all(name="search_all")
+                                option(value="По релевантности") Искать везде
+                                option(value="Тест 1") Тест 1
+                                option(value="Тест 2") Тест 2
+                        form(action)
+                            input(type="text", placeholder="Поиск по названию, описанию или региону")
+                            button
+                    //- .bank_znanii_header_menu_tabs
+                        nav
+                            a.bank_znanii_header_menu_tabs_current.noselect(href="#", onclick="showTab(this, 1)") Темы
+                            a.noselect(href="#", onclick="showTab(this, 2)") Смотреть
+                            a.noselect(href="#", onclick="showTab(this, 3)") Читать
+                            a.noselect(href="#", onclick="showTab(this, 4)") Курсы
+                            a.noselect(href="#", onclick="showTab(this, 5)") Книги
+                    .bank_znanii_header_tabs_c
+                        #bank_znanii_header_tab_1(data-index="1")
+                            #bank_znanii_header_tab_1_wrapper_1
+                                #bank_znanii_references
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Производство
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Логистика
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Сбыт
+                                    //-         span (41)
+                                    .bz-tab-1-item
+                                        a.bz-tab-1-item-title(href="#")
+                                            | Дирекция по общим вопросам
+                                            span (41)
+                                        a.bz-tab-1-item-line(href="#") Стандарты
+                                        a.bz-tab-1-item-line(href="#") Инструкции
+                                        a.bz-tab-1-item-line(href="#") Регламенты
+                                    .bz-tab-1-item
+                                        a.bz-tab-1-item-title(href="#")
+                                            | Проектное управление
+                                            span (41)
+                                        a.bz-tab-1-item-line(href="#") Реализованные проекты
+                                        a.bz-tab-1-item-line(href="#") Жизненный цикл проекта
+                                        a.bz-tab-1-item-line(href="#") Оргструктура проектной деятельности
+                                    .bz-tab-1-item
+                                        a.bz-tab-1-item-title(href="#")
+                                            | Комплаенс
+                                            span (3)
+                                        a.bz-tab-1-item-line(href="#") ЛНА по комплаенс
+                                        a.bz-tab-1-item-line(href="#") Памятка о принятии решений
+                                        a.bz-tab-1-item-line(href="#") Базовые презентации
+                                    .bz-tab-1-item
+                                        a.bz-tab-1-item-title(href="#")
+                                            | Юридическая служба
+                                            span (41)
+                                        a.bz-tab-1-item-line(href="#") Шаблоны и бланки
+                                        a.bz-tab-1-item-line(href="#") Доверенности
+                                        a.bz-tab-1-item-line(href="#") Типовые договоры
+                                    .bz-tab-1-item
+                                        a.bz-tab-1-item-title(href="#")
+                                            | Управление персоналом
+                                            span (41)
+                                        a.bz-tab-1-item-line(href="#") Кадровые процедуры
+                                        a.bz-tab-1-item-line(href="#") Брошюра нового сотрудника
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Безопасность производства
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Дирекция по стратегии и корпоративной политике
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Корпоративная этика
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Безопасность труда Дивизиона Логистика
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Корпоративный университет
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Финансово-экономический блок
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | СВКиА
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Корпоративный университет
+                                    //-         span (41)
+                                    //- .bz-tab-1-item
+                                    //-     a.bz-tab-1-item-title(href="#")
+                                    //-         | Закупки
+                                    //-         span (41)
+                                .bank_znanii_tab_btn
+                                    a(href) Все темы
+                            #bank_znanii_header_tab_1_wrapper_2(style="display: none")
+                                #bank_znanii_header_tab_1_wrapper_2_title
+                                    #bank_znanii_header_tab_1_wrapper_2_title_name
+                                        | Логистика
+                                        span (41)
+                                    #bank_znanii_header_tab_1_wrapper_2_top_btn_wrapper
+                                        span(onclick="swapView2()").
+
+                                            Выбрать другую тему
+
+                                #bank_znanii_tab_1_wrapper_2_grid
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bg-bank-znanii.png")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            Проектное управление
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Жизненный цикл проекта
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bk-work-group.jpg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            Проектное управление
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Новые стандарты проектного управления
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bk_top_feb.jpeg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            Дирекция по общим вопросам
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Стандарты по информационной безопасности
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bk_safety_3.jpeg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            IT
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Инструкция по работе с бюджетными формами SAP BPS
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bg_lk_py.jpeg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            IT
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            .bank_znanii_tab_1_wrapper_2_grid_item_c1_icon
+                                                img(src="../../images/icons/collection.svg")
+                                                span Сборник
+                                            div Инструкции по работе с JIRA
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bg-bank-znanii.png")
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_video(src="../../images/icons/video.svg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            Дирекция по общим вопросам
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Стандарты по информационной безопасности
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bk_safety_3.jpeg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            IT
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Инструкция по работе с бюджетными формами SAP BPS
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bg_lk_py.jpeg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            IT
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            .bank_znanii_tab_1_wrapper_2_grid_item_c1_icon
+                                                img(src="../../images/icons/collection.svg")
+                                                span Сборник
+                                            div Инструкции по работе с JIRA
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                    .bank_znanii_tab_1_wrapper_2_grid_item
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_bg(src="../../images/bg-bank-znanii.png")
+                                        img.bank_znanii_tab_1_wrapper_2_grid_item_video(src="../../images/icons/video.svg")
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_title.
+
+                                            Дирекция по общим вопросам
+
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_top_bg_footer
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c1
+                                            div Стандарты по информационной безопасности
+                                        .bank_znanii_tab_1_wrapper_2_grid_item_c2
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/comments-white.svg")
+                                                span 153
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/show-eye-white.svg")
+                                                span 36
+                                            .divnews_content_colum_type_footer_item
+                                                img(src="../../images/icons/share-white.svg")
+                                                span 256
+                                            .divnews_content_colum_type_footer_item_bookmarks
+                                                img(src="../../images/icons/bookmarks-white.svg")
+                                #bank_znanii_tab_1_wrapper_2_grid_footer
+                                    a(href="#") Показать еще
+                        #bank_znanii_header_tab_2(data-index="2", style="display: none")
+                        #bank_znanii_header_tab_3(data-index="3", style="display: none")
+                        #bank_znanii_header_tab_4(data-index="4", style="display: none")
+                        #bank_znanii_header_tab_5(data-index="5", style="display: none")
+        +footer_custom
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../js/knowledge-data.js')
+        script(src='../components/footer/footer.js')

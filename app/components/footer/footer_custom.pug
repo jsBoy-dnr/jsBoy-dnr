@@ -1,0 +1,37 @@
+mixin footer_custom()
+    footer.site-footer
+      .footer-in
+        .left
+          .copyright © 2003 - 2022 АИМ Холдинг 
+          a.agreement(href="#") Политика конфиденциальности
+        .center
+          .footer__select
+            .selectStyler
+              select#sort_bl(name="sort_bl_select")
+                option(value="СГК", selected) СГК
+                option(value="СУЭК") СУЭК
+                option(value="АИМ") АИМ
+                option(value="ЕвроХим") ЕвроХим
+                option(value="НТК") НТК
+            .social
+              a(href="#")
+                img(src="../../images/image_social/vk.svg", alt)
+              a(href="#")
+                img(src="../../images/image_social/fb.svg", alt)
+              a(href="#")
+                img(src="../../images/image_social/inst.svg", alt)
+              a(href="#")
+                img(src="../../images/image_social/youtube.svg", alt)
+        .right
+          .link-site
+            a(href='#!') Внешний сайт СУЭК
+            //- .selectStyler
+              select#sort_bl2(name="sort_bl_select")
+                option(value="Внешний сайт СУЭК", selected) Внешний сайт СУЭК
+                option(value="Внешний сайт СГК") Внешний сайт СГК
+                option(value="Внешний сайт АИМ") Внешний сайт АИМ
+                option(value="Внешний сайт ЕвроХим") Внешний сайт ЕвроХим
+                option(value="Внешний сайт НТК") Внешний сайт НТК
+          .phones
+            .title Единая горячая линия
+            a(href="tel:88002001240") 8 (800) 200-12-40

@@ -1,0 +1,649 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/title_bl
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/mediateka/mediateka
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        //- link(rel='stylesheet', href='../css/block_org_struct/block_org_struct.css')
+        //- link(rel='stylesheet', href='../css/libraries/knowledge-data.css')
+        link(rel='stylesheet', href='../css/mediateka/mediateka.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Медиатека')
+                    +title_bl('mediateka-logo.png')
+
+                    //- .mediateka_content_logo
+                        img(src="../../images/mediateka-logo.png")
+                    .mediateka_content
+                        .mediateka_header_menu
+                            .mediateka_header_menu_search
+                                select.mediateka_header_menu_filter_search_drow_down#filter_region_top
+                                    option(value="0") Искать везде
+                                input#mediateka_search_text(type="text", placeholder="Поиск по названию, тегам")
+                                img.mediateka_header_menu_search_icon#mediateka_header_menu_search_icon(src="../../images/search.svg")
+                                img.mediateka_header_menu_clean_search#mediateka_header_menu_clean_search(src="../../images/clear-input.svg", onclick="clearInputSearch()", style="display: none")
+                            .mediateka_header_menu_filter_drow_down_c
+                                select.mediateka_header_menu_filter_drow_down#filter_region_top_1
+                                    option(value="0") Предприятие
+                            .mediateka_header_menu_filter_drow_down_c
+                                select.mediateka_header_menu_filter_drow_down#filter_region_top_2
+                                    option(value="0") Тематика
+                            a.mediateka_header_menu_btn_search(style="display: none")
+                                img(src="../../images/search-calendar.svg")
+
+                        .mediateka_header_menu_2(style="display: none")
+                            select.mediateka_header_menu_2_f1
+                                option(value="0") Выбрать предприятие
+                            select.mediateka_header_menu_2_f2
+                                option(value="0") Выбрать тематику
+                        .mediateka_top_filter_line2(style="display: none")
+                            #btn_filter_2.mediateka_top_filter_line2_btn.noselect(onclick="showHideMenuFilters(this)")
+                                span Фильтр
+                                img(src="../../images/filter_menu.svg")
+                            #btn_filter_2_sub
+                                select.mediateka_header_menu_2_f1
+                                    option(value="0") Выбрать предприятие
+                                select.mediateka_header_menu_2_f2
+                                    option(value="0") Выбрать тематику
+                        .mediateka_header_menu_tabs
+                            nav
+                                a.mediateka_header_menu_tabs_current.noselect#mediateka_header_menu_tabs_first_menu(href="#!", onclick="showTab(this, 1)") Фотоальбомы
+                                a.noselect(href="#!", onclick="showTab(this, 2)") Видеозаписи
+                                a.noselect(href="#!", onclick="showTab(this, 3)") Презентации
+                                a.noselect(href="#!", onclick="showTab(this, 4)") Документы
+                                a.noselect#mediateka_header_menu_tabs_search_menu(href="#!", onclick="showTab(this, 5)", style="display: none") Все файлы
+
+                        .mediateka_content_tab#mediateka_content_tab_1(data-index="1")
+                            .mediateka_header_menu3_tabs_txt#menu_1
+                                nav
+                                    a.mediateka_header_menu3_tabs_txt_current.noselect(href="#") Все фото
+                                    a.noselect(href="#") Мероприятия
+                                    a.noselect(href="#") Наши активы
+                                    a.noselect(href="#") Руководство
+                                    a.noselect(href="#") Красноярский край
+                                    a.noselect(href="#") Красноярский край
+                            .mediateka_content_tab_head
+                                span.mediateka_content_tab_head_title Фотоальбомы
+
+                                select.mediateka_content_tab_filter_drow_down
+                                    option(value="0") По дате добавления
+                            .mediateka_tab_list_content
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-1.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Международный форум, проведенный при поддержк...
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-2.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Открытие новых общежитий для вахтовиков в Хакасии
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-3.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Сибирская красота
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-4.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Конкурс фотографов СУЭК
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-5.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Бизнес-форум Угольных корпораций в Нью-Йорке
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-6.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Фоны для рабочего стола
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-7.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Бизнес-форум Угольных корпораций в Нью-Йорке
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-8.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Библитека СУЭК-Красноярск переехала. Фото с открытия
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-9.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Обновленное меню для сотрудников в Хакасии
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-10.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Кафе “SHOROR” открылось в Березовском
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-11.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Разрез Назаровский в фото
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-12.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Конкурс фотографий на тему «Россия будущего»
+
+                            .mediateka_footer_moree
+                                a(href="#") Показать ещё
+                        .mediateka_content_tab#mediateka_content_tab_2(data-index="2", style="display: none")
+                            .mediateka_header_menu3_tabs_txt#menu_2
+                                nav
+                                    a.mediateka_header_menu3_tabs_txt_current(href="#") Все видео
+                                    a(href="#") Мероприятия
+                                    a(href="#") Наши активы
+                                    a(href="#") Руководство
+                                    a(href="#") Красноярский край
+                            .mediateka_content_tab_head
+                                span.mediateka_content_tab_head_title Видеозаписи
+
+                                select.mediateka_content_tab_filter_drow_down
+                                    option(value="0") По дате добавления
+                            .mediateka_tab_list_content
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-1.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Конференция менеджеров по продажам
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-2.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Серф лагерь для детей и работников Малого порта в...
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-3.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Обновленное меню
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-4.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Большая компания – большие возможности
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-5.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title «Сколько ты зарабатываешь» при участии Ю.Дуть
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-6.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Хто я?
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-7.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Ванинский Балкерный Терминал
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-8.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Хор Турецкого ft. СУЭК – За горизонтом
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-9.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Счастливая пенсия с СУЭК
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-10.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Город Назарово
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-11.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Сотрудницы СУЭК
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-12.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Фантастическая Бугульма и кто в ней обитает
+
+                            .mediateka_footer_moree
+                                a(href="#") Показать ещё
+                        .mediateka_content_tab#mediateka_content_tab_3(data-index="3", style="display: none")
+                            .mediateka_content_tab_head
+                                span.mediateka_content_tab_head_title Презентации
+
+                                select.mediateka_content_tab_filter_drow_down
+                                    option(value="0") По дате добавления
+                            .mediateka_tab_list_content
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-1.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Новые проект СУЭК. Уголь для народа
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-2.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title BIG DATA в энергетике
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-3.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Биполярное расстройство. Что за этим стоит?
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-4.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Благоустройство Тывы. Развитие 2020-2030
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-5.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Новые идеи от сотрудников для руководства
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-6.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Как улучшать продукт?
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-7.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Безопасность превыше всего
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-8.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Здоровье шахтеров
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-9.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Аналитика будущего
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-10.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Анализ данных
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-11.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Спасибо за 2019!
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-12.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Для форума Угольщиков в г. Саранск
+
+                            .mediateka_footer_moree
+                                a(href="#") Показать ещё
+                        .mediateka_content_tab#mediateka_content_tab_4(data-index="4", style="display: none")
+                            .mediateka_content_tab_head
+                                span.mediateka_content_tab_head_title Документы
+
+                                select.mediateka_content_tab_filter_drow_down
+                                    option(value="0") По дате добавления
+                            .mediateka_tab_list_content
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-1.jpg")
+                                    .mediateka_documents_list_item_title Годовой отчет 2018
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-2.jpg")
+                                    .mediateka_documents_list_item_title Годовой отчет 2017
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-3.jpg")
+                                    .mediateka_documents_list_item_title Социальный отчет 2017
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-3.jpg")
+                                    .mediateka_documents_list_item_title События и люди.
+                                        br
+                                        | Сентябрь 2019
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-4.jpg")
+                                    .mediateka_documents_list_item_title События и люди.
+                                        br
+                                        | Август 2019
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-5.jpg")
+                                    .mediateka_documents_list_item_title События и люди.
+                                        br
+                                        | Июль 2019
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-1.jpg")
+                                    .mediateka_documents_list_item_title Годовой отчет 2018
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-2.jpg")
+                                    .mediateka_documents_list_item_title Годовой отчет 2017
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-3.jpg")
+                                    .mediateka_documents_list_item_title Социальный отчет
+                                        br
+                                        | 2017
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-3.jpg")
+                                    .mediateka_documents_list_item_title События и люди.
+                                        br
+                                        | Сентябрь 2019
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-4.jpg")
+                                    .mediateka_documents_list_item_title Социальный отчет
+                                        br
+                                        | 2015
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-5.jpg")
+                                    .mediateka_documents_list_item_title Портовик
+                                        br
+                                        | №111
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-4.jpg")
+                                    .mediateka_documents_list_item_title Портовик
+                                        br
+                                        | №109
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-5.jpg")
+                                    .mediateka_documents_list_item_title Портовик. Обновленный
+
+                            .mediateka_footer_moree
+                                a(href="#") Показать ещё
+                        .mediateka_content_tab#mediateka_content_tab_5(data-index="5", style="display: none")
+                            .mediateka_content_tab_head
+                                span.mediateka_content_tab_head_title Результаты поиска по запросу «
+                                    span »
+
+                                select.mediateka_content_tab_filter_drow_down
+                                    option(value="0") По дате добавления
+                            .mediateka_tab_list_content
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-1.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Международный форум, проведенный при поддержк...
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-2.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Открытие новых общежитий для вахтовиков в Хакасии
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-5.jpg")
+                                    .mediateka_documents_list_item_title Портовик. Обновленный
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-11.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Спасибо за 2019!
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-12.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Для форума Угольщиков в г. Саранск
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-11.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Сотрудницы СУЭК
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-11.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Разрез Назаровский в фото
+
+                                .mediateka_tab_list_content_item(onclick="showPopupMenuPreviewImag()")
+                                    .mediateka_photo_album_item_photo
+                                        .mediateka_photo_album_item_photo_main
+                                            img(src="../../images/temp/mediaketa-photo-album-12.jpg")
+                                        img.mediateka_photo_album_item_photo_bk3(src="../../images/mediateka-photo-bk-3.svg")
+                                        img.mediateka_photo_album_item_photo_bk2(src="../../images/mediateka-photo-bk-2.svg")
+                                        img.mediateka_photo_album_item_photo_bk1(src="../../images/mediateka-photo-bk-1.svg")
+                                    .mediateka_photo_album_item_title Конкурс фотографий на тему «Россия будущего»
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_presentations_album_list_item_img
+                                        img.mediateka_presentations_album_list_item_img_img(src="../../images/temp/mediateka-presentations-11.jpg")
+                                        img.mediateka_presentations_album_list_item_img_rectangle(src="../../images/safety-rectangle.svg")
+                                    .mediateka_presentations_album_list_item_title Спасибо за 2019!
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-4.jpg")
+                                    .mediateka_documents_list_item_title Социальный отчет 2015
+
+                                a.mediateka_tab_list_content_item(href="#")
+                                    .mediateka_documents_list_item_img
+                                        img(src="../../images/temp/mediateka-documents-5.jpg")
+                                    .mediateka_documents_list_item_title Портовик №111
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-11.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Сотрудницы СУЭК
+
+                                .mediateka_tab_list_content_item
+                                    .mediateka_video_album_list_item_img
+                                        img.mediateka_video_album_list_item_img_cover(src="../../images/temp/mediaketa-video-album-12.jpg")
+                                        img.mediateka_video_album_list_item_img_lleft(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lright(src="../../images/mediateka-video-item-bk-lenta.svg")
+                                        img.mediateka_video_album_list_item_img_lplay(src="../../images/mediateka-video-play-icon.png")
+                                        img.mediateka_video_album_list_item_img_lleft_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                        img.mediateka_video_album_list_item_img_lright_2(src="../../images/mediateka-video-item-bk-lenta_2.svg")
+                                    .mediateka_video_album_list_item_title Фантастическая Бугульма и кто в ней обитает
+
+                            .mediateka_footer_moree
+                                a(href="#") Показать ещё
+
+
+        +footer_custom
+
+        #fade
+        .form_popup_preview_img#popup_preview_img(style="display: none")
+            img.form_popup_preview_img_close_btn(src="../../images/safety-popup-win-close-btn.png", onclick="hidePopupMenuPreviewImag()")
+            .form_popup_preview_img_title NCOV-2019. Мировые фото
+            .form_popup_preview_img_img
+                img.form_popup_preview_img_img_inner(src="../../images/temp/preview-image.jpg")
+                img.form_popup_preview_img_img_download(src="../../images/safety-preview-img-download.png")
+                img.form_popup_preview_img_img_fullscreen(src="../../images/safety-preview-img-fullscreen.png", onclick="hidePopupMenuPreviewImag();img_box(\'../../images/temp/preview-image.jpg\')")
+            .form_popup_preview_img_footer_1 Город Ухань. Памятник матери и ребенку
+            .form_popup_preview_img_footer_2 Фото: Андрей Любимов / РБК
+            .form_popup_preview_img_footer_2 4030х4030 px, 7.5 мБ
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/slider_menu/slider_menu.js')
+        script(src='../components/mediateka/mediateka.js')
+        script(src='../components/footer/footer.js')
+
+        //- script(src='../js/knowledge-data.js')

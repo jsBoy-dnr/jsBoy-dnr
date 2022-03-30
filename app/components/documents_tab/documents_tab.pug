@@ -1,0 +1,39 @@
+mixin documents_tab()
+    .safety_docs_tabs
+        .safety_docs_tabs_header
+            .safety_docs_tabs_header_current(data-year="2020") 2020 Год
+            div(data-year="2019") 2019 Год
+            div(data-year="2018") 2018 Год
+            div(data-year="2017") 2017 Год
+            div(data-year="2016") 2016 Год
+            div(data-year="other") Ранее
+
+        #safety_docs_tabs_select_drop_down_list
+            select.select-custom
+                option(value="2020") 2020 Год
+                option(value="2019") 2019 Год
+                option(value="2018") 2018 Год
+                option(value="2017") 2017 Год
+                option(value="2016") 2016 Год
+                option(value="0") Ранее
+        .safety_docs_tabs_body
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_1
+                - for (let i = 0; i < 3; i++)
+                    a.safety_docs_tabs_body_doc_item(href="#")
+                        svg.ifile(fill='#ff4a4a')
+                            use(href="../../images/sprite.svg#i_pdf")
+                        span Важный документ PDF
+                    a.safety_docs_tabs_body_doc_item(href="#")
+                        svg.ifile(fill='#1571c6')
+                            use(href="../../images/sprite.svg#i_doc")
+                        span Другой важный документ в Doc
+                    a.safety_docs_tabs_body_doc_item(href="#")
+                        svg.ifile(fill='#219653')
+                            use(href="../../images/sprite.svg#i_xls")
+                        span Другой важный документ в XLS
+
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_2(style="display: none")
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_3(style="display: none")
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_4(style="display: none")
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_5(style="display: none")
+            .safety_docs_tabs_body--item#safety_docs_tabs_body_6(style="display: none")

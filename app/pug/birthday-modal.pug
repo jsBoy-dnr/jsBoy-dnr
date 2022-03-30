@@ -1,0 +1,84 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/newslist/newslist_big
+    include ../components/newslist/newslist_slider
+    include ../components/footer/footer_custom
+    include ../components/modals/modals
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/newslist/newslist.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/top_filter/top_filter.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+    body
+        .site-wrapper.birthday_page.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper.blocks-news.happy_b_day
+                .inner
+                    .news-block.news-block-new
+
+                        .items-wrap
+                            .item.today.usercard
+                                .label Сегодня
+
+                                .image
+                                    img(src="../../images/happy_b_day_image1.png", alt)
+                                    a.notifications(href="javascript:void(null);" data-popup-trigger="happybirthday")
+                                        .body
+                                            | Получать уведомления
+                                            br
+                                            | о дне рождения сотрудника
+                                .name Илларион Витальев
+                                .desc
+                                    | Директор по персоналу
+                                    br
+                                    | и администрации
+
+                                .location АО «СУЭК»
+                                .link
+                                    a(href="#") ПОЗДРАВИТЬ
+        +footer_custom
+        .modal.modal--active(id="happybirthday", data-popup="happybirthday", tabindex="-1" role="dialog")
+            .modal__bg.modal-dialog(role="document")
+            .modal__wrap.modal_lg.modal-content
+                .modal__inner
+                    .modal__header.modal-header
+                        h2.title-bl.bleft.modal-title Поздравление для Виталий Стинкин
+                        .close-modal
+                            button.btn.close-modal__button.modal_close(data-dismiss="modal")
+                    .modal__body.modal-body.padtop0
+                        .form
+                            .form-group
+                                .form-field
+                                    label.custom-input_label
+                                    textarea.custom-textarea(placeholder="Текст поздравления")
+                        button.btn.btn-primary.m_zayavka_complete__btn
+                            .btn_inner Отправить
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../components/newslist/newslist.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')
+        script(src='../components/calendar/calendar.js')

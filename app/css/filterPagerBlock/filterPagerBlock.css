@@ -1,0 +1,222 @@
+.top_filter {
+  position: relative;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 2rem; }
+  .top_filter_form {
+    position: relative;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    @media (max-width: 800px) {
+      .top_filter_form {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+  .top_filter_item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    width: 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%; }
+    @media (max-width: 800px) {
+      .top_filter_item {
+        width: 100%;
+        -ms-flex: 0 0 10%;
+        flex: 0 0 10%;
+        margin-bottom: 2rem; }
+        .top_filter_item:last-child {
+          margin-bottom: 0; } }
+    @media (max-width: 480px) {
+      .top_filter_item {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+    .top_filter_item .btn {
+      max-width: 13.2rem;
+      margin-left: 3rem;
+      min-width: auto;
+      padding: 0 2rem; }
+      .top_filter_item .btn.disabled, .top_filter_item .btn:disabled {
+        opacity: .5;
+        cursor: none;
+        pointer-events: none; }
+      @media (max-width: 480px) {
+        .top_filter_item .btn {
+          width: 100%;
+          max-width: 100%;
+          margin-left: 0;
+          text-align: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          margin-top: 2rem; } }
+    .top_filter_item .jq-selectbox__select {
+      height: 5.5rem;
+      min-width: 25rem;
+      max-width: 25rem;
+      font-size: 1.6rem; }
+      @media (max-width: 480px) {
+        .top_filter_item .jq-selectbox__select {
+          width: 100%;
+          max-width: 100%; } }
+      .top_filter_item .jq-selectbox__select .jq-selectbox__select-text {
+        white-space: nowrap;
+        padding: 2rem 4rem 2rem 3rem;
+        overflow: hidden;
+        max-width: 100%;
+        text-overflow: ellipsis; }
+        @media (max-width: 768px) {
+          .top_filter_item .jq-selectbox__select .jq-selectbox__select-text {
+            font-size: 1.6rem; } }
+    .top_filter_item .jq-selectbox__dropdown ul {
+      border-top: 1px solid #B8B9BA; }
+    .top_filter_item .jq-selectbox__dropdown li {
+      line-height: 1.2;
+      padding: 2rem 2rem 2rem 3rem; }
+    .top_filter_item .jq-selectbox__dropdown .disabled {
+      display: inline-block;
+      cursor: none;
+      pointer-events: none;
+      opacity: .5; }
+    .top_filter_item .sort-bl {
+      width: 100%;
+      height: 5.5rem;
+      margin-bottom: 0; }
+      .top_filter_item .sort-bl button {
+        height: 5.5rem;
+        margin-right: -.1rem; }
+  .top_filter .width-4 {
+    width: 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 41rem;
+    margin-right: 6rem; }
+  .top_filter .width-7 {
+    width: 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 70rem; }
+  @media (max-width: 1300px) {
+    .top_filter .width-4,
+    .top_filter .width-7 {
+      width: 45%;
+      -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
+      max-width: 100%;
+      margin-right: 0; } }
+  @media (max-width: 800px) {
+    .top_filter .width-4,
+    .top_filter .width-7 {
+      width: 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; } }
+
+.pagerblock {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 2rem; }
+  @media (max-width: 768px) {
+    .pagerblock {
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  .pagerblock__heading {
+    width: 100%;
+    font-size: 2.4rem;
+    position: absolute;
+    z-index: 0;
+    left: 0; }
+    @media (max-width: 768px) {
+      .pagerblock__heading {
+        position: relative;
+        margin-bottom: 2rem; } }
+  .pagerblock__items {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 1; }
+    @media (max-width: 768px) {
+      .pagerblock__items {
+        width: auto; } }
+  .pagerblock__txt {
+    font-size: 1.8rem;
+    margin-right: 3rem;
+    display: inline-block;
+    color: #333; }
+    @media (max-width: 480px) {
+      .pagerblock__txt {
+        width: 100%;
+        margin-bottom: 2rem; } }
+  .pagerblock__item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    background-color: #fff;
+    border: 1px solid #EBEBEB;
+    height: 3.4rem;
+    padding: 0 2rem;
+    padding-top: .2rem;
+    transition: all .3s;
+    cursor: pointer; }
+    @media (max-width: 480px) {
+      .pagerblock__item {
+        padding: 0 1.5rem; } }
+    .pagerblock__item.active, .pagerblock__item:hover {
+      background-color: #F6C358;
+      border-color: #F6C358;
+      color: #fff; }
+    .pagerblock__item:first-child {
+      border-top-left-radius: .2rem;
+      border-bottom-left-radius: .2rem; }
+    .pagerblock__item:last-child {
+      border-top-right-radius: .2rem;
+      border-bottom-right-radius: .2rem; }
+  .pagerblock__input {
+    position: relative;
+    max-width: 9rem;
+    width: 100%;
+    height: 3.5rem;
+    margin-left: 2rem;
+    z-index: 1; }
+    .pagerblock__input .custom-input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid #EBEBEB;
+      font-size: 1.4rem;
+      text-overflow: ellipsis;
+      padding: 1rem;
+      transition: all .3s; }
+      .pagerblock__input .custom-input:-ms-input-placeholder {
+        font-size: 1.4rem; }
+      .pagerblock__input .custom-input::placeholder {
+        font-size: 1.4rem; }
+      .pagerblock__input .custom-input:hover, .pagerblock__input .custom-input:focus {
+        min-width: 18rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); }

@@ -1,0 +1,21 @@
+.page-path {
+  font-size: 1.6rem;
+  line-height: 140%;
+  color: #707274;
+  margin-top: -2rem;
+  margin-bottom: 6rem;
+  letter-spacing: 0.18em; }
+  @media (max-width: 1024px) {
+    .page-path {
+      margin-top: 0;
+      margin-bottom: 3rem; } }
+  @media (max-width: 480px) {
+    .page-path {
+      font-size: 1.4rem;
+      letter-spacing: 0em; } }
+  .page-path a {
+    color: #707274;
+    text-decoration: none;
+    font-weight: 300; }
+  .page-path span {
+    font-weight: 600; }

@@ -1,0 +1,5 @@
+@use "sass:math";
+
+.print {
+  width: percentage(math.div(3, 6));
+}

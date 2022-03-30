@@ -1,0 +1,418 @@
+.usercard {
+  background: #FFFFFF;
+  border: 1px solid #F0F0F0;
+  box-sizing: border-box;
+  box-shadow: 0 0.5rem 21px rgba(0, 0, 0, 0.05);
+  border-radius: .5rem;
+  padding: 2rem;
+  display: block;
+  margin: 2.5rem 0;
+  text-align: center; }
+  @media (max-width: 768px) {
+    .usercard {
+      width: 270px;
+      margin-right: 3rem; } }
+  .usercard img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%; }
+    @media (max-width: 768px) {
+      .usercard img {
+        margin: 0 auto; } }
+  .usercard h3 {
+    font-family: Circe, sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    padding: 0;
+    line-height: 1.2;
+    text-align: center;
+    color: #333333;
+    margin: 1rem 0; }
+  .usercard .desc {
+    font-size: 1.4rem;
+    display: inline-block;
+    line-height: 1.5;
+    min-height: 3.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #707274; }
+  .usercard .position {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #707274;
+    display: block; }
+  .usercard .map {
+    font-style: normal;
+    width: auto;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    padding: .5rem 0 .5rem 2rem;
+    color: #333333;
+    background: url("data:image/svg+xml,%3Csvg width='11' height='14' viewBox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 0C2.74299 0 0.5 2.27451 0.5 5.07025C0.5 8.53985 4.97451 13.6334 5.16502 13.8486C5.34395 14.0507 5.65637 14.0503 5.83498 13.8486C6.02549 13.6334 10.5 8.53985 10.5 5.07025C10.4999 2.27451 8.25699 0 5.5 0ZM5.5 7.62123C4.11288 7.62123 2.9844 6.47687 2.9844 5.07025C2.9844 3.66363 4.1129 2.51929 5.5 2.51929C6.8871 2.51929 8.01557 3.66366 8.01557 5.07028C8.01557 6.47689 6.8871 7.62123 5.5 7.62123Z' fill='%23333333'/%3E%3C/svg%3E%0A") 0 50% no-repeat; }
+  .usercard .phones, .usercard .mobile-code, .usercard .skype, .usercard .whatsap {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #333333;
+    display: block; }
+    .usercard .phones a, .usercard .mobile-code a, .usercard .skype a, .usercard .whatsap a {
+      position: relative;
+      color: #333333;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 23rem;
+      text-overflow: ellipsis; }
+      @media (max-width: 1180px) {
+        .usercard .phones a, .usercard .mobile-code a, .usercard .skype a, .usercard .whatsap a {
+          max-width: 100%; } }
+  .usercard .phones {
+    float: left;
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #333333;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .usercard .phones a {
+      margin-right: 1rem;
+      padding-left: 2rem;
+      background: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M19.0202 19.2562C18.9161 19.7509 18.6166 19.9982 18.1219 19.9982C13.1228 19.9982 8.85266 18.2277 5.3116 14.6866C1.77053 11.1456 -3.00536e-07 6.87546 -8.20161e-08 1.87631C-6.03917e-08 1.3816 0.247354 1.08217 0.742062 0.978023L4.80387 0.0406825C5.29858 -0.0895037 5.65008 0.0927571 5.85838 0.587465L7.73306 4.96172C7.91532 5.37832 7.82419 5.74284 7.45967 6.05529L5.11632 7.96902C5.81932 9.50522 6.76968 10.8592 7.9674 12.0308C9.16511 13.2285 10.519 14.1789 12.0292 14.8819L13.982 12.5386C14.2684 12.174 14.6329 12.0829 15.0756 12.2652L19.4498 14.1399C19.9185 14.3482 20.0877 14.6997 19.9575 15.1944L19.0202 19.2562Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+      margin-bottom: 1rem;
+      background-size: 1.3rem 1.3rem; }
+  .usercard .mobile-code a {
+    margin-bottom: 0;
+    line-height: 1.6;
+    padding-left: 2rem;
+    background: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 5 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M10.625 0C11.1458 0 11.5885 0.182292 11.9531 0.546875C12.3177 0.911458 12.5 1.35417 12.5 1.875V18.125C12.5 18.6458 12.3177 19.0885 11.9531 19.4531C11.5885 19.8177 11.1458 20 10.625 20H1.875C1.35417 20 0.911458 19.8177 0.546875 19.4531C0.182292 19.0885 0 18.6458 0 18.125V1.875C0 1.35417 0.182292 0.911458 0.546875 0.546875C0.911458 0.182292 1.35417 0 1.875 0H10.625ZM5.35156 18.3594C5.61198 18.6198 5.91146 18.75 6.25 18.75C6.58854 18.75 6.875 18.6198 7.10938 18.3594C7.36979 18.125 7.5 17.8385 7.5 17.5C7.5 17.1615 7.36979 16.875 7.10938 16.6406C6.875 16.3802 6.58854 16.25 6.25 16.25C5.91146 16.25 5.61198 16.3802 5.35156 16.6406C5.11719 16.875 5 17.1615 5 17.5C5 17.8385 5.11719 18.125 5.35156 18.3594ZM10.625 14.5312V2.34375C10.625 2.03125 10.4688 1.875 10.1562 1.875H2.34375C2.03125 1.875 1.875 2.03125 1.875 2.34375V14.5312C1.875 14.8438 2.03125 15 2.34375 15H10.1562C10.4688 15 10.625 14.8438 10.625 14.5312Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+    background-size: 1.2rem 1.2rem; }
+    .usercard .mobile-code a.code {
+      background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 2 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.7' d='M18.5714 7.85714C18.9583 7.85714 19.2857 8.00595 19.5536 8.30357C19.8512 8.57143 20 8.89881 20 9.28571V10.7143C20 11.1012 19.8512 11.4435 19.5536 11.7411C19.2857 12.0089 18.9583 12.1429 18.5714 12.1429H12.1429V18.5714C12.1429 18.9583 11.994 19.2857 11.6964 19.5536C11.4286 19.8512 11.1012 20 10.7143 20H9.28571C8.89881 20 8.55655 19.8512 8.25893 19.5536C7.99107 19.2857 7.85714 18.9583 7.85714 18.5714V12.1429H1.42857C1.04167 12.1429 0.699405 12.0089 0.401786 11.7411C0.133929 11.4435 0 11.1012 0 10.7143V9.28571C0 8.89881 0.133929 8.57143 0.401786 8.30357C0.699405 8.00595 1.04167 7.85714 1.42857 7.85714H7.85714V1.42857C7.85714 1.04167 7.99107 0.714286 8.25893 0.446429C8.55655 0.14881 8.89881 0 9.28571 0H10.7143C11.1012 0 11.4286 0.14881 11.6964 0.446429C11.994 0.714286 12.1429 1.04167 12.1429 1.42857V7.85714H18.5714Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+      background-size: 1.2rem 1.2rem; }
+  .usercard .skype a {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    background: url(../../images/template/teams.svg) 0 50% no-repeat;
+    background-size: 1.6rem 1.6rem; }
+  .usercard .whatsap a {
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    background: url(../../images/whatsap.svg) left center no-repeat;
+    background-size: 1.6rem 1.6rem; }
+  .usercard a {
+    text-decoration: none; }
+  .usercard a.go {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #007BC4;
+    -ms-flex-pack: center;
+    justify-content: center;
+    outline: none;
+    padding: 1rem 0 0 0;
+    transition: 0.3s ease-out; }
+    .usercard a.go:hover {
+      opacity: 0.7; }
+  .usercard > div:last-child {
+    line-height: 1; }
+    .usercard > div:last-child a {
+      margin-bottom: 0; }
+
+.birthday_page .items-wrap {
+  margin-right: -1.5rem;
+  margin-left: -1.5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-word-break: break-all;
+  word-break: break-all; }
+  .birthday_page .items-wrap .item,
+  .birthday_page .items-wrap .usercard {
+    background: #fff;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0px 17px 50px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(25% - 3rem);
+    margin-top: 0;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 2rem; }
+    @media (max-width: 980px) {
+      .birthday_page .items-wrap .item,
+      .birthday_page .items-wrap .usercard {
+        width: calc(33.33% - 3rem); } }
+    @media (max-width: 768px) {
+      .birthday_page .items-wrap .item,
+      .birthday_page .items-wrap .usercard {
+        width: calc(50% - 3rem); } }
+    @media (max-width: 580px) {
+      .birthday_page .items-wrap .item,
+      .birthday_page .items-wrap .usercard {
+        width: calc(100% - 3rem); } }
+    .birthday_page .items-wrap .item:hover,
+    .birthday_page .items-wrap .usercard:hover {
+      position: relative;
+      z-index: 2; }
+    .birthday_page .items-wrap .item .label,
+    .birthday_page .items-wrap .usercard .label {
+      font-weight: bold;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+      color: #707274;
+      margin-bottom: .5rem; }
+    .birthday_page .items-wrap .item .image,
+    .birthday_page .items-wrap .usercard .image {
+      font-size: 0;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+      min-height: 12rem; }
+    .birthday_page .items-wrap .item .name,
+    .birthday_page .items-wrap .usercard .name {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 1.2;
+      text-align: center;
+      color: #333;
+      margin-bottom: .5rem; }
+    .birthday_page .items-wrap .item .link,
+    .birthday_page .items-wrap .usercard .link {
+      margin-left: 0;
+      margin-right: 0;
+      text-decoration: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%; }
+      .birthday_page .items-wrap .item .link a,
+      .birthday_page .items-wrap .usercard .link a {
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1;
+        color: #b8b9ba;
+        text-decoration: none;
+        position: relative;
+        display: block;
+        padding: 1.5rem; }
+        .birthday_page .items-wrap .item .link a:before,
+        .birthday_page .items-wrap .usercard .link a:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          right: 0;
+          left: 0;
+          background: linear-gradient(89.9deg, rgba(196, 196, 196, 0) 0%, rgba(196, 196, 196, 0.3) 48.62%, rgba(196, 196, 196, 0) 100%);
+          height: 1px; }
+    .birthday_page .items-wrap .item.today,
+    .birthday_page .items-wrap .usercard.today {
+      border: 2px solid #f6c358; }
+      .birthday_page .items-wrap .item.today .label,
+      .birthday_page .items-wrap .usercard.today .label {
+        color: #f6c358; }
+      .birthday_page .items-wrap .item.today .link a,
+      .birthday_page .items-wrap .usercard.today .link a {
+        border-radius: 0 0 6px 6px;
+        background: #f6c358;
+        color: #fff; }
+    .birthday_page .items-wrap .item .location,
+    .birthday_page .items-wrap .usercard .location {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      padding-left: 2rem;
+      box-sizing: border-box;
+      display: inline-block;
+      margin-bottom: 3rem;
+      background: url("data:image/svg+xml,%3Csvg width='11' height='14' viewBox='0 0 11 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.5 0C2.74299 0 0.5 2.27451 0.5 5.07025C0.5 8.53985 4.97451 13.6334 5.16502 13.8486C5.34395 14.0507 5.65637 14.0503 5.83498 13.8486C6.02549 13.6334 10.5 8.53985 10.5 5.07025C10.4999 2.27451 8.25699 0 5.5 0ZM5.5 7.62123C4.11288 7.62123 2.9844 6.47687 2.9844 5.07025C2.9844 3.66363 4.1129 2.51929 5.5 2.51929C6.8871 2.51929 8.01557 3.66366 8.01557 5.07028C8.01557 6.47689 6.8871 7.62123 5.5 7.62123Z' fill='%23333333'/%3E%3C/svg%3E%0A") 0 50% no-repeat; }
+    .birthday_page .items-wrap .item .notifications,
+    .birthday_page .items-wrap .usercard .notifications {
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 25rem;
+      background: #f0f0f0 url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 16C6.825 16 7.5 15.2615 7.5 14.359H4.5C4.5 14.7942 4.65804 15.2116 4.93934 15.5194C5.22064 15.8271 5.60218 16 6 16ZM10.5 11.0769V6.97436C10.5 4.45538 9.27 2.34667 7.125 1.78872V1.23077C7.125 0.549744 6.6225 0 6 0C5.3775 0 4.875 0.549744 4.875 1.23077V1.78872C2.7225 2.34667 1.5 4.44718 1.5 6.97436V11.0769L0 12.7179V13.5385H12V12.7179L10.5 11.0769Z' fill='%23B8B9BA'/%3E%3C/svg%3E%0A") 50% 50% no-repeat; }
+      .birthday_page .items-wrap .item .notifications.act,
+      .birthday_page .items-wrap .usercard .notifications.act {
+        background: #333 url("data:image/svg+xml,%3Csvg width='12' height='16' viewBox='0 0 12 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 16C6.825 16 7.5 15.2615 7.5 14.359H4.5C4.5 14.7942 4.65804 15.2116 4.93934 15.5194C5.22064 15.8271 5.60218 16 6 16ZM10.5 11.0769V6.97436C10.5 4.45538 9.27 2.34667 7.125 1.78872V1.23077C7.125 0.549744 6.6225 0 6 0C5.3775 0 4.875 0.549744 4.875 1.23077V1.78872C2.7225 2.34667 1.5 4.44718 1.5 6.97436V11.0769L0 12.7179V13.5385H12V12.7179L10.5 11.0769Z' fill='white'/%3E%3C/svg%3E%0A") 50% 50% no-repeat; }
+      .birthday_page .items-wrap .item .notifications .body,
+      .birthday_page .items-wrap .usercard .notifications .body {
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        background: rgba(240, 240, 240, 0.8);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: .5rem;
+        font-weight: normal;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: #333;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 22rem;
+        display: none;
+        text-align: left; }
+        @media (max-width: 1400px) {
+          .birthday_page .items-wrap .item .notifications .body,
+          .birthday_page .items-wrap .usercard .notifications .body {
+            left: 50%;
+            margin-left: -11rem; } }
+        @media (max-width: 400px) {
+          .birthday_page .items-wrap .item .notifications .body,
+          .birthday_page .items-wrap .usercard .notifications .body {
+            margin-left: -16rem; } }
+      .birthday_page .items-wrap .item .notifications:hover .body,
+      .birthday_page .items-wrap .usercard .notifications:hover .body {
+        display: block; }
+    .birthday_page .items-wrap .item > div:last-child a,
+    .birthday_page .items-wrap .usercard > div:last-child a {
+      margin-bottom: 0; }
+
+.users_wrap {
+  box-sizing: border-box;
+  width: calc(100% + 3rem);
+  height: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem; }
+  .users_wrap:last-child {
+    margin-bottom: 0; }
+  @media (max-width: 1100px) {
+    .users_wrap {
+      width: calc(100% + 1rem);
+      margin-right: -.5rem;
+      margin-left: -.5rem; } }
+  @media (max-width: 768px) {
+    .users_wrap {
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0; } }
+  .users_wrap .usercard__desc,
+  .users_wrap .usercard {
+    width: 22.2222%;
+    margin: 1.5rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem; }
+    @media (max-width: 1100px) {
+      .users_wrap .usercard__desc,
+      .users_wrap .usercard {
+        width: 32%;
+        margin-right: .5rem;
+        margin-left: .5rem; } }
+    @media (max-width: 960px) {
+      .users_wrap .usercard__desc,
+      .users_wrap .usercard {
+        width: calc(33% - 1rem); } }
+    @media (max-width: 768px) {
+      .users_wrap .usercard__desc,
+      .users_wrap .usercard {
+        width: 48%;
+        margin-right: 0;
+        margin-left: 0; } }
+    @media (max-width: 540px) {
+      .users_wrap .usercard__desc,
+      .users_wrap .usercard {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0; } }
+    @media (max-width: 480px) {
+      .users_wrap .usercard__desc,
+      .users_wrap .usercard {
+        max-width: 100%; } }
+
+.usercard__desc > ul {
+  margin-top: 2rem;
+  padding-left: 0;
+  list-style: none; }
+  .usercard__desc > ul:last-child {
+    margin-bottom: 0; }
+  .usercard__desc > ul li {
+    list-style: none;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+    .usercard__desc > ul li:last-child {
+      margin-bottom: 0; }
+    @media (max-width: 960px) {
+      .usercard__desc > ul li {
+        line-height: 1.2; } }
+    .usercard__desc > ul li:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      display: inline-block;
+      padding-right: 1rem;
+      margin-right: 1rem;
+      margin-top: .7rem;
+      line-height: 1.5;
+      width: 1rem;
+      height: 1rem;
+      background: #F6C358;
+      border-radius: 50%; }
+
+.usercard__desc .title {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  min-height: 14rem;
+  font-weight: bold; }
+  @media (max-width: 480px) {
+    .usercard__desc .title {
+      min-height: auto; } }
+
+.usercard__desc .usercard {
+  width: 100%;
+  margin: 0;
+  min-height: 29rem; }

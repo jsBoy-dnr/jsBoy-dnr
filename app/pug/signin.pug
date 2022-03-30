@@ -1,0 +1,104 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+
+    include ../components/nav_wrap/nav_wrap
+    include ../components/accordion/accordion
+    include ../components/section_title/title_bl
+    include ../components/pagelist/pagelist
+    include ../components/header_notif/header_notif
+    include ../components/filterPagerBlock/filterblock
+    include ../components/filterPagerBlock/pagerblock
+    include ../components/my_appeals_block/my_appeals_block
+    include ../components/modals/modals
+
+    include ../components/footer/footer_lk
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/template_switcher/template_switcher.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+
+        link(rel='stylesheet', href='../css/my_tasks_block/my_tasks_block.css')
+        link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+        link(rel='stylesheet', href='../css/work_services_block/work_services_block.css')
+        link(rel='stylesheet', href='../css/my_appeals_block/my_appeals_block.css')
+        link(rel='stylesheet', href='../css/working_groups/working_groups.css')
+        link(rel='stylesheet', href='../css/filterPagerBlock/filterPagerBlock.css')
+        link(rel='stylesheet', href='../css/libraries/account.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.lk.template--aim
+            header.site-header.with-bg.with-nav.site-header-default(
+                    href="javascript:void(0);", 
+                    data-tmpl-btn="suek" 
+                    data-tmpl-name="СУЭК" 
+                    data-tmpl-text="Внешний сайт СУЭК" 
+                    data-tmpl-link="#"
+                    data-tmpl-logo="logo-suek-56.svg" 
+                    data-tmpl-bg="template/bg_suek.png" 
+                    data-tmpl-bgfooter="template/bg_footer_suek.png" 
+                    data-tmpl-phone="8 (800) 200 - 12 - 40"
+                    data-tmpl-vk="http://vk.com/suek" 
+                    data-tmpl-fb="http://fb.com/suek" 
+                    data-tmpl-inst="http://instagram.com/suek"
+                    data-tmpl-youtube="http://youtube.com/suek" 
+                )
+                .header-top
+                    .site-logo
+                        a(href="/")
+                            img(src="../../images/logo-suek-56.svg", alt)
+            .blocks-wrapper
+                .inner
+
+                    section.section
+                        +title_bl('title/lk_v2.png')
+                        h2.heading--half.center Авторизация
+                        .section-body.form-in-page
+                            .form.form--validation.form-pin-edit#form-pin-edit
+                                .form-group
+                                    .form-field.form-field-half
+                                        label.custom-input_label(for="") Введите телефон
+                                            b.red *
+                                        input.custom-input.form-control.custom-input--tel(type="text", placeholder="+7 (000) 000-00-00", required)
+                                        .errortext Введите Телефон
+                                    .form-group
+                                        .form-field.form-field-half
+                                            label.custom-input_label(for="pincode") Введите старый пин-код
+                                            .custom-input_with-btn
+                                                input.custom-input.form-control#pincode(type="password", required)
+                                                button.btn.showpass()
+                                            .errortext Неверный пин-код
+                                .form-group
+                                    .form-field.form-field-half
+                                        button.btn.btn-primary
+                                            span.btn_inner Войти
+
+
+        +footer_lk
+        
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/maskinput.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/filterPagerBlock/filterPagerBlock.js')
+        script(src='../components/accordion/accordion.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/template_switcher/template_switcher.js')
+        script(src='../components/footer/footer.js')

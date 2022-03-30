@@ -1,0 +1,120 @@
+doctype html
+html(class="no-js", lang="en")
+
+    include ../components/head/head
+    include ../components/header_top/header_top_custom
+    include ../components/header_right/header_right
+    include ../components/header_notif/header_notif
+    include ../components/section_title/section_title
+    include ../components/section_title/title_bl
+    include ../components/breadcrumbs/breadcrumbs
+    include ../components/vacancy_block/vacancy_block
+    include ../components/filterblock/filterblock
+    include ../components/user_card/user_card
+    include ../components/pagelist/pagelist
+    include ../components/modals/modals
+    include ../components/footer/footer_custom
+
+    head
+        +head
+        link(rel='stylesheet', href='../css/GUI.css')
+        link(rel='stylesheet', href='../css/header_top/header_top.css')
+        link(rel='stylesheet', href='../css/header_right/header_right.css')
+        link(rel='stylesheet', href='../css/header_notif/header_notif.css')
+        link(rel='stylesheet', href='../css/breadcrumbs/breadcrumbs.css')
+        link(rel='stylesheet', href='../css/vacancy_block/vacancy_block.css')
+        link(rel='stylesheet', href='../css/filterblock/filterblock.css')
+        link(rel='stylesheet', href='../css/user_card/user_card.css')
+        link(rel='stylesheet', href='../css/pagelist/pagelist.css')
+        link(rel='stylesheet', href='../css/modals/modals.css')
+        link(rel='stylesheet', href='../css/footer/footer.css')
+    body
+        .site-wrapper.template--aim
+            header.site-header.with-bg
+                +header_top_custom
+                +header_right
+            .blocks-wrapper
+                .inner
+                    +breadcrumbs('', 'Вакансии')
+                    +title_bl('jobs_title.png')
+                    form(action)
+                        .sort-bl
+                            a.filterBtn(href="#!") 
+                            .search
+                                select.find_sort(name="region")
+                                    option(value="Выбрать регион") По ревалентности
+                                    option(value="Тестовый регион") Второе значение
+                                    option(value="Тестовый регион 2") Третье значение
+                            .form
+                                input(type="text", placeholder="Поиск по названию, описанию или региону")
+                                button(type="submit")
+                        +filterblock
+                        .sort_bl.sort_bl--filter
+                            .sort_bl_body
+                                .to-heading(data-popup-trigger="profsearch")
+                                    select#region-select(name="region")
+                                        option(value="Выбрать ") Выбрать специализации
+                                        option(value="Тестовый регион") Второе значение
+                                        option(value="Тестовый регион 2") Третье значение
+                                .to-heading
+                                    select#region-select(name="region")
+                                        option(value="Выбрать регион") Выбрать регион
+                                        option(value="Тестовый регион") Тестовый регион
+                                        option(value="Тестовый регион 2") Тестовый регион 2
+                                .to-heading
+                                    select#region-select(name="region")
+                                        option(value="Выбрать регион") Выбрать город
+                                        option(value="Тестовый регион") Второе значение
+                                        option(value="Тестовый регион 2") Третье значение
+                                .to-heading
+                                    select#region-select(name="region")
+                                        option(value="Выбрать регион") Выбрать предприятие
+                                        option(value="Тестовый регион") Второе значение
+                                        option(value="Тестовый регион 2") Третье значение
+                                .to-heading
+                                    select#heading-select(name="heading")
+                                        option(value="Выбрать регион") По дате добавления
+                                        option(value="Тестовая рубрика") Тестовая рубрика
+                                        option(value="Тестовая рубрика 2") Тестовая рубрика 2
+                    .jobs_title.flex_wrap.justify
+                        div
+                            h2
+                                | Всего вакансий 
+                                span (60)
+                                a.fav(href="#") Показать избранное
+                            //- a.support_toggle(href="#!") Развернуть подбор и развитие персонала
+                        .sort_list.for_tablet
+                            select#region-select.with_border(name="region")
+                                option(value="Выбрать регион") По дате добавления
+                                option(value="Тестовый регион") Второе значение
+                                option(value="Тестовый регион 2") Третье значение
+                    +vacancy_block
+                    +pagelist
+                    //- .selectStyler.filterBlock__subscribe
+                        .filterBlock__title Оформите подписку на обновления:
+                        .form-group 
+                            .form-field
+                                select.select-custom(name="Профессиональная область")
+                                    option Профессиональная область
+                                    option test
+                                .checkbox__wrap.mt-4
+                                    input.custom-checkbox(type="checkbox", value="Оформить подписку на основе выбранной фильтрации")
+                                    label(for="") Оформить подписку на основе выбранной фильтрации
+                        button.btn.btn-primary
+                            .btn_inner Подписаться
+        +footer_custom
+        +modals('profsearch', 'Профессиональная область')
+
+
+        script(src='../js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        script(src='../js/separate-js/jquery-2.2.4.min.js')
+        script(src='../js/separate-js/owl.carousel.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js")
+        script(src='../js/compiled.js')
+        script(src='../js/separate-js/retina.min.js')
+        script(src='../components/vacancy_block/vacancy_block.js')
+        script(src='../components/modals/modals.js')
+        script(src='../components/footer/footer.js')

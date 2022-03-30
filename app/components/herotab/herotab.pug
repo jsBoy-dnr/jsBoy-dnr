@@ -1,0 +1,65 @@
+mixin herotab()
+    .herotab
+        .herotab__inner
+            .herotab__title Юридическая служба
+            .herotab__nav 
+                .nav__item.active(data-tabs-trigger="1")
+                    .item
+                        img(src="../../images/corp_logo/min-logo-aim.svg", alt)
+                        span АИМ Холдинг
+                .nav__item(data-tabs-trigger="2")
+                    .item
+                        img(src="../../images/corp_logo/min-logo-suek.svg", alt)
+                        span ГК СУЭК
+                .nav__item(data-tabs-trigger="3")
+                    .item
+                        img(src="../../images/corp_logo/min-logo-sgk.svg", alt)
+                        span ГК СГК
+                .nav__item(data-tabs-trigger="4")
+                    .item
+                        img(src="../../images/corp_logo/min-logo-eurochem.svg", alt)
+                        span ГК ЕвроХим
+                .nav__item(data-tabs-trigger="5")
+                    .item
+                        img(src="../../images/corp_logo/min-logo-ntk.png", alt)
+                        span ГК НТК
+            .herotab__content
+                .tab__el.active(data-tabs='1')
+                    .item
+                        a(href="#!", title="Перечень ежегодных плановых проверок контролирующих органов").
+                            Перечень ежегодных плановых проверок контролирующих органов
+                    .item
+                        a(href="#!", title="Обзоры судебной практики группы компаний").
+                            Обзоры судебной практики группы компаний
+                    .item
+                        a(href="#!", title="Структура юридической службы Корпоративного центра").
+                            Структура юридической службы Корпоративного центра
+                    .item
+                        a(href="#!", title="Обзоры законодательства ").
+                            Обзоры законодательства 
+                    .item
+                        a(href="#!", title="Учредительные документы").
+                            Учредительные документы
+                    .item
+                        a(href="#!", title="Утвержденные стандарты, регламенты, инструкции").
+                            Утвержденные стандарты, регламенты, инструкции
+                - for (let i=2; i < 5; i++)
+                    .tab__el(data-tabs=i)
+                        .item
+                            a(href="#!", title="Перечень ежегодных плановых проверок контролирующих органов").
+                                #{i} Перечень ежегодных плановых проверок контролирующих органов
+                        .item
+                            a(href="#!", title="Обзоры судебной практики группы компаний").
+                                Обзоры судебной практики группы компаний
+                        .item
+                            a(href="#!", title="Структура юридической службы Корпоративного центра").
+                                Структура юридической службы Корпоративного центра
+                        .item
+                            a(href="#!", title="Обзоры законодательства ").
+                                Обзоры законодательства 
+                        .item
+                            a(href="#!", title="Учредительные документы").
+                                Учредительные документы
+                        .item
+                            a(href="#!", title="Утвержденные стандарты, регламенты, инструкции").
+                                Утвержденные стандарты, регламенты, инструкции
